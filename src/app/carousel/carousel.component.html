@@ -1,0 +1,25 @@
+<div class="dsc-carousel" [style]="{'min-height': finalHeight}" >
+  <div class="dsc-carousel__btns">
+    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" (click)="setBack()">
+      <mat-icon>arrow_back_ios</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon"
+    (click)="setNext()">
+      <mat-icon>arrow_forward_ios</mat-icon>
+    </button>
+  </div>
+  <div class="dsc-carousel__content">
+    <ng-container *ngFor="let section of items;">
+      <div class="dsc-carousel__content-item" [style]="{'background-image':'url('+section.image+')','margin-left': section.marginLeft+'%'}">
+        <h1>{{section.title!.first}}<span>{{section.title!.second}}</span></h1>
+        <p>{{section.subtitle}}</p>
+      </div>
+    </ng-container>
+  </div>
+  <div class="dsc-carousel__steps">
+    <div class="dsc-carousel__steps-step" tabindex=0 [class]="currentPosition === item.id ? 'dsc-carousel__steps-step-active' : ''"
+    *ngFor="let item of items" (keyup)="setCurrentPosition(item.id)" (click)="setCurrentPosition(item.id)">
+
+    </div>
+  </div>
+</div>
