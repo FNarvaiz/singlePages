@@ -1,0 +1,95 @@
+.container-sucursales {
+    max-width: 1600px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .flechas {
+      display: none;
+    position: absolute;
+      top: 50%;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    background-color: #29317a;
+    z-index: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  .flechas h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto;
+  
+  }
+  .izq{
+  
+      left: 0;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+  
+  }
+  .der{
+      right: 0;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+  }
+  .sucursal{
+      width: 25%;
+      margin: auto;
+      text-align: center;
+      transition: opacity 1s ease-in-out;
+  }
+  .sucursal.hide {
+      opacity: 0; /* Imagen desaparece */
+    }
+  .sucursal img {
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+  }
+  .sucursal {
+    margin-bottom: 20px;
+  }
+  h2 {
+    background-color: #29317a;
+    color: #fff;
+    border-radius: 50px;
+      padding: 5px 0px;
+      margin-bottom: 0;
+  }
+  p {
+    margin: 10px 0;
+  }
+  .sucursal-textos
+  {
+    padding: 20px;
+  }
+  .hide {
+    display: none;
+    transition: opacity 1s ease-in-out;
+  }
+  @media (max-width: 1200px) {
+    .sucursal {
+      max-width: 400px;
+      width: 50%;
+  
+    }
+  }
+  @media (max-width: 800px) {
+      .flechas {
+          display: flex;
+      }
+    .sucursal {
+      width: 100%;
+    }
+      
+  }

@@ -1,12 +1,12 @@
 <div class="dsc-carousel" [style]="{'min-height': finalHeight}" >
   <div class="dsc-carousel__btns">
-    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon" (click)="setBack()">
+    <i mat-icon-button color="primary" aria-label="Example icon button with a home icon" (click)="setBack()">
       <mat-icon>arrow_back_ios</mat-icon>
-    </button>
-    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon"
+    </i>
+    <i mat-icon-button color="primary" aria-label="Example icon button with a home icon"
     (click)="setNext()">
       <mat-icon>arrow_forward_ios</mat-icon>
-    </button>
+  </i>
   </div>
   <div class="dsc-carousel__content">
     <ng-container *ngFor="let section of items;">

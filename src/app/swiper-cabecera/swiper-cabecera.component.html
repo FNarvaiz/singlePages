@@ -1,0 +1,58 @@
+<section>
+  <div class="swiper mySwiperCabeceraEscritorio">
+    <div class="swiper-wrapper">
+      @for(imagen of imagenesEscritorio; track imagen){
+      <div class="swiper-slide">
+        <div class="image swiper-zoom-container">
+         
+          <img
+            class="imagen-fluida"
+            #HTMLimg
+            src="{{ imagen.ruta }}"
+            alt="{{ imagen.alt }}"
+          />
+          @if (imagen.url!=null && imagen.url!= ""){
+            <a class="link" href="{{ imagen.url }}" target="_blank">
+                </a>
+            }
+          
+        </div>
+      </div>
+      }
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper mySwiperCabeceraMovil">
+    <div class="swiper-wrapper">
+      @for(imagen of imagenesMovil; track imagen){
+      <div class="swiper-slide">
+        <div class="image swiper-zoom-container">
+            <img
+            class="imagen-fluida"
+            #HTMLimg
+            src="{{ imagen.ruta }}"
+            alt="{{ imagen.alt }}"
+          />
+          @if (imagen.url!=null && imagen.url!= ""){
+            <a class="link" href="{{ imagen.url }}" target="_blank">
+                </a>
+            }
+        </div>
+      </div>
+      }
+    </div>
+    <div
+      appAnimations
+      animationInput="fadeInRight"
+      class="swiper-button-next"
+    ></div>
+    <div
+      appAnimations
+      animationInput="fadeInLeft"
+      class="swiper-button-prev"
+    ></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>

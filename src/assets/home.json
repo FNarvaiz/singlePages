@@ -1,0 +1,30 @@
+[
+  {
+    "image": "assets/home/hotel.jpg",
+    "title": "Lugra Hotel",
+    "link": "/lugra",
+    "social": {
+      "instagram": "https://instagram.com/lugrahotel",
+      "facebook": "https://facebook.com/lugrahotel"
+    }
+  },
+  {
+    "image": "assets/home/cronos.jpg",
+    "title": "Cronos I\nTemporada 2026",
+    "link": "/reservas/cronos"
+  },
+  {
+    "image": "assets/home/playa.jpg",
+    "title": "Alquileres\nTemporada 2026",
+    "link": "/reservas/alquileres"
+  },
+  {
+    "image": "assets/home/familia.jpg",
+    "title": "Luis Protti\nInmobiliaria",
+    "link": "/reservas/protti",
+    "social": {
+      "instagram": "https://instagram.com/prottiinmobiliaria",
+      "facebook": "https://facebook.com/prottiinmobiliaria"
+    }
+  }
+]

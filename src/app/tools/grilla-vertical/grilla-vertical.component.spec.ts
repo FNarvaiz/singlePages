@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderMinimalComponent } from './header-minimal.component';
+import { GrillaVerticalComponent } from './grilla-vertical.component';
 
-describe('HeaderMinimalComponent', () => {
-  let component: HeaderMinimalComponent;
-  let fixture: ComponentFixture<HeaderMinimalComponent>;
+describe('GrillaVerticalComponent', () => {
+  let component: GrillaVerticalComponent;
+  let fixture: ComponentFixture<GrillaVerticalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeaderMinimalComponent]
+      imports: [GrillaVerticalComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(HeaderMinimalComponent);
+    fixture = TestBed.createComponent(GrillaVerticalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

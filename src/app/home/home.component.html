@@ -1,0 +1,52 @@
+<div class="home-container">
+  <div class="logo-header">
+    <img
+      src="assets/home/logo-lugra.png"
+      alt="Lugra Hotel Miramar"
+      class="logo"
+    />
+    <div class="line"></div>
+    <img
+      src="assets/home/logo-protti.png"
+      alt="Luis Protti Inmobiliaria"
+      class="logo"
+    />
+  </div>
+
+  <div class="card-grid">
+    @for(item of cards;track item;let it = $index){
+    <div class="card">
+      <img [src]="item.image" [alt]="item.title" class="card-img" />
+      <div class="card-content">
+        <div class="card-title">{{ item.title }}
+            @if(item.social){
+                <div class="social">
+                  @if(item.social.instagram){
+                  <a [href]="item.social.instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  } @if(item.social.facebook){
+                  <a [href]="item.social.facebook" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  }
+                </div>
+                }
+        </div>
+        
+        <div class="card-buttons">
+          <button class="btn" (click)="onReservar(item.link)">RESERVAS</button>
+          
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <footer class="footer">
+    <p>
+      Copyright 2025. Todos los derechos reservados.<br />
+      Lugra Hotel Miramar / Luis Protti Inmobiliaria
+    </p>
+  </footer>
+</div>
