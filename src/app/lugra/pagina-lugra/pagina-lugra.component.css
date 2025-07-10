@@ -1,0 +1,13 @@
+.scrollToTopButton{
+    opacity: 0;
+    transition: 0.5s opacity;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+  }
+  

@@ -2,7 +2,7 @@
   {
     "image": "assets/home/hotel.jpg",
     "title": "Lugra Hotel",
-    "link": "/lugra",
+    "link": "/hotel",
     "social": {
       "instagram": "https://instagram.com/lugrahotel",
       "facebook": "https://facebook.com/lugrahotel"
@@ -11,17 +11,17 @@
   {
     "image": "assets/home/cronos.jpg",
     "title": "Cronos I\nTemporada 2026",
-    "link": "/reservas/cronos"
+    "link": "https://luisprotti.com.ar/alq/cronos/"
   },
   {
     "image": "assets/home/playa.jpg",
     "title": "Alquileres\nTemporada 2026",
-    "link": "/reservas/alquileres"
+    "link": "https://luisprotti.com.ar/alq/"
   },
   {
     "image": "assets/home/familia.jpg",
     "title": "Luis Protti\nInmobiliaria",
-    "link": "/reservas/protti",
+    "link": "https://luisprotti.com/ventas/",
     "social": {
       "instagram": "https://instagram.com/prottiinmobiliaria",
       "facebook": "https://facebook.com/prottiinmobiliaria"

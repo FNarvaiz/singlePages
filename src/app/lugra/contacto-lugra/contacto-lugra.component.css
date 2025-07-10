@@ -1,0 +1,41 @@
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.iframe-map {
+  width: 100%;
+}
+.width70 {
+  width: 70%;
+}
+.card {
+  margin: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.card * {
+  font-size: larger;
+}
+.card a {
+  color: rgb(33, 30, 30);
+}
+.card i {
+  margin-right: 5px;
+}
+.sep{
+    margin-bottom: 10px;
+  }
+
+
+@media (max-width: 950px) {
+    .flex-row {
+        
+  flex-direction: column;
+    }
+}

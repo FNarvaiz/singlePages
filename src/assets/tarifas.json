@@ -1,0 +1,43 @@
+{
+  "habitaciones": ["Doble","Triple","Deptox4/5"],
+  "cronograma": [
+    {
+      "titulo": "Feriado Largo de Octubre 2025",
+      "Desde": "2025-10-05",
+      "Hasta": "2025-10-10",
+      "promos": [
+        {
+          "nombre": "Por dia",
+          "precios": [[10000], [15000], [20000]]
+        },
+        {
+          "nombre": "2 Noches",
+          "precios": [[17000], [25000], [35000]]
+        },
+        {
+          "nombre": "3x2 Noches",
+          "precios": [[20000], [30000], [40000]]
+        }
+      ]
+    },
+    {
+      "titulo": "Temporada 2026",
+      "Desde": "2026-01-01",
+      "Hasta": "2026-03-15",
+      "promos": [
+        {
+          "nombre": "Por dia",
+          "precios": [[10000], [15000], [20000]]
+        },
+        {
+          "nombre": "2 Noches",
+          "precios": [[17000], [25000], [35000]]
+        },
+        {
+          "nombre": "3x2 Noches",
+          "precios": [[20000], [30000], [40000]]
+        }
+      ]
+    }
+  ]
+}

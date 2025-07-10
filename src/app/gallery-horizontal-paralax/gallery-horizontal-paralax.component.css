@@ -22,15 +22,15 @@ body {
 }
 .external {
   overflow: hidden;
-  height: 100vh;
+  height: 70vh;
 }
 
 .horizontal-scroll-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vh;
-  transform: rotate(-90deg) translate3d(0,-100vh,0);
+  width: 70vh;
+  transform: rotate(-90deg) translate3d(0,-70vh,0);
   transform-origin: right top;
   overflow-y: auto;
   overflow-x: hidden;
@@ -54,7 +54,7 @@ body {
 .img-wrapper:hover {
  min-height: 65vh;
 }
-
+/* translateZ modifica el tamanio y translateY modifica la ubicacion en altura */
 .slower {
   transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(-10vh);
 }
@@ -68,7 +68,7 @@ body {
   transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(16vh) ;
 }
 .faster {
-  transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(0%) translateY(14vh) ;
+  transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(0%) translateY(12vh) ;
 }
 .faster1 {
   transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh) ;

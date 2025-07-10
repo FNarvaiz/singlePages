@@ -1,0 +1,36 @@
+<header #Menu id="header" class="sticky-top header-scrolled">
+  <div class="principal-navbar d-flex align-items-center">
+  <a
+      routerLink=""
+      (click)="navigateAndScrollTo('/', '#inicio')"
+      class="logo me-auto"
+      ><img src="./assets/lugra/logo-50.png" alt="" class="img-fluid"
+    /></a>
+    <nav id="navbar" class="navbar" #navbar>
+      <ul>
+        <img
+          src="./assets/lugra/logo-50.png"
+          class="img-fluid logo-mobile"
+          alt=""
+        />
+        @for(navItem of menuItemsList; track navItem){
+        <li>
+          <a
+            class="nav-link scrollto"
+            routerLink="{{ navItem.routerLink }}"
+            (click)="
+              navigateAndScrollTo(
+                navItem.linkPrimeraRuta,
+                navItem.link,
+                navItem.effectBehavior
+              )
+            "
+            >{{ navItem.name }}</a
+          >
+        </li>
+        }
+      </ul>
+      <i class="fa fa-list mobile-nav-toggle" (click)="toggleNavbar()"></i>
+    </nav>
+  </div>
+</header>

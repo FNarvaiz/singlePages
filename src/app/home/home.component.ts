@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
-import { HeaderCutComponent } from '../header-cut/header-cut.component';
-import { GrillaVerticalComponent } from '../tools/grilla-vertical/grilla-vertical.component';
 import { Title } from '@angular/platform-browser';
 import { JsonService } from '../services/json.service';
 
@@ -9,7 +6,7 @@ import { JsonService } from '../services/json.service';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, HeaderCutComponent, GrillaVerticalComponent],
+  imports: [],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

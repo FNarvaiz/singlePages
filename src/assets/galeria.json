@@ -1,0 +1,156 @@
+
+{
+  "categorias": ["Hotel", "Balneario", "Habitaciones", "Bufet"],
+  "fotos": [
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-11",
+      "src": "assets/galeria/DSC_1171-1024x678-1-768x509.jpg",
+      "thumb": "assets/galeria/DSC_1171-1024x678-1-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-16",
+      "src": "assets/galeria/DSC_1276-1024x678-1-768x509.jpg",
+      "thumb": "assets/galeria/DSC_1276-1024x678-1-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-2",
+      "src": "assets/galeria/DSC_1311-1024x678-1-768x509.jpg",
+      "thumb": "assets/galeria/DSC_1311-1024x678-1-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-23",
+      "src": "assets/galeria/HOTEL-LUGRA-23.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-23-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-51",
+      "src": "assets/galeria/HOTEL-LUGRA-51.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-51-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-54",
+      "src": "assets/galeria/HOTEL-LUGRA-54.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-54-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-63",
+      "src": "assets/galeria/HOTEL-LUGRA-63.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-63-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-66",
+      "src": "assets/galeria/HOTEL-LUGRA-66.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-66-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-69",
+      "src": "assets/galeria/HOTEL-LUGRA-69.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-69-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-70",
+      "src": "assets/galeria/HOTEL-LUGRA-70.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-70-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-76",
+      "src": "assets/galeria/HOTEL-LUGRA-76.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-76-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería IMG_0089-1",
+      "src": "assets/galeria/IMG_0089-1.jpg",
+      "thumb": "assets/galeria/IMG_0089-1-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería IMG_0089",
+      "src": "assets/galeria/IMG_0089.jpg",
+      "thumb": "assets/galeria/IMG_0089-300x199.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-11",
+      "src": "assets/galeria/HOTEL-LUGRA-11.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-11-300x200.jpg",
+      "categoria": 2
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-16",
+      "src": "assets/galeria/HOTEL-LUGRA-16.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-16-300x200.jpg",
+      "categoria": 3
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-2",
+      "src": "assets/galeria/HOTEL-LUGRA-2.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-2-300x200.jpg",
+      "categoria": 4
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-51",
+      "src": "assets/galeria/HOTEL-LUGRA-51.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-51-300x200.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-54",
+      "src": "assets/galeria/HOTEL-LUGRA-54.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-54-300x200.jpg",
+      "categoria": 2
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-63",
+      "src": "assets/galeria/HOTEL-LUGRA-63.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-63-300x200.jpg",
+      "categoria": 3
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-66",
+      "src": "assets/galeria/HOTEL-LUGRA-66.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-66-300x200.jpg",
+      "categoria": 4
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-69",
+      "src": "assets/galeria/HOTEL-LUGRA-69.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-69-300x200.jpg",
+      "categoria": 1
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-70",
+      "src": "assets/galeria/HOTEL-LUGRA-70.jpg",
+      "thumb": "assets/galeria/HOTEL-LUGRA-70-300x200.jpg",
+      "categoria": 2
+    },
+    {
+      "caption": "Imagen de galería HOTEL-LUGRA-76",
+      "src": "assets/galeria/HOTEL-LUGRA-76.jpg",
+      "thumb": "",
+      "categoria": 3
+    },
+    {
+      "caption": "Imagen de galería IMG_0089-1",
+      "src": "assets/galeria/IMG_0089-1.jpg",
+      "thumb": "",
+      "categoria": 4
+    },
+    {
+      "caption": "Imagen de galería IMG_0089",
+      "src": "assets/galeria/IMG_0089.jpg",
+      "thumb": "",
+      "categoria": 1
+    }
+  ]
+}

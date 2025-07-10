@@ -1,0 +1,76 @@
+.full-width {
+  width: 100%;
+}
+
+.shipping-card {
+  min-width: 120px;
+  width: 600px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.mat-radio-button {
+  display: block;
+  margin: 5px 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+.mdc-card__actions{
+  justify-content: center;
+}
+.btn{
+  width: 200px;
+}
+.mat-mdc-form-field-textarea-control{
+  height: 100px !important;
+}
+
+/* Estilos para reCAPTCHA */
+.recaptcha-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.error-message {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Responsive para reCAPTCHA */
+@media (max-width: 600px) {
+
+  .recaptcha-container {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+  .shipping-card{
+    width: 97vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  .adapter{
+    display: inline-block;
+    width: 100%;
+  }
+  .adapter > div{
+    margin-right: 0px;
+  }
+}
+
+

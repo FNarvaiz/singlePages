@@ -1,0 +1,86 @@
+<div class="contenedor">
+    <h1>CRONOGRAMA</h1>
+  <mat-accordion class="acordion">
+    @for (tar of tarifas; track tar;let it = $index) {
+    <mat-expansion-panel hideToggle >
+      <mat-expansion-panel-header  class="cabeceras">
+        <mat-panel-title>
+          {{ tar.titulo }}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{ tar.Desde }} al {{ tar.Hasta }}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            @for (column of habitaciones; track column) {
+            <th>{{ column }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (p of tar.promos; track p) {
+          <tr>
+            <td>{{ p.nombre }}</td>
+            @for(pre of p.precios; track pre){
+            <td>
+              @if(pre.length>1){ @for (x of pre; track x) { ${{ x }}<br />
+              }} @else { ${{ pre }} }
+            </td>
+            }
+          </tr>
+          }
+        </tbody>
+      </table>
+    </mat-expansion-panel>
+    }
+  </mat-accordion>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Cancelaciones </mat-card-title>
+      <mat-card-subtitle></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        En caso de que, una vez formalizada su reserva, usted desee cancelarla,
+        se aplicarán las siguientes penalizaciones:
+      </p>
+      <H2>Días de Antelación</H2>
+      <ol type="I">
+        <li>
+          Penalización 30 o más días Se reintegrará un 90% del monto depositado
+          en concepto de reserva.
+        </li>
+        <li>
+          15 a 30 días Se reintegrará un 50% del monto depositado en concepto de
+          reserva.
+        </li>
+        <li>
+          7 a 15 días Se reintegrará un 25% del monto depositado en concepto de
+          reserva 0 a 7 días No se reintegrará suma alguna del monto depositado
+          en concepto de reserva.
+        </li>
+      </ol>
+
+      <H2>Cambios de fecha </H2>
+      <ol type="I">
+        <li>
+          Los cambios de fecha serán considerados como una nueva reserva y
+          dependerán de la disponibilidad del Departamento de Reservas.
+        </li>
+        <li>
+          Disponibilidad Si por causas ajenas a nuestra voluntad no pudiéramos
+          facilitarle el departamento reservado, pondremos a su disposición otro
+          departamento de características similares o superiores.
+        </li>
+        <li>
+          Cesará la obligación por nuestra parte de reservar el departamento,
+          con pérdida del anticipo entregado, cuando éste no fuera ocupado
+          dentro de las 24 horas siguientes al día fijado para ello.
+        </li>
+      </ol>
+    </mat-card-content>
+  </mat-card>
+</div>

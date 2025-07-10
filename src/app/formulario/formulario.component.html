@@ -1,0 +1,154 @@
+<form [formGroup]="contactForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Formulario de contacto</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row adapter">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Nombre" formControlName="nombre" />
+            @if (contactForm.controls['nombre'].hasError('required')) {
+            <mat-error>El nombre es <strong>requerido</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Apellido" formControlName="apellido" />
+            @if (contactForm.controls['apellido'].hasError('required')) {
+            <mat-error>El apellido es <strong>requerido</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Email" formControlName="email" />
+            @if (contactForm.controls['email'].hasError('required')) {
+            <mat-error>El email es <strong>requerido</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-label>TIPO DE CONSULTA</mat-label><br />
+          <mat-radio-group formControlName="tipoConsulta">
+            <mat-radio-button value="no"
+              >Tarifa y disponibilidad</mat-radio-button
+            >
+            <mat-radio-button value="si">Otras consultas</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      @if ( contactForm.get('tipoConsulta')?.value=='no') {
+      <div class="row">
+        <div class="col">
+          <mat-label>FECHAS DE VIAJE </mat-label><br />
+          <mat-radio-group formControlName="fechaDefinida">
+            <mat-radio-button value="si">Fecha definida</mat-radio-button>
+            <mat-radio-button value="no">Sin fecha definida</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+      @if ( contactForm.get('fechaDefinida')?.value=='si') {
+      <div class="row adapter">
+        <div class="col">
+          <mat-form-field>
+            <mat-label>Check-in</mat-label>
+            <input
+              formControlName="fechaInicio"
+              matInput
+              [matDatepicker]="picker"
+            />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field>
+            <mat-label>Check-out</mat-label>
+            <input
+              formControlName="fechaFin"
+              
+              matInput
+              [matDatepicker]="picker2"
+            />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker2"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      } @else {
+      <div class="row adapter">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Mes" formControlName="mes">
+              @for (month of months; track month) {
+              <mat-option [value]="month">{{ month }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <mat-select placeholder="Cant de noches" formControlName="noches">
+              @for (noche of noches; track noche) {
+              <mat-option [value]="noche">{{ noche }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      } }
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea
+              matInput
+              placeholder="Escribanos su consulta"
+              formControlName="mensaje"
+            ></textarea>
+            @if (contactForm.controls['mensaje'].hasError('required')) {
+            <mat-error>El mensaje es <strong>requerido</strong></mat-error>
+            }
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- reCAPTCHA -->
+      <div class="row">
+        <div class="col">
+          <div class="recaptcha-container">
+            <re-captcha
+              [siteKey]="siteKey"
+              (resolved)="onRecaptchaResolved($event!)"
+              (expired)="onRecaptchaExpired()"
+            >
+            </re-captcha>
+            @if (contactForm.controls['recaptcha'].hasError('required') &&
+            contactForm.controls['recaptcha'].touched) {
+            <div class="error-message">
+              Por favor complete el reCAPTCHA para verificar que no es un robot.
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button class="btn" color="primary" type="submit">
+        ENVIAR
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</form>

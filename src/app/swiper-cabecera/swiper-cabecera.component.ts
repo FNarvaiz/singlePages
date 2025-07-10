@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
-import { isPlatformBrowser } from '@angular/common';
-import { Inject, PLATFORM_ID } from '@angular/core';
 
 @Component({
   selector: 'app-swiper-cabecera',
@@ -14,7 +12,7 @@ import { Inject, PLATFORM_ID } from '@angular/core';
 })
 export class SwiperCabeceraComponent  implements OnInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor() {}
 
 
   @Input() imagenesEscritorio: { ruta: string, alt?: string, url?: string }[] = [
@@ -55,14 +53,34 @@ export class SwiperCabeceraComponent  implements OnInit {
   swiperMovil!: Swiper;
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) 
-      this.inicializarSwiper();
+    this.inicializarSwiperSegunPantalla();
+    window.addEventListener('resize', this.reinicializarSwiperSegunPantalla.bind(this));
   }
 
-  inicializarSwiper() {
-    register();
-    this.swiperEscritorio = new Swiper('.mySwiperCabeceraEscritorio', this.swiperParams);
-    this.swiperMovil = new Swiper('.mySwiperCabeceraMovil', this.swiperParams);
+  inicializarSwiperSegunPantalla() {
+    if (window.innerWidth >= 768) {
+      if (!this.swiperEscritorio) {
+        register();
+        this.swiperEscritorio = new Swiper('.mySwiperCabeceraEscritorio', this.swiperParams);
+      }
+    } else {
+      if (!this.swiperMovil) {
+        register();
+        this.swiperMovil = new Swiper('.mySwiperCabeceraMovil', this.swiperParams);
+      }
+    }
   }
-
+  reinicializarSwiperSegunPantalla() {
+    // Destruye los Swipers existentes si existen
+    if (this.swiperEscritorio) {
+      this.swiperEscritorio.destroy(true, true);
+      this.swiperEscritorio = undefined as any;
+    }
+    if (this.swiperMovil) {
+      this.swiperMovil.destroy(true, true);
+      this.swiperMovil = undefined as any;
+    }
+    // Inicializa el Swiper correcto
+    this.inicializarSwiperSegunPantalla();
+  }
 }

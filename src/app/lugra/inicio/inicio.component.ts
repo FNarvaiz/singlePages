@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import { CarouselComponent } from '../../carousel/carousel.component';
-import { ICarouselItem } from '../../carousel/carousel-item';
 import { SwiperCabeceraComponent } from '../../swiper-cabecera/swiper-cabecera.component';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [SwiperCabeceraComponent, CarouselComponent],
+  imports: [SwiperCabeceraComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })

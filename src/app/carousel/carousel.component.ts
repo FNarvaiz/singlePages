@@ -28,7 +28,7 @@ export class CarouselComponent implements OnInit{
   }
   ngOnInit(): void {
     this.finalHeight = this.isFullScreen ? "100vh" : this.height + 'px';
-    console.log(this.items)
+    
     this.items.map((item, index) => {
       item.id = index;
       item.marginLeft = 0;
