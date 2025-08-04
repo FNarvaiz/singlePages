@@ -12,57 +12,92 @@ export class GalleryHorizontalParalaxComponent implements AfterViewInit {
     {
       clases: "slower",
       descripcion: "Stylish Parisian cafe terrace",
-      img: "./assets/pagina_vieja/2.jpg"
+      img: "./assets/galeria/Historia/Historia1.jpg"
     },
     {
       clases: "faster",
       descripcion: "Vintage typewriter on the table",
-      img: "./assets/pagina_vieja/alquileres.jpg"
+      img: "./assets/galeria/Historia/Historia2.jpg"
     },
     {
       clases: "slower vertical",
       descripcion: "Old camera on a wooden table",
-      img: "./assets/pagina_vieja/alquilerverano.jpg"
+      img: "./assets/galeria/Historia/Historia3.jpg"
     },
     {
       clases: "slower slower-down",
       descripcion: "Classic car in the street",
-      img: "./assets/pagina_vieja/galeriaMiramar.png"
+      img: "./assets/galeria/Historia/Historia4.jpg"
     },
     {
       clases: "slower",
       descripcion: "Books on a shelf",
-      img: "./assets/pagina_vieja/equipoLugraHotel2.png"
+      img: "./assets/galeria/Historia/Historia5.jpg"
     },
     {
       clases: "faster",
       descripcion: "Books on a shelf",
-      img: "./assets/pagina_vieja/logo_hotel.png"
+      img: "./assets/galeria/Historia/Historia6.jpg"
     },
     {
       clases: "faster1",
       descripcion: "Books on a shelf",
-      img: "./assets/pagina_vieja/isoInmoColor.png"
+      img: "./assets/galeria/Historia/Historia7.jpg"
     },
     {
       clases: "slower slower2",
       descripcion: "Books on a shelf",
-      img: "./assets/pagina_vieja/fondoweblugra2.jpg"
+      img: "./assets/galeria/Historia/Historia8.jpg"
     },
     {
       clases: "",
       descripcion: "Books on a shelf",
-      img: "./assets/pagina_vieja/fondoweblugra3.jpg"
+      img: "./assets/galeria/Historia/Historia9.jpg"
     },
     {
       clases: "slower",
       descripcion: "Books on a shelf",
-      img: "./assets/pagina_vieja/galeriaHotel.png"
+      img: "./assets/galeria/Historia/Historia10.jpg"
+    },
+    {
+      clases: "faster",
+      descripcion: "Books on a shelf",
+      img: "./assets/galeria/Historia/Historia11.jpg"
+    },
+    {
+      clases: "slower",
+      descripcion: "Stylish Parisian cafe terrace",
+      img: "./assets/galeria/Historia/Historia12.jpg"
+    },
+    {
+      clases: "faster",
+      descripcion: "Vintage typewriter on the table",
+      img: "./assets/galeria/Historia/Historia13.jpg"
+    },
+    {
+      clases: "slower vertical",
+      descripcion: "Old camera on a wooden table",
+      img: "./assets/galeria/Historia/Historia14.jpg"
+    },
+    {
+      clases: "slower slower-down",
+      descripcion: "Classic car in the street",
+      img: "./assets/galeria/Historia/Historia15.jpg"
+    },
+    {
+      clases: "slower",
+      descripcion: "Books on a shelf",
+      img: "./assets/galeria/Historia/Historia16.jpg"
+    },
+    {
+      clases: "faster",
+      descripcion: "Books on a shelf",
+      img: "./assets/galeria/Historia/Historia17.jpg"
     },
     {
       clases: "faster1 last",
       descripcion: "Books on a shelf",
-      img: "./assets/pagina_vieja/galeriaMiramar.png"
+      img: "./assets/galeria/Historia/Historia18.jpg"
     }
   ];
 

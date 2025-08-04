@@ -1,4 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family:  'Montserrat',  sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/lugra/Fuentes/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/lugra/Fuentes/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+:root {
+  --blanco:#f2f2f2;
+  --blanco-gris: #d9d9d9;
+  --gris-claro: #a2a2b0;
+  --gris: #29292d;
+  --negro: #1a1a1c;
+  --ocre: #c79236;
+  --piel: #fcdfb6;
+}
+a {
+  color: var(--theme-link-initial-color);
+  -webkit-text-decoration: var(
+    --has-link-decoration,
+    var(--theme-text-decoration, none)
+  );
+  text-decoration: var(
+    --has-link-decoration,
+    var(--theme-text-decoration, none)
+  );
+}
+.fondo-piel{
+  background-color: var(--piel);
+}
+.items-center{
+  align-items: center;
+}
+.margin-auto{
+  margin:auto;
+}
+.img-icono {
+  width: 20px;
+  height: 18px;
+  vertical-align: middle;
+}
+.margin-top-20{
+  margin-top: 30px;
+}
+.title-39{
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 39px;
+  font-weight: 500;
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 1.5;
+}
+.title-25{
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.0;
+}
+.title-31{
+  font-family: 'Roboto';
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1.0;
+}
+.italic{
+  font-style: italic;
+}
+.roboto-regular{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: justify;
+
+}
+
+.limit-1200{
+  max-width: 1200px;
+}
+.limit-1100{
+  max-width: 1100px;
+}
+.flex-column-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-grid{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (max-width: 1200px) {
+  .flex-grid{
+    width: auto;
+  }
+  .limit-1200{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}

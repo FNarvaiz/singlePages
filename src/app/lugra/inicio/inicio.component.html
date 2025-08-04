@@ -1,23 +1,16 @@
-
-<app-swiper-cabecera [imagenesEscritorio]="escritorio" [imagenesMovil]="escritorio" ></app-swiper-cabecera>
-
-
-Incluye: Jugos, Ensalada de Frutas, Queso, Yogurt y otros productos.
-HUEVOS REVUELTOS…. Rico en Vitaminas y Minerales.
-
-Sin límite de horario.
-
-Sala de Star
-Servicio Cafeteria
-Servicio de Bar
-Servicio de Tintorería y Lavandería
-Zona Wi-Fi
-
-WI-FI
-TV - LED
-Frigobar
-Calefaccion
-Sommier
-Cofre de Seguridad
-Ventilador de Techo
-Aire Acondicionado (sujeto a disponibilidad)
+<app-swiper-cabecera
+  [imagenesEscritorio]="escritorio"
+  [imagenesMovil]="escritorio"
+></app-swiper-cabecera>
+<div class="flex-column-center margin-top-20" >
+  <p class="title-39">Descubre Nuestros Servicios</p>
+  <div class="limit-1200 flex-grid">
+    @for (item of servicios; track $index) {
+    <article class="item">
+      <img [src]="item.img" [alt]="item.titulo" />
+      <h2>{{ item.titulo }}</h2>
+      <p>{{ item.descripcion }}</p>
+    </article>
+    }
+  </div>
+</div>

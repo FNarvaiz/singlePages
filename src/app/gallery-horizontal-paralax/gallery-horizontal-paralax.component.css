@@ -1,4 +1,3 @@
-/* Inspired by this pen by Pieter Biesemans https://codepen.io/pieter-biesemans/pen/BQBWXX and My Mother Before Me project http://mymotherbeforeme.com/ */
 
 body {
   font-family: Hepta Slab, sans-serif;
@@ -131,4 +130,14 @@ p {
 .icon svg {
     width: 50px;
     fill: currentcolor;
+}
+.external {
+  /* Fondo gradiente vintage */
+  background: linear-gradient( #ffffff 0%, #fcd399 40%, var(--piel) 100%);
+  /* Opcional: textura sutil */
+  /* background-image: linear-gradient(135deg, #f5e7c4 0%, #e7cba9 40%, #bfa980 100%), url('https://www.transparenttextures.com/patterns/old-mathematics.png'); */
+  background-repeat: repeat;
+}
+.horizontal-scroll-wrapper {
+  background: transparent;
 }

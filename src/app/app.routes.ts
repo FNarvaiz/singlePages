@@ -6,6 +6,7 @@ import { PaginaLugraComponent } from './lugra/pagina-lugra/pagina-lugra.componen
 import { HomeComponent } from './home/home.component';
 import { ContactoLugraComponent } from './lugra/contacto-lugra/contacto-lugra.component';
 import { GaleriaComponent } from './lugra/galeria/galeria.component';
+import { PaginaInmobiliariaComponent } from './inmobiliaria/pagina-inmobiliaria/pagina-inmobiliaria.component';
 
 export const routes: Routes = [
     {
@@ -15,6 +16,32 @@ export const routes: Routes = [
     {
         path: 'hotel',
         component: PaginaLugraComponent,
+        children:[
+            {
+                path: '',
+                component: InicioComponent,
+            },
+            {
+                path: 'nosotros',
+                component: NosotrosComponent,
+            },
+            {
+                path: 'galeria',
+                component: GaleriaComponent,
+            },
+            {
+                path: 'tarifas',
+                component: TarifasComponent,
+            },{
+                path: 'contacto',
+                component: ContactoLugraComponent,
+            },
+        ]
+
+    },
+    {
+        path: 'inmobiliaria',
+        component: PaginaInmobiliariaComponent,
         children:[
             {
                 path: '',

@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {MatExpansionModule} from '@angular/material/expansion'
 import { JsonService } from '../../services/json.service';
-import {MatTableModule} from '@angular/material/table'
 import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'app-tarifas',
   standalone: true,
-  imports: [MatExpansionModule,MatTableModule, MatCardModule],
+  imports: [MatCardModule],
   templateUrl: './tarifas.component.html',
   styleUrl: './tarifas.component.css'
 })

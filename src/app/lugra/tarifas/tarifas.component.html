@@ -1,81 +1,79 @@
-<div class="contenedor">
-    <h1>CRONOGRAMA</h1>
-  <mat-accordion class="acordion">
-    @for (tar of tarifas; track tar;let it = $index) {
-    <mat-expansion-panel hideToggle >
-      <mat-expansion-panel-header  class="cabeceras">
-        <mat-panel-title>
-          {{ tar.titulo }}
-        </mat-panel-title>
-        <mat-panel-description>
-          {{ tar.Desde }} al {{ tar.Hasta }}
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            @for (column of habitaciones; track column) {
-            <th>{{ column }}</th>
-            }
-          </tr>
-        </thead>
-        <tbody>
-          @for (p of tar.promos; track p) {
-          <tr>
-            <td>{{ p.nombre }}</td>
-            @for(pre of p.precios; track pre){
-            <td>
-              @if(pre.length>1){ @for (x of pre; track x) { ${{ x }}<br />
-              }} @else { ${{ pre }} }
-            </td>
-            }
-          </tr>
-          }
-        </tbody>
-      </table>
-    </mat-expansion-panel>
+<div class="contenedor limit-1200">
+    <p class="title-39">Tarifas</p>
+  <div class="acordion-custom">
+    @for (tar of tarifas; track tar; let it = $index) {
+      <div class="acordeon-item">
+        <input type="checkbox" id="acordeon-{{it}}" class="acordeon-toggle">
+        <label for="acordeon-{{it}}" class="acordeon-cabecera">
+          <span class="title-31">{{ tar.titulo }}</span>
+          <span class="acordeon-arrow">&#9660;</span>
+        </label>
+        <div class="acordeon-contenido">
+          <table class="tabla-tarifas">
+            <thead>
+              <tr>
+                <th class="th-head"></th>
+                @for (column of habitaciones; track column) {
+                  <th class="th-head">{{ column }}</th>
+                }
+              </tr>
+            </thead>
+            <tbody>
+              @for (p of tar.promos; track p) {
+                <tr>
+                  <td class="td-nombre">{{ p.nombre }}</td>
+                  @for(pre of p.precios; track pre){
+                    <td class="td-precio">
+                      <div class="txt-precio">
+                        @if(pre.length>1){ @for (x of pre; track x) { ${{ x }}<br /> }} @else { ${{ pre }} }
+                      </div>
+                    </td>
+                  }
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
     }
-  </mat-accordion>
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>Cancelaciones </mat-card-title>
-      <mat-card-subtitle></mat-card-subtitle>
-    </mat-card-header>
+  </div>
+  <mat-card class="leyenda-card">
     <mat-card-content>
-      <p>
+      <p class="title-31">Politicas de Cancelación</p>
+      <p class="roboto-regular">
         En caso de que, una vez formalizada su reserva, usted desee cancelarla,
         se aplicarán las siguientes penalizaciones:
       </p>
-      <H2>Días de Antelación</H2>
+      <br>
+      <p class="title-31">Días de Antelación</p>
       <ol type="I">
-        <li>
+        <li class="roboto-regular">
           Penalización 30 o más días Se reintegrará un 90% del monto depositado
           en concepto de reserva.
         </li>
-        <li>
+        <li class="roboto-regular">
           15 a 30 días Se reintegrará un 50% del monto depositado en concepto de
           reserva.
         </li>
-        <li>
+        <li class="roboto-regular">
           7 a 15 días Se reintegrará un 25% del monto depositado en concepto de
           reserva 0 a 7 días No se reintegrará suma alguna del monto depositado
           en concepto de reserva.
         </li>
       </ol>
-
-      <H2>Cambios de fecha </H2>
+<br>
+      <p class="title-31">Cambios de fecha </p>
       <ol type="I">
-        <li>
+        <li class="roboto-regular">
           Los cambios de fecha serán considerados como una nueva reserva y
           dependerán de la disponibilidad del Departamento de Reservas.
         </li>
-        <li>
+        <li class="roboto-regular">
           Disponibilidad Si por causas ajenas a nuestra voluntad no pudiéramos
           facilitarle el departamento reservado, pondremos a su disposición otro
           departamento de características similares o superiores.
         </li>
-        <li>
+        <li class="roboto-regular">
           Cesará la obligación por nuestra parte de reservar el departamento,
           con pérdida del anticipo entregado, cuando éste no fuera ocupado
           dentro de las 24 horas siguientes al día fijado para ello.

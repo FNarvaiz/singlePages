@@ -1,7 +1,13 @@
 import { ViewportScroller } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild
+} from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
-
+import { menuNavList } from '../menuItemList';
 @Component({
   selector: 'app-navbar-lugra',
   standalone: true,
@@ -16,25 +22,27 @@ export class NavbarLugraComponent implements OnInit {
   navbarMobile = false;
   seEstaScrolleandoPorMenu: boolean = false;
   imgBanner = '';
-  menuItemsList = [
-    { name: 'INICIO', linkPrimeraRuta:'/hotel', link: '#topNavBar', routerLink: '', effectBehavior: false  },
-    { name: 'TARIFAS', linkPrimeraRuta:'/hotel/tarifas', link: '#topNavBar', routerLink: '', effectBehavior: false  },
-    { name: 'GALERIA', linkPrimeraRuta:'/hotel/galeria', link: '#topNavBar', routerLink: '', effectBehavior: false  },
-    { name: 'NOSOTROS', linkPrimeraRuta: '/hotel/nosotros', link: '#topNavBar', routerLink: '', effectBehavior: false },
-    { name: 'CONTACTO', linkPrimeraRuta: '/hotel/contacto', link: '#topNavBar', routerLink: '', effectBehavior: false },
-  ];
+  menuItemsList = menuNavList;
 
-  constructor(private router: Router,
-    private viewportScroller: ViewportScroller,) { }
-
-  ngOnInit() {
-    
+  constructor(
+    private router: Router,
+    private viewportScroller: ViewportScroller
+  ) {
+    this.changeActive();
   }
 
+  ngOnInit() {}
+  changeActive() {
+    this.menuItemsList.forEach(x => {
+      x.active = x.linkPrimeraRuta === this.router.url;
+    });
+  }
   toggleNavbar() {
     this.navbarMobile = !this.navbarMobile;
     this.navbar.nativeElement.classList.toggle('navbar-mobile');
-    const toggleIcon = this.navbar.nativeElement.querySelector('.mobile-nav-toggle');
+    const toggleIcon = this.navbar.nativeElement.querySelector(
+      '.mobile-nav-toggle'
+    );
     toggleIcon.classList.toggle('bi-list');
     toggleIcon.classList.toggle('bi-x');
   }
@@ -42,7 +50,9 @@ export class NavbarLugraComponent implements OnInit {
   exitNavbar() {
     this.navbarMobile = false;
     this.navbar.nativeElement.classList.remove('navbar-mobile');
-    const toggleIcon = this.navbar.nativeElement.querySelector('.mobile-nav-toggle');
+    const toggleIcon = this.navbar.nativeElement.querySelector(
+      '.mobile-nav-toggle'
+    );
     toggleIcon.classList.add('bi-list');
     toggleIcon.classList.remove('bi-x');
   }
@@ -60,40 +70,44 @@ export class NavbarLugraComponent implements OnInit {
     }
     const element = document.querySelector(hash);
     if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
       const navbarHeight = navbar.offsetHeight;
       const scrollPosition = elementPosition - 20;
       if (effectBehaviorSmooth) {
-        window.scrollTo ({ top: scrollPosition, behavior: 'smooth' });
-      }
-      else {
+        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+      } else {
         window.scrollTo({ top: scrollPosition, behavior: 'instant' });
       }
     }
   }
 
-
-
-
-  navigateAndScrollTo(router: string, hash: string, effectBehaviorSmooth?: boolean) {
+  navigateAndScrollTo(
+    router: string,
+    hash: string,
+    effectBehaviorSmooth?: boolean
+  ) {
     this.router.navigate([router]).then(() => {
       setTimeout(() => {
         this.scrollTo(hash, undefined, effectBehaviorSmooth);
+
+        this.changeActive();
       }, 0);
     });
   }
 
   ubicacionPrincipal = this.viewportScroller.getScrollPosition()[1];
   @HostListener('window:scroll', ['$event'])
-  ocultarYMostrarMenu(){
-      if(this.ubicacionPrincipal >= this.viewportScroller.getScrollPosition()[1]){
-        this.menu.nativeElement.style.top = '0';
-      }
-      else{
-        this.menu.nativeElement.style.top = '-250px';			
-      }
-      this.ubicacionPrincipal = this.viewportScroller.getScrollPosition()[1];
+  ocultarYMostrarMenu() {
+    if (
+      this.ubicacionPrincipal >= this.viewportScroller.getScrollPosition()[1]
+    ) {
+      this.menu.nativeElement.style.top = '0';
+    } else {
+      this.menu.nativeElement.style.top = '-250px';
     }
+    this.ubicacionPrincipal = this.viewportScroller.getScrollPosition()[1];
+  }
 
   navigateTo(router: string, hash: string) {
     this.router.navigate([router]).then(() => {

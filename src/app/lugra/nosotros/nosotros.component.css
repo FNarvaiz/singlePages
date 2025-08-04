@@ -1,0 +1,42 @@
+#nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#subtitulo{
+    color: #6a6a72;
+    width: 80%;
+    margin-bottom: 20px;
+}
+.title-39{
+    margin: 1em;
+}
+.tarjeta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.tarjeta img{
+    margin:auto;
+    width: 472px;
+    height: auto;
+}
+.tarjeta p{
+    margin: auto;
+    line-height: 1.2;
+    width: 590px;
+}
+@media (max-width: 600px) {
+    .tarjeta img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .tarjeta p{
+        margin-bottom: 20px;
+    }
+    #subtitulo{
+        width: 100%;
+    }
+}

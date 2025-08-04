@@ -5,32 +5,220 @@ table {
 }
 th,
 td {
-  border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
-th {
-  background-color: #56cb46;
-  font-weight: bold;
-}
 tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: transparent;
 }
 
 .contenedor {
+  margin: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.acordion {
-  width: 80%;
+.title-31 {
+  font-weight: 500;
+  color: white;
+}
+.tabla-tarifas {
+  width: 1100px;
+  margin: 0 auto 30px auto;
+  background: #e0e0e0;
+  border-radius: 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.tabla-tarifas th,
+.tabla-tarifas td {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+}
+.tabla-tarifas td {
+  border-bottom: 2px solid #bdbdbd;
+}
+
+.th-head,
+.td-nombre {
+  font-family: "Roboto Medium", Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 500;
+  background: transparent;
+  color: #222;
+  width: 235px;
+  height: 75px;
+}
+
+.th-head {
+  border: none;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  background: transparent;
+  color: hsl(0, 0%, 13%);
+  height: 30px;
+}
+th {
+  border: none;
+}
+
+.td-precio {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 400;
+  background: #fff;
+  color: #222;
+  width: 235px;
+  height: 75px;
+}
+
+.tabla-tarifas tbody tr {
+  height: 75px;
+}
+.tabla-tarifas thead tr {
+  height: 30px;
+}
+
+.tabla-tarifas thead th {
+  background: #e0e0e0;
+}
+
+.tabla-tarifas tbody tr:not(:last-child) {
+  border-bottom: 2px solid #bdbdbd;
+}
+
+.acordion-custom {
+  width: 100%;
   margin-bottom: 20px;
 }
-.cabeceras {
-  background-color: rgb(165, 182, 245) !Important;
+
+.acordeon-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #0001;
+  background: #b8862b;
 }
-.cabeceras:hover {
-  background-color: rgb(165, 245, 196) !Important;
+
+.acordeon-toggle {
+  display: none;
+}
+
+.acordeon-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: var(--ocre, #b8862b);
+  color: #fff;
+  padding: 0 24px;
+  height: 75px;
+  font-family: "Roboto Medium", Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.acordeon-cabecera:hover {
+  background: #d1a03a;
+}
+
+.acordeon-arrow {
+  font-size: 2rem;
+  transition: transform 0.3s;
+}
+
+.acordeon-toggle:checked + .acordeon-cabecera .acordeon-arrow {
+  transform: rotate(180deg);
+}
+
+.acordeon-contenido {
+  max-height: 0;
+  overflow: hidden;
+  background: #e0e0e0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.acordeon-toggle:checked ~ .acordeon-contenido {
+  max-height: 1000px; /* suficiente para mostrar la tabla */
+  padding: 16px 0;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.txt-precio {
+  border: solid black 1px;
+  background-color: white;
+  height: 75px;
+  width: 235px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.td-nombre {
+  text-align: left !important;
+}
+.leyenda-card .title-31 {
+  color: var(--negro);
+}
+.leyenda-card li{
+  margin-bottom: 10px;
+}
+@media (max-width: 1200px) {
+  .tabla-tarifas {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .tabla-tarifas {
+    width: 100vw;
+    min-width: 400px;
+    font-size: 13px;
+    border-radius: 0;
+    overflow-x: auto;
+    margin: auto;
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .tabla-tarifas th,
+  .tabla-tarifas td {
+    font-size: 13px !important;
+    padding: 4px !important;
+    width: auto !important;
+    height: 40px !important;
+    min-width: 80px;
+  }
+
+  .th-head,
+  .td-nombre {
+    font-size: 15px !important;
+    height: 40px !important;
+    min-width: 90px;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+  }
+
+  .td-precio,
+  .txt-precio {
+    font-size: 15px !important;
+    height: 40px !important;
+    min-width: 90px;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    width: auto;
+  }
+
+  .tabla-tarifas thead tr,
+  .tabla-tarifas tbody tr {
+    height: 40px !important;
+  }
 }

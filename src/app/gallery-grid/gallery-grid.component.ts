@@ -40,14 +40,15 @@ export class GalleryGridComponent {
     this.lightbox.close();
   }
   change(id_categoria: number) {
-    console.log(id_categoria);
-    if (id_categoria == 0) this.miArreglo = this.fotos.slice(0, 18);
+    if (id_categoria == 0) {
+      const fotosDesordenadas = [...this.fotos].sort(() => Math.random() - 0.5);
+      this.miArreglo = fotosDesordenadas.slice(0, 18);
+    }
     else {
       this.miArreglo = this.fotos
         .filter(x => x.categoria == id_categoria)
         .slice(0, 18);
     }
-    console.log(this.miArreglo);
   }
 
   ngOnInit() {
