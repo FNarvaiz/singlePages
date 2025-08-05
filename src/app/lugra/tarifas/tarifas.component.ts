@@ -16,6 +16,7 @@ export class TarifasComponent implements OnInit {
     titulo: string,
     Desde: string,
     Hasta: string,
+    Servicios: string,
     promos: {
       nombre: string,
       precios: number[][]
@@ -33,6 +34,23 @@ export class TarifasComponent implements OnInit {
       });
       
     });
+  }
+  private convertPrecio(precio: number): string {
+    return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+
+  public splitServicios(servicios: string): string[] {
+    return servicios.split(". ");
+  }
+  public textoPrecio(precio: number, ite: number|undefined = undefined): string {
+    var textoPrecio = this.convertPrecio(precio)
+    
+    console.log(ite)
+    if(ite!==undefined){
+      var texto = ite == 0 ? "S/A.A" : "C/A.A"
+      return ` ${texto} $${textoPrecio}`
+    }
+    return `$${textoPrecio}`
   }
 
 }

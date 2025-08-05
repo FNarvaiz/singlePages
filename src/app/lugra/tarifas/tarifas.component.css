@@ -48,7 +48,7 @@ tr:nth-child(even) {
 .th-head,
 .td-nombre {
   font-family: "Roboto Medium", Arial, sans-serif;
-  font-size: 31px;
+  font-size: 26px;
   font-weight: 500;
   background: transparent;
   color: #222;
@@ -68,10 +68,14 @@ tr:nth-child(even) {
 th {
   border: none;
 }
-
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .td-precio {
   font-family: "Roboto", Arial, sans-serif;
-  font-size: 31px;
+  font-size: 20px;
   font-weight: 400;
   background: #fff;
   color: #222;
@@ -168,7 +172,7 @@ th {
 .leyenda-card .title-31 {
   color: var(--negro);
 }
-.leyenda-card li{
+.leyenda-card li {
   margin-bottom: 10px;
 }
 @media (max-width: 1200px) {
@@ -220,5 +224,14 @@ th {
   .tabla-tarifas thead tr,
   .tabla-tarifas tbody tr {
     height: 40px !important;
+  }
+  .title-31 {
+    font-size: 26px;
+  }
+  .contenedor{
+    padding: 0;
+  }
+  .flex-column-center{
+    padding: 10px;
   }
 }

@@ -248,7 +248,7 @@ a {
 }
 
 @media (max-width: 1200px) {
-  #header{
+  #header {
     width: auto;
   }
   .navbar a,
@@ -280,4 +280,10 @@ a {
   left: 0;
   bottom: 0;
   border-radius: 2px;
+}
+
+@media (max-width: 800px) {
+  #lema {
+    display: none;
+  }
 }

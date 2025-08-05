@@ -147,7 +147,7 @@ export class FormularioComponent {
       recaptchaToken: form.recaptcha // Enviamos el token del reCAPTCHA
     };
 
-    this.http.post('https://lugrahotel.com.ar/enviar.php', datos).subscribe({
+    this.http.post(`${window.location.origin}/enviar.php`, datos).subscribe({
       next: () => {
         this.mensajeEnviado = true;
         this.error = '';
