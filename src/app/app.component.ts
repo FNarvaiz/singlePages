@@ -10,7 +10,6 @@ import { HeaderCutComponent } from './header-cut/header-cut.component';
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [CommonModule, HeaderCutComponent, GalleryGridComponent, CarouselComponent, RouterOutlet, HeaderComponent]

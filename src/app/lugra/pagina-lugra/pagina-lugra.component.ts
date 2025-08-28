@@ -6,11 +6,10 @@ import { FooterComponent } from '../../footer/footer.component';
 import { WhatsappComponent } from '../../whatsapp/whatsapp.component';
 import { menuNavList } from '../menuItemList';
 @Component({
-  selector: 'app-pagina-lugra',
-  standalone: true,
-  imports: [WhatsappComponent, FooterComponent, NavbarComponent, RouterOutlet, NavbarLugraTopComponent],
-  templateUrl: './pagina-lugra.component.html',
-  styleUrl: './pagina-lugra.component.css'
+    selector: 'app-pagina-lugra',
+    imports: [WhatsappComponent, FooterComponent, NavbarComponent, RouterOutlet, NavbarLugraTopComponent],
+    templateUrl: './pagina-lugra.component.html',
+    styleUrl: './pagina-lugra.component.css'
 })
 export class PaginaLugraComponent {
   numero= '542291451314';

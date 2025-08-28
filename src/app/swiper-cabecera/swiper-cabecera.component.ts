@@ -4,11 +4,10 @@ import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 
 @Component({
-  selector: 'app-swiper-cabecera',
-  standalone: true,
-  imports: [],
-  templateUrl: './swiper-cabecera.component.html',
-  styleUrl: './swiper-cabecera.component.css'
+    selector: 'app-swiper-cabecera',
+    imports: [],
+    templateUrl: './swiper-cabecera.component.html',
+    styleUrl: './swiper-cabecera.component.css'
 })
 export class SwiperCabeceraComponent  implements OnInit {
 

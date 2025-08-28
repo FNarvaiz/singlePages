@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { JsonService } from '../../services/json.service';
 import {MatCardModule} from '@angular/material/card';
 @Component({
-  selector: 'app-tarifas',
-  standalone: true,
-  imports: [MatCardModule],
-  templateUrl: './tarifas.component.html',
-  styleUrl: './tarifas.component.css'
+    selector: 'app-tarifas',
+    imports: [MatCardModule],
+    templateUrl: './tarifas.component.html',
+    styleUrl: './tarifas.component.css'
 })
 export class TarifasComponent implements OnInit {
   constructor(private jsonService: JsonService) {

@@ -14,26 +14,24 @@ import { DateAdapter, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MY_DATE_FORMATS } from './date-formats';
 import { provideMomentDateAdapter } from '@angular/material-moment-adapter';
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css',
-  providers: [
-    provideMomentDateAdapter(),
-
-    { provide: MAT_DATE_LOCALE, useValue: 'es-AR' },
-    { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS }
-  ],
-  standalone: true,
-  imports: [
-    MatDatepickerModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    RecaptchaModule
-  ]
+    selector: 'app-formulario',
+    templateUrl: './formulario.component.html',
+    styleUrl: './formulario.component.css',
+    providers: [
+        provideMomentDateAdapter(),
+        { provide: MAT_DATE_LOCALE, useValue: 'es-AR' },
+        { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS }
+    ],
+    imports: [
+        MatDatepickerModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSelectModule,
+        MatRadioModule,
+        MatCardModule,
+        ReactiveFormsModule,
+        RecaptchaModule
+    ]
 })
 export class FormularioComponent {
   constructor(private _adapter: DateAdapter<any>, private http: HttpClient) {

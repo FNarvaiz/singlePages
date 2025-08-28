@@ -5,11 +5,10 @@ import { timer } from 'rxjs';
 import {CommonModule, NgStyle} from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 @Component({
-  selector: 'app-carousel',
-  standalone: true,
-  imports: [NgStyle, CommonModule, MatIconModule],
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.css'
+    selector: 'app-carousel',
+    imports: [NgStyle, CommonModule, MatIconModule],
+    templateUrl: './carousel.component.html',
+    styleUrl: './carousel.component.css'
 })
 export class CarouselComponent implements OnInit{
   /*

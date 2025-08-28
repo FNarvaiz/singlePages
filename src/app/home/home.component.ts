@@ -4,11 +4,10 @@ import { JsonService } from '../services/json.service';
 
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    selector: 'app-home',
+    imports: [],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
   constructor(private titleService: Title, private jsonService: JsonService) {

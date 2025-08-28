@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { SwiperCabeceraComponent } from '../../swiper-cabecera/swiper-cabecera.component';
 import { JsonService } from '../../services/json.service';
 @Component({
-  selector: 'app-inicio',
-  standalone: true,
-  imports: [SwiperCabeceraComponent ],
-  templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.css'
+    selector: 'app-inicio',
+    imports: [SwiperCabeceraComponent],
+    templateUrl: './inicio.component.html',
+    styleUrl: './inicio.component.css'
 })
 export class InicioComponent implements OnInit {
   constructor(private jsonService: JsonService) {
