@@ -1,3 +1,5 @@
-<app-navbar-inmo></app-navbar-inmo>
-<p>pagina-inmobiliaria works!</p>
-<app-footer></app-footer>
+<app-navbar-inmo-top></app-navbar-inmo-top>
+<app-navbar [menuItemsList]="menuList"  [logo]="logo"  [colorClass]="'inmo'" id="topNavBar" class="relative"></app-navbar>
+
+<router-outlet></router-outlet>
+<app-footer [menuItemsList]="menuList" [mail]="'reservas@luisprotti.com'"></app-footer>

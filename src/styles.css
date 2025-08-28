@@ -23,13 +23,14 @@ body {
   font-style: normal;
 }
 :root {
-  --blanco:#f2f2f2;
+  --blanco: #f2f2f2;
   --blanco-gris: #d9d9d9;
   --gris-claro: #a2a2b0;
   --gris: #29292d;
   --negro: #1a1a1c;
   --ocre: #c79236;
   --piel: #fcdfb6;
+  --naranja: #f05236;
 }
 a {
   color: var(--theme-link-initial-color);
@@ -42,81 +43,145 @@ a {
     var(--theme-text-decoration, none)
   );
 }
-.fondo-piel{
+
+.fondo-piel {
   background-color: var(--piel);
 }
-.items-center{
+.items-center {
   align-items: center;
 }
-.margin-auto{
-  margin:auto;
+.margin-auto {
+  margin: auto;
 }
 .img-icono {
   width: 20px;
   height: 18px;
   vertical-align: middle;
 }
-.margin-top-20{
+.margin-top-20 {
   margin-top: 30px;
 }
-.title-39{
+.title-39 {
   text-align: center;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 39px;
   font-weight: 500;
   padding-left: 30px;
   padding-right: 30px;
   line-height: 1.5;
 }
-.title-25{
+.title-25 {
   text-align: center;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 25px;
   font-weight: 400;
-  line-height: 1.0;
+  line-height: 1;
 }
-.title-31{
-  font-family: 'Roboto';
+.title-31 {
+  font-family: "Roboto";
   font-size: 31px;
   font-weight: 400;
-  line-height: 1.0;
+  line-height: 1;
 }
-.italic{
+.title-29 {
+  font-family: "Roboto";
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 1;
+}
+.italic {
   font-style: italic;
 }
-.roboto-regular{
-  font-family: 'Roboto';
+.roboto-regular {
+  font-family: "Roboto";
   font-weight: 400;
   font-size: 20px;
   text-align: justify;
-
+  letter-spacing: normal;
+  color: var(--gris);
+}
+.roboto-medium {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: normal;
+  color: var(--gris);
 }
 
-.limit-1200{
+.limit-1200 {
   max-width: 1200px;
 }
-.limit-1100{
+.margin-auto {
+  margin: auto;
+}
+.limit-1100 {
   max-width: 1100px;
 }
-.flex-column-center{
+.size-48 {
+  font-size: 48px;
+  line-height: 1;
+}
+.size-43 {
+  font-size: 43px;
+  line-height: 1;
+}
+.size-31 {
+  font-size: 31px;
+  line-height: 1;
+}
+.size-26 {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.size-19 {
+  font-size: 19px;
+}
+.flex-column-center {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.flex-grid{
+.flex-grid {
   display: flex;
   width: 100%;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.mbottom-60{
+  margin-bottom: 60px;
+}
+.mbottom-40{
+  margin-bottom: 40px;
+}
+.mbottom-20{
+  margin-bottom: 20px;
+}
+.mtop-40{
+  margin-top: 40px;
+}
+.mtop-20{
+  margin-top: 20px;
+}
+.ocre {
+  color: var(--ocre);
+}
+.p-0{
+  padding: 0px;
+}
 @media (max-width: 1200px) {
-  .flex-grid{
+  .flex-grid {
     width: auto;
   }
-  .limit-1200{
+  .limit-1200 {
     padding-left: 20px;
     padding-right: 20px;
   }
-
 }

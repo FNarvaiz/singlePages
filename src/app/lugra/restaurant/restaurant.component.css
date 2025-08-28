@@ -1,0 +1,41 @@
+#img-title{
+    width: 100%;
+    max-width: 560px;
+    max-height: 375px;
+    margin: auto;
+}
+.cuadrante{
+    background-color: var(--blanco-gris);
+    width: 100%;
+    padding: 20px;
+    padding-top: 40px;
+    max-width: 510px;
+    height: 260px;
+    margin: auto;
+}
+.content-title{
+    max-width: 600px;
+    width: 100%;
+}
+.bar-ocre{
+    background-color: var(--ocre);
+    height: 4px;
+    width: 80px;
+    border-radius: 50px;
+}
+.flex-grid{
+    justify-content: space-between;
+    align-items: center;
+}
+#horarios{
+    width: 300px;
+}
+@media (max-width: 1200px) {
+    .flex-grid {
+        width: 100%;
+    }
+    .cuadrante{
+        height: auto;
+    }
+    
+}

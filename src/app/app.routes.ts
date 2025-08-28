@@ -7,6 +7,11 @@ import { HomeComponent } from './home/home.component';
 import { ContactoLugraComponent } from './lugra/contacto-lugra/contacto-lugra.component';
 import { GaleriaComponent } from './lugra/galeria/galeria.component';
 import { PaginaInmobiliariaComponent } from './inmobiliaria/pagina-inmobiliaria/pagina-inmobiliaria.component';
+import { RestaurantComponent } from './lugra/restaurant/restaurant.component';
+import { InicioComponent as InicioInmoComponent } from './inmobiliaria/inicio/inicio.component';
+import { ContactoComponent } from './inmobiliaria/contacto/contacto.component';
+import { ServiciosComponent } from './inmobiliaria/servicios/servicios.component';
+import { InmueblesComponent } from './inmobiliaria/inmuebles/inmuebles.component';
 
 export const routes: Routes = [
     {
@@ -36,6 +41,10 @@ export const routes: Routes = [
                 path: 'contacto',
                 component: ContactoLugraComponent,
             },
+            {
+                path: 'restaurant',
+                component: RestaurantComponent,
+            },
         ]
 
     },
@@ -45,22 +54,18 @@ export const routes: Routes = [
         children:[
             {
                 path: '',
-                component: InicioComponent,
+                component: InicioInmoComponent,
             },
             {
-                path: 'nosotros',
-                component: NosotrosComponent,
+                path: 'inmuebles',
+                component: InmueblesComponent,
             },
             {
-                path: 'galeria',
-                component: GaleriaComponent,
-            },
-            {
-                path: 'tarifas',
-                component: TarifasComponent,
+                path: 'servicios',
+                component: ServiciosComponent,
             },{
                 path: 'contacto',
-                component: ContactoLugraComponent,
+                component: ContactoComponent,
             },
         ]
 

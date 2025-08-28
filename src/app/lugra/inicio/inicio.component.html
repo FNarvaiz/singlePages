@@ -1,16 +1,37 @@
 <app-swiper-cabecera
   [imagenesEscritorio]="escritorio"
-  [imagenesMovil]="escritorio"
+  [imagenesMovil]="movil"
 ></app-swiper-cabecera>
 <div class="flex-column-center margin-top-20" >
   <p class="title-39">Descubre Nuestros Servicios</p>
   <div class="limit-1200 flex-grid">
     @for (item of servicios; track $index) {
-    <article class="item">
+    <article class="item border">
       <img [src]="item.img" [alt]="item.titulo" />
       <h2>{{ item.titulo }}</h2>
       <p>{{ item.descripcion }}</p>
     </article>
     }
+    
   </div>
+  <article id="nuevo-servicio" class="border limit-1200">
+    <div id="descripcion" >
+      <div>
+        <div class="mbottom-20"></div>
+      <p class="roboto-medium size-48 ocre">NUEVO SERVICIO</p>
+      <div class="mbottom-20"></div>
+      <p class="roboto-medium size-31">CENA DE BIENVENIDA EN</p>
+      <p class="roboto-medium size-31 ocre">RESTAURANT JURERÉ</p>
+      <div class="mbottom-20"></div>
+      <p class="roboto-regular">a 700 Mts de Hotel Lugra</p>
+    </div>
+      <div id="button-conoce" class="roboto-regular size-26" (click)="clickConoceMas()">Conocé Más</div>
+    </div>
+    
+    <img id="img-jurere"
+    src="assets/lugra/inicio/restaurant.jpg"
+    alt="Restaurant de Lugra Hotel" />
+    
+    
+  </article>
 </div>

@@ -4,7 +4,7 @@ import { JsonService } from '../../services/json.service';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [SwiperCabeceraComponent],
+  imports: [SwiperCabeceraComponent ],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
@@ -13,13 +13,21 @@ export class InicioComponent implements OnInit {
   }
   escritorio: {ruta:string,alt:string}[] = [
   ]
+  movil: {ruta:string,alt:string}[] = [
+  ]
   
   ngOnInit() {
     this.jsonService.readJson('./assets/banners_lugra.json').subscribe(data => {
-      this.escritorio = data
+      this.escritorio = data["escritorio"]
+      this.movil = data["movil"]
     });
   }
-  
+  //redireccionar a /hotel/restaurant
+  clickConoceMas(){
+    // Redireccionar a /hotel/restaurant
+    window.location.href = '/hotel/restaurant';
+
+  }
   servicios: {img: string, titulo: string, descripcion: string }[]=[
     {
       img: 'assets/lugra/SVG/icono_sala_de_estar.svg',
