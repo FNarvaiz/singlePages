@@ -5,6 +5,7 @@ import { register } from 'swiper/element/bundle';
 
 @Component({
     selector: 'app-swiper-cabecera',
+    standalone: true,
     imports: [],
     templateUrl: './swiper-cabecera.component.html',
     styleUrl: './swiper-cabecera.component.css'

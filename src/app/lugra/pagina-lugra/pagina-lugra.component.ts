@@ -5,8 +5,10 @@ import { NavbarLugraTopComponent } from "../navbar-lugra-top/navbar-lugra-top.co
 import { FooterComponent } from '../../footer/footer.component';
 import { WhatsappComponent } from '../../whatsapp/whatsapp.component';
 import { menuNavList } from '../menuItemList';
+
 @Component({
     selector: 'app-pagina-lugra',
+    standalone: true,
     imports: [WhatsappComponent, FooterComponent, NavbarComponent, RouterOutlet, NavbarLugraTopComponent],
     templateUrl: './pagina-lugra.component.html',
     styleUrl: './pagina-lugra.component.css'

@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { ICarouselItem } from './carousel-item';
 import { timer } from 'rxjs';
-import {CommonModule, NgStyle} from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 @Component({
     selector: 'app-carousel',
-    imports: [NgStyle, CommonModule, MatIconModule],
+    standalone: true,
+    imports: [CommonModule, MatIconModule],
     templateUrl: './carousel.component.html',
     styleUrl: './carousel.component.css'
 })

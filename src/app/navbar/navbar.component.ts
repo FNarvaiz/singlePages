@@ -13,6 +13,7 @@ import {
 import { Router, RouterLink, RouterModule } from '@angular/router';
 @Component({
     selector: 'app-navbar',
+    standalone: true,
     imports: [RouterLink, RouterModule],
     templateUrl: './navbar.component.html',
     styleUrl: './navbar.component.css'

@@ -15,6 +15,7 @@ import { MY_DATE_FORMATS } from './date-formats';
 import { provideMomentDateAdapter } from '@angular/material-moment-adapter';
 @Component({
     selector: 'app-formulario',
+    standalone: true,
     templateUrl: './formulario.component.html',
     styleUrl: './formulario.component.css',
     providers: [

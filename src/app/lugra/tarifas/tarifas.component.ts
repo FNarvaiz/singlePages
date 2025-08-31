@@ -3,6 +3,7 @@ import { JsonService } from '../../services/json.service';
 import {MatCardModule} from '@angular/material/card';
 @Component({
     selector: 'app-tarifas',
+    standalone: true,
     imports: [MatCardModule],
     templateUrl: './tarifas.component.html',
     styleUrl: './tarifas.component.css'

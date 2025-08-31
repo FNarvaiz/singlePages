@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { MatButton } from '@angular/material/button';
-
 @Component({
     selector: 'app-navbar-lugra-top',
-    imports: [MatButton],
+    standalone: true,
+    imports: [],
     templateUrl: './navbar-lugra-top.component.html',
     styleUrl: './navbar-lugra-top.component.css'
 })

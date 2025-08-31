@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-inmuebles',
+    standalone: true,
     imports: [],
     templateUrl: './inmuebles.component.html',
     styleUrl: './inmuebles.component.css'

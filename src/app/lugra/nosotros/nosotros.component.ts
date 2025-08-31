@@ -3,6 +3,7 @@ import { GalleryHorizontalParalaxComponent } from "../../gallery-horizontal-para
 
 @Component({
     selector: 'app-nosotros',
+    standalone: true,
     imports: [GalleryHorizontalParalaxComponent],
     templateUrl: './nosotros.component.html',
     styleUrl: './nosotros.component.css'

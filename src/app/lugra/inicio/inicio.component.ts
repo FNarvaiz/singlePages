@@ -3,6 +3,7 @@ import { SwiperCabeceraComponent } from '../../swiper-cabecera/swiper-cabecera.c
 import { JsonService } from '../../services/json.service';
 @Component({
     selector: 'app-inicio',
+    standalone: true,
     imports: [SwiperCabeceraComponent],
     templateUrl: './inicio.component.html',
     styleUrl: './inicio.component.css'

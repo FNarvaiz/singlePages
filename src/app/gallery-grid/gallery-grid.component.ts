@@ -5,6 +5,7 @@ import { JsonService } from '../services/json.service';
 
 @Component({
     selector: 'app-gallery-grid',
+    standalone: true,
     imports: [LightboxModule, MatChipsModule],
     templateUrl: './gallery-grid.component.html',
     styleUrl: './gallery-grid.component.css'
