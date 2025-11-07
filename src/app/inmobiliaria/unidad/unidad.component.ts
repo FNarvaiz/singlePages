@@ -8,6 +8,7 @@ import { TarifasGridComponent } from '../../tarifas-grid/tarifas-grid.component'
 import { PoliticasComponent } from '../politicas/politicas.component';
 import { CondicionesComponent } from '../condiciones/condiciones.component';
 import { ComoReservarComponent } from '../como-reservar/como-reservar.component';
+import { Meta, Title } from '@angular/platform-browser';
 
 
 interface Unidad {
@@ -43,7 +44,12 @@ interface Unidad {
   styleUrl: './unidad.component.css'
 })
 export class UnidadComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private jsonService: JsonService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private jsonService: JsonService,
+    private title: Title,
+    private meta: Meta,
+  ) {}
   unidad: Unidad = {
     nombre: '',
     descripcion: '',
@@ -66,6 +72,18 @@ export class UnidadComponent implements OnInit {
       this.unidad.imagen2= carpeta+this.unidad.imagen2;
       for(let img of this.unidad.imagenes)
         img.ruta = carpeta+img.ruta;
+
+      // SEO dinámico por unidad
+      const unitName = (this.unidad.nombre || '').toString().trim();
+      if (unitName) {
+        this.title.setTitle(`Inmobiliaria Luis Protti | ${unitName}`);
+      }
+      const baseDesc = (this.unidad.descripcion || '').toString().replace(/\s+/g, ' ').trim();
+      const shortDesc = baseDesc.length > 160 ? baseDesc.slice(0, 157) + '...' : baseDesc;
+      const finalDesc = unitName ? `${unitName} en Miramar. ${shortDesc}`.trim() : shortDesc;
+      if (finalDesc) {
+        this.meta.updateTag({ name: 'description', content: finalDesc });
+      }
     });
   }
   

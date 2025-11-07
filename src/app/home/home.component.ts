@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { JsonService } from '../services/json.service';
 
 
@@ -11,9 +10,7 @@ import { JsonService } from '../services/json.service';
     styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
-  constructor(private titleService: Title, private jsonService: JsonService) {
-    this.titleService.setTitle('Home - '+this.titleService.getTitle());
-  }
+  constructor(private jsonService: JsonService) {}
   
   cards: any[] = [];
   
