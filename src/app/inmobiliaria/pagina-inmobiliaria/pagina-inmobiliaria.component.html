@@ -1,5 +1,5 @@
 <app-navbar-inmo-top></app-navbar-inmo-top>
-<app-navbar [menuItemsList]="menuList"  [logo]="logo"  [colorClass]="'inmo'" id="topNavBar" class="relative"></app-navbar>
+<app-navbar [menuItemsList]="menuList"  [logo]="logo"  [colorClass]="'inmo'" [isHotel]="false" id="topNavBar" class="relative"></app-navbar>
 
 <router-outlet></router-outlet>
-<app-footer [menuItemsList]="menuList" [mail]="'reservas@luisprotti.com'"></app-footer>
+<app-footer [menuItemsList]="menuList" [class]="'inmo'" [mail]="'reservas@luisprotti.com'"></app-footer>

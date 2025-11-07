@@ -1,0 +1,60 @@
+/* Contenedor principal */
+*{
+  font-family: "Roboto";
+}
+.nosotros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 16px 0;
+}
+
+.tarjeta {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.lista {
+  padding-left: 18px;
+  margin: 8px 0 0 0;
+}
+
+.lista li,
+p { line-height: 1.7; color: #333; margin: 8px 0; }
+
+/* Grid de servicios */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.servicio {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.servicio h3 { margin: 0 0 6px 0; font-size: 1.125rem; }
+
+/* Breakpoints */
+@media (min-width: 640px) {
+  .servicios-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 2.5rem; }
+  .tarjeta { padding: 24px; }
+  .servicios-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+

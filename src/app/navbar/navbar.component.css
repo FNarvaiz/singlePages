@@ -129,7 +129,12 @@ a {
   #navbar ul li a.nav-link img {
     width: 25px;
   }
-  
+  .btn_link
+  {
+      width: 250px !important;
+      height: 80px;
+      margin-top: -20px;
+  }
   @media (min-width: 1200px) {
     .nav-link.lenguage-icon {
       padding: 10px;
@@ -291,6 +296,24 @@ a {
   @media (max-width: 800px) {
     #lema {
       display: none;
+    }
+    a.nav-link.scrollto{
+      margin: 0;
+    }
+    #btn-hotel-inmo{
+      margin-top: 10px;
+    }
+    .logo.me-auto{
+      margin-left: 10px;
+    }
+    #header .logo{
+      margin-left: 10px;
+    }
+    #header .navbar{
+      margin-right: 10px;
+    }
+    #header{
+      padding: 0;
     }
   }
   

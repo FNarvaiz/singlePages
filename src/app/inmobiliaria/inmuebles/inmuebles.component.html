@@ -1,1 +1,36 @@
-<p>inmuebles works!</p>
+<div class="back-gris center ptop-20 pbottom-20">
+    <section class="margin-auto limit-1200 mtop-20" id="inmuebles">
+    <section class="margin-auto limit-1200 mbottom-20 flex-grid" id="filtros">
+        @for (item of categorias; track $index) {
+
+            <h1 class="item" (click)="filtrar($index)" >{{item}}</h1>
+        }
+    </section>
+    
+<section class="margin-auto limit-1200 flex-grid" >
+    @for (item of inmueblesFiltered; track $index) {
+        <article (click)="clickInmueble(item)" class="element-inmueble">
+            <img [src]="getPathImg(item)" [alt]="item.nombre">
+            <section class="left">
+                <p class="roboto-medium size-16 categoria">
+                    {{categorias[item.categoria-1]}}
+                </p>
+                <p  class="roboto-medium size-22 titulo">
+                    {{item.nombre}}
+                </p>
+                <section class="flex-grid flex-start">
+                    <p class="roboto-regular size-16 caract">Banios: {{item.banios}}         </p>
+                    <p class="roboto-regular size-16 caract">Camas: {{item.camas}}</p>
+                </section>
+                <div class="flex-grid flex-start">
+                <fa-icon [icon]="faLocationDot"/><p class="roboto-regular size-16">{{item.localizacion.direccion}}</p>
+            </div>
+            </section>
+        </article>
+    }
+</section>
+<!-- <section class="margin-auto limit-1200 mbottom-20">
+    <app-mapa-inmuebles [inmuebles]="inmueblesFiltered"></app-mapa-inmuebles>
+</section> -->
+</section>
+</div>

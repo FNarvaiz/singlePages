@@ -1,0 +1,40 @@
+.element-inmueble img {
+    max-width: 380px;
+    max-height: 280px;
+    width: 100%;
+    border-radius: 30px
+  }
+  #filtros {
+    padding: 10px;
+  }
+  #filtros h1 {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .flex-start{
+      justify-content: flex-start;
+  }
+  .categoria{
+    color: var(--naranja);
+    margin-bottom: 2px;
+  }
+  .titulo{
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .caract{
+    margin-right: 10px ;
+    margin-bottom: 5px;
+  }
+  .element-inmueble{
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  #inmuebles{
+    background-color: white;
+    margin: auto;
+    width: auto;
+  }

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { JsonService } from '../../services/json.service';
 import {MatCardModule} from '@angular/material/card';
+import { TarifasGridComponent } from '../../tarifas-grid/tarifas-grid.component'
 @Component({
     selector: 'app-tarifas',
     standalone: true,
-    imports: [MatCardModule],
+    imports: [MatCardModule, TarifasGridComponent],
     templateUrl: './tarifas.component.html',
     styleUrl: './tarifas.component.css'
 })
@@ -17,6 +18,8 @@ export class TarifasComponent implements OnInit {
     Desde: string,
     Hasta: string,
     Servicios: string,
+    Imagenes: string[],
+    Info: string,
     promos: {
       nombre: string,
       precios: number[][]
@@ -35,22 +38,8 @@ export class TarifasComponent implements OnInit {
       
     });
   }
-  private convertPrecio(precio: number): string {
-    return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
+  
 
-  public splitServicios(servicios: string): string[] {
-    return servicios.split(". ");
-  }
-  public textoPrecio(precio: number, ite: number|undefined = undefined): string {
-    var textoPrecio = this.convertPrecio(precio)
-    
-    console.log(ite)
-    if(ite!==undefined){
-      var texto = ite == 0 ? "S/A.A" : "C/A.A"
-      return ` ${texto} $${textoPrecio}`
-    }
-    return `$${textoPrecio}`
-  }
+  
 
 }

@@ -1,56 +1,6 @@
 <div class="contenedor limit-1200">
-  <p class="title-39">Tarifas</p>
-  <div class="acordion-custom">
-    @for (tar of tarifas; track tar; let it = $index) {
-    <div class="acordeon-item">
-      <input type="checkbox" id="acordeon-{{ it }}" class="acordeon-toggle" />
-      <label for="acordeon-{{ it }}" class="acordeon-cabecera">
-        <span class="title-29">{{ tar.titulo }}</span>
-        <span class="acordeon-arrow">&#9660;</span>
-      </label>
-      <div class="acordeon-contenido">
-        <table class="tabla-tarifas">
-          <thead>
-            <tr>
-              <th class="th-head"></th>
-              @for (column of habitaciones; track column; let index = $index) {
-                @if(index+1 <= tar.promos[0].precios.length){
-                <th class="th-head">{{ column }}</th>
-                }
-              }
-            </tr>
-          </thead>
-          <tbody>
-            @for (p of tar.promos; track p) {
-            <tr>
-              <td class="td-nombre">{{ p.nombre }}</td>
-              @for(pre of p.precios; track pre){
-              <td class="td-precio">
-                <div class="txt-precio">
-                  @if(pre.length>1){ @for (x of pre; track x; let indexacion = $index)
-                  { {{ textoPrecio(x, indexacion) }}<br />
-                  }} @else { {{ textoPrecio(pre[0]) }} }
-                </div>
-              </td>
-              }
-            </tr>
-            }
-          </tbody>
-        </table>
-        <div class="leyenda-card flex-column-center">
-          <p class="title-25">Servicios Incluidos</p>
-          <ol type="I">
-            @for (servicio of splitServicios(tar.Servicios); track servicio) {
-            <li class="roboto-regular">
-              {{ servicio }}
-            </li>
-            }
-          </ol>
-        </div>
-      </div>
-    </div>
-    }
-  </div>
+  <app-tarifas-grid [tarifas]="tarifas" [headers]="habitaciones"></app-tarifas-grid>
+  
   <mat-card class="leyenda-card">
     <mat-card-content>
       <p class="title-29">Politicas de Cancelación</p>

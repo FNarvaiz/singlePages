@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.89 103.59">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .08em;
+      }
+
+      .cls-2 {
+        letter-spacing: .02em;
+      }
+
+      .cls-2, .cls-3 {
+        font-family: FinalSix-Black, FinalSix;
+        font-size: 66.39px;
+        font-weight: 800;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        font-family: FinalSix-Bold, FinalSix;
+        font-size: 26.23px;
+        font-weight: 700;
+      }
+
+      .cls-7 {
+        fill: #29292d;
+      }
+
+      .cls-8 {
+        letter-spacing: .2em;
+      }
+
+      .cls-9 {
+        font-size: 27.13px;
+        letter-spacing: .02em;
+      }
+
+      .cls-9, .cls-6 {
+        font-family: FinalSix-Book, FinalSix;
+      }
+
+      .cls-10 {
+        letter-spacing: .22em;
+      }
+
+      .cls-6 {
+        font-size: 17.93px;
+      }
+
+      .cls-11 {
+        letter-spacing: .22em;
+      }
+
+      .cls-12 {
+        letter-spacing: .08em;
+      }
+
+      .cls-13 {
+        letter-spacing: .16em;
+      }
+
+      .cls-3 {
+        letter-spacing: .02em;
+      }
+
+      .cls-14 {
+        letter-spacing: .08em;
+      }
+    </style>
+  </defs>
+  <g id="Capa_2-2" data-name="Capa 2">
+    <g>
+      <path class="cls-7" d="M0,0h323.1C351.69,0,374.89,23.21,374.89,51.79h0c0,28.59-23.21,51.79-51.79,51.79H51.79C23.21,103.59,0,80.38,0,51.79V0H0Z"/>
+      <text class="cls-4" transform="translate(32.8 73.2)"><tspan class="cls-2" x="0" y="0">3</tspan><tspan class="cls-9" x="45.55" y="0">y</tspan><tspan class="cls-3" x="63.67" y="0">6</tspan></text>
+      <text class="cls-6" transform="translate(158.51 42.02)"><tspan class="cls-11" x="0" y="0">CU</tspan><tspan class="cls-8" x="35.16" y="0">O</tspan><tspan class="cls-13" x="53.59" y="0">T</tspan><tspan class="cls-10" x="67.54" y="0">AS</tspan></text>
+      <text class="cls-5" transform="translate(158.51 70.67)"><tspan class="cls-1" x="0" y="0">SIN I</tspan><tspan class="cls-14" x="69.32" y="0">NT</tspan><tspan class="cls-12" x="110.37" y="0">ERÉS</tspan></text>
+    </g>
+  </g>
+</svg>

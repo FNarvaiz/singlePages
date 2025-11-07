@@ -1,4 +1,5 @@
 import { ApplicationConfig } from '@angular/core';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
@@ -11,5 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideAnimations(),
     provideHttpClient(),
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
   ]
 };

@@ -70,8 +70,16 @@
     padding:  10px 0px;
     
   }
+  #descripcion{
+    height: 360px;
+  }
   #img-jurere {
     width: 90%;
   }
-  
+  .limit-1200{
+    padding: 0;
+  }
+ .title-39{
+  padding: 0;
+ }
 }

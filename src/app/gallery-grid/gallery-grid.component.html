@@ -11,7 +11,7 @@
 <div id="gallery">
   @for(i of miArreglo; track i;let it = $index){
   <div>
-      <img [alt]="i.caption" [src]="i.src" style="cursor: pointer;" (click)="open(it)"/>
+      <img [alt]="i.caption" [src]="i.thumb" style="cursor: pointer;" (click)="open(it)"/>
   </div>
   }
 </div>

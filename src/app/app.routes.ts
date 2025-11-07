@@ -10,8 +10,10 @@ import { PaginaInmobiliariaComponent } from './inmobiliaria/pagina-inmobiliaria/
 import { RestaurantComponent } from './lugra/restaurant/restaurant.component';
 import { InicioComponent as InicioInmoComponent } from './inmobiliaria/inicio/inicio.component';
 import { ContactoComponent } from './inmobiliaria/contacto/contacto.component';
-import { ServiciosComponent } from './inmobiliaria/servicios/servicios.component';
-import { InmueblesComponent } from './inmobiliaria/inmuebles/inmuebles.component';
+import { UnidadComponent } from './inmobiliaria/unidad/unidad.component';
+import { NosotrosComponent as NosotrosInmoComponent } from './inmobiliaria/nosotros/nosotros.component';
+import { AlquileresComponent } from './inmobiliaria/alquileres/alquileres.component';
+import { VentasComponent } from './inmobiliaria/ventas/ventas.component';
 
 export const routes: Routes = [
     {
@@ -57,15 +59,23 @@ export const routes: Routes = [
                 component: InicioInmoComponent,
             },
             {
-                path: 'inmuebles',
-                component: InmueblesComponent,
+                path: 'alquileres',
+                component: AlquileresComponent,
             },
             {
-                path: 'servicios',
-                component: ServiciosComponent,
+                path: 'ventas',
+                component: VentasComponent,
+            },
+            {
+                path: 'nosotros',
+                component: NosotrosInmoComponent,
             },{
                 path: 'contacto',
                 component: ContactoComponent,
+            },
+            {
+                path: 'unidad/:carpeta',
+                component: UnidadComponent,
             },
         ]
 

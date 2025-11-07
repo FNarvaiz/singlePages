@@ -32,7 +32,9 @@
 .swiper-button-next, .swiper-button-prev {
     color: #ffffff;
 }
-
+.maxH700 {
+    max-height: 700px;
+}
 @media (max-width: 768px) {
     .swiper {
         --swiper-pagination-bullet-size: 1vmax;

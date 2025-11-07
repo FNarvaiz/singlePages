@@ -133,9 +133,14 @@ a {
   font-size: 26px;
   line-height: 1;
 }
-
+.size-22 {
+  font-size: 22px;
+}
 .size-19 {
   font-size: 19px;
+}
+.size-16 {
+  font-size: 16px;
 }
 .flex-column-center {
   display: flex;
@@ -175,6 +180,27 @@ a {
 }
 .p-0{
   padding: 0px;
+}
+.p-5{
+  padding: 5px;
+}
+.ptop-20{
+  padding-top: 20px;
+}
+.pbottom-20{
+  padding-bottom: 20px;
+}
+.back-gris{
+  background-color: var(--gris-claro);
+}
+.back-blanco{
+  background-color: var(--blanco);
+}
+.text-naranja{
+  color:  var(--naranja);
+}
+.radius{
+  border-radius: 30px;
 }
 @media (max-width: 1200px) {
   .flex-grid {

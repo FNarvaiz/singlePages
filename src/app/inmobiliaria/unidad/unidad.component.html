@@ -1,0 +1,38 @@
+<div class="back-gris center ptop-20 pbottom-20 p-5">
+  <section class="margin-auto limit-1200 back-blanco mtop-20" id="inmuebles">
+    <p class="roboto-medium size-48">{{ unidad.nombre }}</p>
+    <section  class="flex-grid mbottom-20" id="imagenes">
+      <img id="primera-img" [src]="unidad.imagen1" alt="Imagen principal de {{ unidad.nombre }}">
+      <img id="segunda-img" [src]="unidad.imagen2" alt="Imagen secundaria de {{ unidad.nombre }}">
+    </section>
+    <section class="flex-grid space-between items-center mbottom-40">
+      <div class="flex-grid space-around items-center" id="categorias"  >
+        <p class="categoria text-naranja roboto-regular size-22">{{unidad.categoria}} </p>
+        <p class="categoria roboto-regular size-22">Camas: {{unidad.camas}} </p>
+        <p class="categoria roboto-regular size-22">Baños: {{unidad.banios}} </p>
+      </div>
+      <div class="flex-grid items-center" > 
+        <fa-icon [icon]="faLocationDot"/> 
+        <p class="roboto-medium size-22 margin-auto">{{ unidad.direccion }}</p>
+      </div>
+    </section>
+    <app-tarifas-grid [headers]="['Precio']" [titulo]="'Precios'" [tarifas]="unidad.tarifas"></app-tarifas-grid>
+    <p class="roboto-medium size-26 left">Descripcion General</p>
+    <p class="roboto-regular size-22 light" [innerHTML]="unidad.descripcion"></p>
+    <app-swiper-cabecera 
+    [addClassImg]="'maxH700'"
+        [imagenesEscritorio]="unidad.imagenes"
+        [imagenesMovil]="unidad.imagenes"
+    ></app-swiper-cabecera>
+  </section>
+  @if(unidad.venta) {
+  }
+  @else {
+    <section class="margin-auto limit-1200 mtop-20">
+      <app-como-reservar></app-como-reservar>
+      <app-politicas></app-politicas>
+      <app-condiciones></app-condiciones>
+    </section>
+  }
+</div>
+

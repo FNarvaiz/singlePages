@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, Input, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
@@ -13,7 +13,7 @@ import { register } from 'swiper/element/bundle';
 export class SwiperCabeceraComponent  implements OnInit {
 
   constructor() {}
-
+  @Input() addClassImg :  string ="";
 
   @Input() imagenesEscritorio: { ruta: string, alt?: string, url?: string }[] = [
   ];

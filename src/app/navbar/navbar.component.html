@@ -1,37 +1,51 @@
-<header #Menu id="header" class="sticky-top header-scrolled{{colorClass}}">
-    <div class="principal-navbar d-flex align-items-center">
-      <a
-        routerLink=""
-        (click)="navigateAndScrollTo('/', '#inicio')"
-        class="logo me-auto"
-      >
-        <img [src]= "logo"  alt="" class="img-fluid" />
-        <h2 id="lema" [innerHTML]="lema"> </h2>
-      </a>
-      <nav id="navbar" class="navbar" #navbar>
-        <ul>
-          <img
-            [src]= 'logo'
-            class="img-fluid logo-mobile"
-            alt=""
-          />
-          @for(navItem of menuItemsList; track navItem){
-          <li>
-            <a
-              class="nav-link scrollto {{navItem.active?'active-link '+ colorClass:''}}"
-              [routerLink]="navItem.routerLink"
-              (click)="navigateAndScrollTo(
+<header #Menu id="header" class="sticky-top header-scrolled{{ colorClass }}">
+  <div class="principal-navbar d-flex align-items-center">
+    <a
+      routerLink="" 
+      (click)="navigateAndScrollTo( isHotel ? '/hotel' : '/inmobiliaria', '#inicio')"
+      class="logo me-auto"
+    >
+      <img [src]="logo" alt="" />
+      <h2 id="lema" [innerHTML]="lema"></h2>
+    </a>
+    <nav id="navbar" class="navbar" #navbar>
+      <ul>
+        <img [src]="logo" class="logo-mobile" alt="" />
+        @for(navItem of menuItemsList; track navItem){
+        <li>
+          <a 
+            class="nav-link scrollto {{
+              navItem.active ? 'active-link ' + colorClass : ''
+            }}"
+            [routerLink]="navItem.routerLink"
+            (click)="
+              navigateAndScrollTo(
                 navItem.linkPrimeraRuta,
                 navItem.link,
                 navItem.effectBehavior
-              )"
-              >{{ navItem.name }}</a
-            >
-          </li>
-          }
-        </ul>
-        <i class="fa fa-list mobile-nav-toggle" (click)="toggleNavbar()"></i>
-      </nav>
-    </div>
-  </header>
-  
+              )
+            "
+          >
+            {{ navItem.name }}
+          </a>
+        </li>
+        }
+        <li>
+        <a id="btn-hotel-inmo"
+            [href]="isHotel ? 'https://www.luisprotti.com.ar/#/inmobiliaria/alquileres' : 'https://www.lugrahotel.com.ar/#/hotel'"
+            class="nav-link scrollto"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              class="btn_link"
+              [src]="isHotel ? './assets/ambos/buscas_alquiler.png' : './assets/ambos/buscas_hotel.png'"
+              [alt]="isHotel ? 'Ve nuestros inmuebles' : 'Ve nuestro hotel'"
+            />
+          </a>
+        </li>
+      </ul>
+      <i class="fa fa-list mobile-nav-toggle" (click)="toggleNavbar()"></i>
+    </nav>
+  </div>
+</header>

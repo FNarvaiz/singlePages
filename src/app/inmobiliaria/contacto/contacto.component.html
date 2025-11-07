@@ -1,1 +1,113 @@
-<p>contacto works!</p>
+<div class="contacto-container">
+  <mat-card class="contacto-card">
+    <mat-card-header class="titulo-contenedor">
+      <mat-card-title class="titulo-contacto">
+        <mat-icon>contact_mail</mat-icon>
+        Contáctanos
+      </mat-card-title>
+      <mat-card-subtitle>
+        Completa el formulario y nos pondremos en contacto contigo
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="contactoForm" (ngSubmit)="onSubmit()" class="formulario-contacto">
+        
+        <!-- Nombre -->
+        <mat-form-field appearance="outline" class="campo-completo">
+          <mat-label>Tu nombre</mat-label>
+          <input matInput 
+                 formControlName="nombre" 
+                 placeholder="Ingresa tu nombre completo"
+                 autocomplete="name">
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-error *ngIf="contactoForm.get('nombre')?.invalid && contactoForm.get('nombre')?.touched">
+            {{ getErrorMessage('nombre') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Email -->
+        <mat-form-field appearance="outline" class="campo-completo">
+          <mat-label>Tu correo electrónico</mat-label>
+          <input matInput 
+                 type="email" 
+                 formControlName="email" 
+                 placeholder="ejemplo@correo.com"
+                 autocomplete="email">
+          <mat-icon matSuffix>email</mat-icon>
+          <mat-error *ngIf="contactoForm.get('email')?.invalid && contactoForm.get('email')?.touched">
+            {{ getErrorMessage('email') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Teléfono -->
+        <mat-form-field appearance="outline" class="campo-completo">
+          <mat-label>Tu número telefónico - WhatsApp</mat-label>
+          <input matInput 
+                 type="tel" 
+                 formControlName="telefono" 
+                 placeholder="+54 9 223 123-4567"
+                 autocomplete="tel">
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-error *ngIf="contactoForm.get('telefono')?.invalid && contactoForm.get('telefono')?.touched">
+            {{ getErrorMessage('telefono') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Asunto -->
+        <mat-form-field appearance="outline" class="campo-completo">
+          <mat-label>Asunto</mat-label>
+          <input matInput 
+                 formControlName="asunto" 
+                 placeholder="¿Sobre qué quieres consultar?"
+                 autocomplete="off">
+          <mat-icon matSuffix>subject</mat-icon>
+          <mat-error *ngIf="contactoForm.get('asunto')?.invalid && contactoForm.get('asunto')?.touched">
+            {{ getErrorMessage('asunto') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Mensaje -->
+        <mat-form-field appearance="outline" class="campo-completo">
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput 
+                    formControlName="mensaje" 
+                    placeholder="Escribe tu mensaje aquí..."
+                    rows="5"
+                    autocomplete="off"></textarea>
+          <mat-icon matSuffix>message</mat-icon>
+          <mat-error *ngIf="contactoForm.get('mensaje')?.invalid && contactoForm.get('mensaje')?.touched">
+            {{ getErrorMessage('mensaje') }}
+          </mat-error>
+        </mat-form-field>
+
+        <!-- reCAPTCHA -->
+        <div class="recaptcha-container">
+          <re-captcha
+            [siteKey]="siteKey"
+            (resolved)="onRecaptchaResolved($event!)"
+            (expired)="onRecaptchaExpired()">
+          </re-captcha>
+          <div *ngIf="contactoForm.get('recaptcha')?.hasError('required') && contactoForm.get('recaptcha')?.touched" 
+               class="error-message">
+            Por favor complete el reCAPTCHA para verificar que no es un robot.
+          </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="boton-container">
+          <button mat-raised-button 
+                  color="primary" 
+                  type="submit"
+                  [disabled]="contactoForm.invalid || isLoading || !recaptchaResolved"
+                  class="boton-enviar">
+            <mat-icon *ngIf="!isLoading">send</mat-icon>
+            <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+            <span>{{ isLoading ? 'Enviando...' : 'Enviar Mensaje' }}</span>
+          </button>
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

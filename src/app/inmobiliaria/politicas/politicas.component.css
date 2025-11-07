@@ -1,0 +1,63 @@
+/* Contenedor y tipografía */
+*{
+  font-family: "Roboto";
+}
+.politicas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+
+h1 { font-size: 2rem; margin: 0 0 16px 0; }
+
+.tarjeta {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tarjeta h2 { font-size: 1.25rem; margin: 0 0 8px 0; }
+
+/* Tabla responsive */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tabla th { background: #fafafa; font-weight: 600; }
+
+/* Mobile-first: transformar tabla a tarjetas en pantallas chicas */
+@media (max-width: 640px) {
+  .tabla thead { display: none; }
+  .tabla,
+  .tabla tbody,
+  .tabla tr,
+  .tabla td { display: block; width: 100%; }
+  .tabla tr { margin: 0 0 12px 0; border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+  .tabla td { border: none; border-bottom: 1px solid #eee; }
+  .tabla td:last-child { border-bottom: none; }
+  .tabla td::before {
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 4px;
+  }
+}
+
+/* Escalas */
+@media (min-width: 768px) { h1 { font-size: 2.25rem; } .tarjeta { padding: 20px; } }
+@media (min-width: 1024px) { h1 { font-size: 2.5rem; } .tarjeta { padding: 24px; } }
+

@@ -26,6 +26,7 @@ export class NavbarComponent implements OnInit {
   seEstaScrolleandoPorMenu: boolean = false;
   @Input() lema = '';
   @Input() logo = "";
+  @Input() isHotel: boolean = false;
   @Input() colorClass = "";
   @Input() menuItemsList :any[]= [];
 

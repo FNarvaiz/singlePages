@@ -1,0 +1,70 @@
+/* Layout base */
+*{
+  font-family: "Roboto";
+}
+.reserva-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 16px 0;
+}
+
+.seccion h2 {
+  font-size: 1.5rem;
+  margin: 24px 0 12px 0;
+}
+
+.seccion h3 {
+  font-size: 1.125rem;
+  margin: 16px 0 8px 0;
+}
+
+/* Tipografía y legibilidad */
+p,
+.pasos li {
+  line-height: 1.7;
+  margin: 8px 0;
+}
+
+.pasos {
+  padding-left: 18px;
+  margin: 8px 0 24px 0;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 16px 16px 16px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Tarjetas/Secciones */
+.seccion {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  h1 { font-size: 2.25rem; }
+  .seccion { padding: 20px; }
+  .pasos { padding: 20px 20px 20px 36px; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 2.5rem; }
+  .seccion { padding: 24px; }
+  .pasos { padding: 24px 24px 24px 40px; }
+}
+
+/* Alto contraste para accesibilidad básica */
+.seccion h2,
+.seccion h3 { color: #222; }
+p,
+.pasos li { color: #333; }
+

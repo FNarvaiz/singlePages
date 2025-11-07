@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.89 103.59">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: FinalSix-Black, FinalSix;
+        font-weight: 800;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        font-size: 61.98px;
+        letter-spacing: .02em;
+      }
+
+      .cls-5 {
+        letter-spacing: .08em;
+      }
+
+      .cls-2 {
+        font-family: FinalSix-Bold, FinalSix;
+        font-size: 26.23px;
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        letter-spacing: .08em;
+      }
+
+      .cls-7 {
+        fill: #29292d;
+      }
+
+      .cls-8 {
+        letter-spacing: .07em;
+      }
+
+      .cls-9 {
+        letter-spacing: .2em;
+      }
+
+      .cls-10 {
+        letter-spacing: .22em;
+      }
+
+      .cls-11 {
+        letter-spacing: .08em;
+      }
+
+      .cls-12 {
+        letter-spacing: .06em;
+      }
+
+      .cls-13 {
+        letter-spacing: .06em;
+      }
+
+      .cls-14 {
+        letter-spacing: .22em;
+      }
+
+      .cls-15 {
+        font-size: 36.96px;
+        letter-spacing: .02em;
+      }
+
+      .cls-3 {
+        font-family: FinalSix-Book, FinalSix;
+        font-size: 17.93px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_2-2" data-name="Capa 2">
+    <g>
+      <path class="cls-7" d="M0,0h323.1C351.69,0,374.89,23.21,374.89,51.79h0c0,28.59-23.21,51.79-51.79,51.79H51.79C23.21,103.59,0,80.38,0,51.79V0H0Z"/>
+      <text class="cls-1" transform="translate(41.07 73.13)"><tspan class="cls-4" x="0" y="0">15</tspan><tspan class="cls-15" x="82.49" y="0">%</tspan></text>
+      <text class="cls-3" transform="translate(178.28 42.87)"><tspan class="cls-14" x="0" y="0">DESCUE</tspan><tspan class="cls-10" x="99.21" y="0">N</tspan><tspan class="cls-9" x="117.46" y="0">T</tspan><tspan class="cls-14" x="132.11" y="0">O</tspan></text>
+      <text class="cls-2" transform="translate(176.29 71.52)"><tspan class="cls-12" x="0" y="0">C</tspan><tspan class="cls-6" x="20.46" y="0">O</tspan><tspan class="cls-11" x="44.19" y="0">N</tspan><tspan class="cls-13" x="67.07" y="0">T</tspan><tspan class="cls-8" x="84.72" y="0">A</tspan><tspan class="cls-5" x="107.17" y="0">DO</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -13,7 +13,7 @@
     color: var(--gris-claro);
     font-family: 'Roboto';
     font-weight: 400;
-    font-size: 19px;
+    font-size: 18px;
     text-decoration: none !important;
     margin-bottom: 18px;
 }
@@ -23,6 +23,9 @@
 
 .titulo{
     color: var(--ocre);
+}
+.tituloinmo{
+  color:  var(--naranja);
 }
 #nav{
   display: flex;
@@ -40,4 +43,9 @@
   #footer-1{
     width: auto;
   }
+}
+@media  (max-width: 1200px) {
+  .contacts {
+    font-size: 15px;
+}
 }

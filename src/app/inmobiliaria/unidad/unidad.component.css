@@ -1,0 +1,54 @@
+#inmuebles{
+    padding: 20px;
+}
+.flex-grid{
+    width: auto;
+}
+#imagenes{
+    justify-content: space-between;
+}
+#imagenes img{
+    max-height: 700px;
+}
+#primera-img{
+    width: 64%;
+    height: auto;
+}
+#segunda-img{
+    width: 33%;
+}
+.categoria{
+    border-radius: 30px;
+    padding: 5px 10px;
+    margin: 0;
+    margin-right: 20px;
+    border: solid black 1px;
+}
+.margin-auto{
+    margin: auto;
+}
+.space-around{
+    justify-content: space-around;
+}
+.space-between{
+    justify-content: space-between;
+}
+.light{
+    line-height: normal;
+    font-weight: 300;
+}
+.mySwiperCabeceraEscritorio, .mySwiperCabeceraMovil {
+    padding: 0px;
+    max-height: 700px;
+    overflow: hidden;
+}
+@media (max-width: 800px) {
+    #categorias{
+        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .categoria{
+        margin-bottom: 5px;
+    }
+}

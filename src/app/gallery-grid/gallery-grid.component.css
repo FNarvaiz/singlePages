@@ -20,6 +20,7 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
+    height: auto;
   }
   #gallery > div {
     width: 48%;

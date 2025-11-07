@@ -1,0 +1,58 @@
+/* Contenedor principal */
+*{
+  font-family: "Roboto";
+}
+.condiciones-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 16px 0;
+}
+
+/* Tarjetas con sombra ligera */
+.tarjeta {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tarjeta h2 {
+  font-size: 1.25rem;
+  margin: 0 0 8px 0;
+}
+
+.tarjeta h3 {
+  font-size: 1.1rem;
+  margin: 12px 0 8px 0;
+}
+
+.lista {
+  padding-left: 18px;
+  margin: 6px 0 0 0;
+}
+
+.lista li,
+.tarjeta p {
+  line-height: 1.7;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+  h1 { font-size: 2.25rem; }
+  .tarjeta { padding: 20px; }
+}
+
+@media (min-width: 1024px) {
+  h1 { font-size: 2.5rem; }
+  .tarjeta { padding: 24px; }
+}
+
