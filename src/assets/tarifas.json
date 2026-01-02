@@ -1,53 +1,116 @@
 {
   "habitaciones": ["Doble","Triple","Deptox4/5"],
   "cronograma": [
+    
     {
-      "titulo": "Feriado Largo de Octubre 2025",
-      "Desde": "2025-10-10",
-      "Hasta": "2025-10-13",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Servicio de Merienda",
+       "titulo": "Feriado Largo de Diciembre Del 05/12 al 08/12 Inclusive",
+      "Desde": "2025-08-07",
+      "Hasta": "2025-12-12",
+      "Servicios":"Desayuno Buffet, sin limite de horario. Servicio de Merienda. Carpa en Balneario a 250mts del Hotel ",
+      "Imagenes":["3_cuotas.svg","10_desc.svg"],
       "promos": [
         {
-          "nombre": "3 Noches, Abonás 2!!",
-          "precios": [[179000], [239000], [299000]]
+          "nombre": "2 Noches",
+          "precios": [[232900,269000], [286900,329000], [340900,419000]]
         },
         {
-          "nombre": "2 Noches",
-          "precios": [[151300], [202300], [253300]]
+          "nombre": "3 Noches",
+          "precios": [[309900,359000], [381900,429000], [453900,549000]]
         }
-            ]
-
+        ,
+        {
+          "nombre": "4 Noches, Abona 3!!",
+          "precios": [[309900,359000], [381900,429000], [453900,549000]]
+        }
+        ]
     },
     {
-      "titulo": "Feriado Largo de Noviembre 2025",
-      "Desde": "2025-11-21",
-      "Hasta": "2025-11-24",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Servicio de Merienda",
+       "titulo": "Promo Diciembre Del 09/12 al 19/12 Inclusive",
+      "Desde": "2025-08-07",
+      "Hasta": "2025-12-21",
+      "Servicios":"Desayuno Buffet, sin limite de horario. Servicio de Merienda. Carpa en Balneario a 250mts del Hotel. Bolso Playero, con Toallones para la playa",
+      "Info":"A partir de la 5º Noche, 1 Bonificada",
+      "Imagenes":["3y6_cuotas.svg","15_desc.svg"],
       "promos": [
         {
-          "nombre": "3 Noches, Abonás 2!!",
-          "precios": [[179000], [239000], [299000]]
+          "nombre": "2 Noches",
+          "precios": [[188900], [245900], [302900]]
         },
         {
-          "nombre": "2 Noches",
-          "precios": [[151300], [202300], [253300]]
+          "nombre": "3 Noches",
+          "precios": [[267900], [348900], [429900]]
         }
         
+        ,
+        {
+          "nombre": "4 Noches",
+          "precios": [[336900], [438900], [540900]]
+        }
       ]
     },
     {
-      "titulo": "Temporada 2026",
+       "titulo": "Super Promo Navidad del 20/12 al 26/12 Inclusive",
+      "Desde": "2025-08-07",
+      "Hasta": "2025-12-21",
+      "Servicios":"Desayuno Buffet, sin limite de horario. Carpa en Balneario a 250mts del Hotel. Bolso Playero, con Toallones para la playa.",
+      "Info":"A partir de la 5º Noche, 1 Bonificada",
+      "Imagenes":["3y6_cuotas.svg","15_desc.svg"],
+      "promos": [
+        {
+          "nombre": "2 Noches",
+          "precios": [[289000,329000], [359000,399000], [439000,519000]]
+        },
+        {
+          "nombre": "3 Noches",
+          "precios": [[399000,459000], [509000,569000], [619000,729000]]
+        }
+        
+        ,
+        {
+          "nombre": "4 Noches",
+          "precios": [[509000,579000], [649000,719000], [779000,919000]]
+        }
+      ]
+    },
+    {
+
+      "titulo": "Preventa Temporada 2026 - Del 27/12 al 17/02 Inclusive",
       "Desde": "2025-08-04",
       "Hasta": "2026-02-28",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en balnerio Daytona a 250mts del Hotel",
+      "Servicios":"Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en balnerio Daytona a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de 7 noches",
+      "Info":"A partir de la 5º Noche, 1 Bonificada",
+      "Imagenes":["3_cuotas.svg","10_desc.svg"],
       "promos": [
         {
           "nombre": "7 Noches",
-          "precios": [[1290000,1490000], [1590000,1790000]]
+          "precios": [[1390000,1590000], [1690000,1890000]]
         },
         {
           "nombre": "4 Noches Lunes a Jueves",
-          "precios": [[630000,730000], [780000,880000]]
+          "precios": [[680000,780000], [830000,930000]]
+        }
+           ]
+        },
+    {
+
+      "titulo": "Super Promo Del 18/02 al 28/02 Inclusive",
+      "Desde": "2025-08-04",
+      "Hasta": "2026-02-28",
+      "Servicios":"Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en balnerio Daytona a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de 7 noches",
+      "Imagenes":["3y6_cuotas.svg","15_desc.svg"],
+      "promos": [
+        {
+          "nombre": "2 Noches",
+          "precios": [[289000,329000], [359000,399000], [439000,479000]]
+        },
+        {
+          "nombre": "3 Noches",
+          "precios": [[409000,459000], [519000,569000], [619000,679000]]
+        
+        },
+        {
+          "nombre": "4 Noches",
+          "precios": [[509000,579000], [649000,719000], [779000,849000]]
         }
       ]
     }

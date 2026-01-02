@@ -22,7 +22,7 @@ export class InicioComponent implements OnInit {
   //redireccionar a /hotel/restaurant
   clickConoceMas() {
     // Redireccionar a /hotel/restaurant
-    window.location.href = '/hotel/restaurant';
+    window.location.href = '/#/hotel/restaurant';
   }
   servicios: { img: string; titulo: string; descripcion: string }[] = [
     {

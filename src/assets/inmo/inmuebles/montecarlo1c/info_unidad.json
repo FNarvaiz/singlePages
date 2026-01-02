@@ -1,0 +1,37 @@
+{
+  "nombre": "MONTECARLO 1ºC",
+  "imagen1": "living.jpeg",
+  "imagen2": "hab matrimonial.jpg",
+  "descripcion": "Departamento 2 ambientes, súper amplio. Inmejorable ubicación: calle 13 Nº 707 , a 100 metros del mar y a 400 metros de la calle peatonal.  Con vista al mar desde el living y habitación.<br>Totalmente amoblado y equipado con vajilla completa para 4 personas, heladera con freezer, microondas, TV, WI-FI. Departamento ideal para 4 personas.<br>Calidad del Departamento: Muy Bueno.",
+  "banios":1,
+  "camas": 3,
+  "venta": true,
+  "categoria":"2 AMBIENTES",
+  "direccion": "Diagonal Arturo Illia 949",
+  "imagenes": [
+    {
+      "ruta": "cocina.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "banio.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "hab mat.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "banio.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "monte.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "hab matrimonial.jpg",
+      "alt": "Imagen de la unidad"
+    }
+  ]
+}

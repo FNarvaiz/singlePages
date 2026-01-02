@@ -1,0 +1,48 @@
+{
+  "categorias" : ["1 AMBIENTE","2 AMBIENTES","3 AMBIENTES"],
+  "tipos" : ["En Aquiler","Verano 2025"],
+  "inmuebles" : [
+    {  
+      "nombre": "ALMAR 7ºB",
+      "categoria": 1,
+      "tipo": [1],
+      "camas":2,
+      "banios":1,
+      "carpeta": "inmuebles/almar7b",
+      "imagen": "SAM_2078.JPG",
+      "localizacion": {
+        "direccion": "Calle 13 Nº 646",
+        "x":"-38.2714496",
+        "y":"-57.8325488"
+      }
+    },
+    { 
+      "nombre": "DIAGOMAR 4ºE",
+      "categoria": 3,
+      "tipo": [1],
+      "camas":4,
+      "banios":1,
+      "carpeta": "inmuebles/diagomar4e",
+      "imagen": "diago.jpg",
+      "localizacion": {
+        "direccion": "Diagonal Arturo Illia 949",
+        "x":"-38.2702029",
+        "y":"-57.8360405"
+      }
+    },
+    {  
+      "nombre": "MONTECARLO 1ºC",
+      "categoria": 2,
+      "tipo": [1],
+      "camas":3,
+      "banios":1,
+      "carpeta": "inmuebles/montecarlo1c",
+      "imagen": "monte.jpeg",
+      "localizacion": {
+        "direccion": "Calle 13 Nº 707",
+        "x":"-38.2708621",
+        "y":"-57.8329636"
+      }
+    }
+  ]
+}

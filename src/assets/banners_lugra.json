@@ -1,11 +1,11 @@
 {
   "escritorio": [
     {
-      "ruta": "assets/galeria/Banners/banner_7noches.jpg",
+      "ruta": "assets/galeria/Banners/banner_7_descuento.jpg",
       "alt": "Temporada 2026 7 noches en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/banner_4noches.jpg",
+      "ruta": "assets/galeria/Banners/banner_4_descuento.jpg",
       "alt": "Temporada 2026 4 noches en el Hotel Lugra"
     },
     {
@@ -19,11 +19,11 @@
   ],
   "movil": [
     {
-      "ruta": "assets/galeria/Banners/historia_7_noches.jpg",
+      "ruta": "assets/galeria/Banners/udHistoria_7_Noches.jpg",
       "alt": "Temporada 2026 7 noches en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/historia_4_noches.jpg",
+      "ruta": "assets/galeria/Banners/udHistoria_4_Noches.jpg",
       "alt": "Temporada 2026 4 noches en el Hotel Lugra"
     },
     {

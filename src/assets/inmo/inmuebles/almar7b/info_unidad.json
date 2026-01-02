@@ -1,0 +1,42 @@
+{
+  "nombre": "ALMAR 7ºB",
+  "imagen1": "SAM_2079.JPG",
+  "imagen2": "SAM_2077.JPG",
+  "descripcion": "Departamento 1 ambiente cómodo, vista lateral al mar. Inmejorable ubicación en calle 13 entre 12 y 14, a 50 metros del Mar y 400 metro de la Peatonal.<br>Totalmente amoblado y equipado con vajilla completa, heladera con freezer, microondas, TV por cable, WI-FI.<br>Departamento ideal para 2 personas, 1 baño.<br>Calidad del Departamento: Bueno.",
+  "banios":1,
+  "camas": 2,
+  "categoria":"1 AMBIENTE",
+  "direccion": "Diagonal Arturo Illia 949",
+  "imagenes": [
+    {
+      "ruta": "Almar7B.JPG",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "SAM_2071.JPG",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "SAM_2075.JPG",
+      "alt": "Imagen de la unidad"
+    }
+    ,
+    {
+      "ruta": "SAM_2077.JPG",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "SAM_2078.JPG",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "SAM_2079.JPG",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "SAM_2083.JPG",
+      "alt": "Imagen de la unidad"
+    }
+  ]
+  
+}

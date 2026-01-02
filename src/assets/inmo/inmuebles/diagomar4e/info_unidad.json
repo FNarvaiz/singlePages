@@ -1,0 +1,94 @@
+{
+  "nombre": "DIAGOMAR 4ºE",
+  "imagen1": "diago.jpg",
+  "imagen2": "balcon.jpg",
+  "descripcion": "Departamento amplio contra frente muy lumionoso. Ubicado en Diagonal Arturo Illia, a 300 metros de la calle peatonal y 300 metros del mar de la ciudad.<br>Totalmente amoblado y equipado con vajilla completa para 4 personas, heladera con freezer, TV led.<br>Departamento ideal para 4 personas, 1 baños.<br>Calidad del Departamento: Bueno.",
+  "banios":1,
+  "camas": 4,
+  "venta": false,
+  "categoria":"3 AMBIENTES",
+  "direccion": "Diagonal Arturo Illia 949",
+  "tarifas": [
+    {
+      "titulo": "DICIEMBRE",
+      "Desde": "2025-12-15",
+      "Hasta": "2025-12-31",
+      "Servicios":"",
+      "Info":"",
+      "promos": [
+        {
+          "nombre": "4 Noches",
+          "precios": [[100000]]
+        },
+        {
+          "nombre": "7 Noches",
+          "precios": [[151300]]
+        },
+        {
+          "nombre": "Quincena",
+          "precios": [[151300]]
+        }
+      ]
+    },
+    {
+      "titulo": "ENERO",
+      "Desde": "2026-01-01",
+      "Hasta": "2026-01-31",
+      "Servicios":"",
+      "Info":"",
+      "promos": [
+        {
+          "nombre": "4 Noches",
+          "precios": [[100000]]
+        },
+        {
+          "nombre": "7 Noches",
+          "precios": [[151300]]
+        },
+        {
+          "nombre": "Quincena",
+          "precios": [[151300]]
+        }
+      ]
+    }
+  ],
+  "imagenes": [
+    {
+      "ruta": "balconn.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "banio2.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "cocina.jpg",
+      "alt": "Imagen de la unidad"
+    }
+    ,
+    {
+      "ruta": "hab mat.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "banio.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "hab.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "living comedor.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "mat.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "hab matrimonial.jpg",
+      "alt": "Imagen de la unidad"
+    }
+  ]
+}

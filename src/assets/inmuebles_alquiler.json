@@ -1,0 +1,93 @@
+{
+  "categorias" : ["1 AMBIENTE","2 AMBIENTES","3 AMBIENTES"],
+  "tipos" : ["En Aquiler","Verano 2026"],
+  "inmuebles" : [
+    {  
+      "nombre": "ALMAR 7ºB",
+      "categoria": 1,
+      "tipo": [1],
+      "camas":2,
+      "banios":1,
+      "carpeta": "inmuebles/almar7b",
+      "imagen": "SAM_2078.JPG",
+      "localizacion": {
+        "direccion": "Calle 13 Nº 646",
+        "x":"-38.2714453",
+        "y":"-57.8348448"
+      }
+    },
+    {  
+      "nombre": "DIAGOMAR 4ºE",
+      "categoria": 3,
+      "tipo": [1],
+      "camas":4,
+      "banios":1,
+      "carpeta": "inmuebles/diagomar4e",
+      "imagen": "diago.jpg",
+      "localizacion": {
+        "direccion": "Diagonal Arturo Illia 949",
+        "x":"-38.2701987",
+        "y":"-57.8360405"
+      }
+    },
+    {  
+      "nombre": "DIAGOMAR 1ºC",
+      "categoria": 3,
+      "tipo": [1],
+      "camas":3,
+      "banios":2,
+      "carpeta": "inmuebles/diagomar1c",
+      "imagen": "Livingcomedor1.jpeg",
+      "localizacion": {
+        "direccion": "Diagonal Arturo Illia 949",
+        "x":"-38.2701987",
+        "y":"-57.8360405"
+      }
+    },
+    {  
+      "nombre": "MONTECARLO 1ºC",
+      "categoria": 2,
+      "tipo": [1],
+      "camas":3,
+      "banios":1,
+      "carpeta": "inmuebles/montecarlo1c",
+      "imagen": "monte.jpeg",
+      "localizacion": {
+        "direccion": "Calle 13 Nº 707",
+        "x":"-38.2708579",
+        "y":"-57.8329636"
+        
+      }
+      },
+    {  
+      "nombre": "LAS VEGAS 1º5",
+      "categoria": 1,
+      "tipo": [1],
+      "camas":2,
+      "banios":1,
+      "carpeta": "inmuebles/lasvegas",
+      "imagen": "comedor.jpeg",
+      "localizacion": {
+        "direccion": "Calle 18 Nº 873",
+        "x":"-38.2706525",
+        "y":"-57.837729"
+}
+      },
+    {  
+      "nombre": "CRONOS 25",
+      "categoria": 2,
+      "tipo": [1],
+      "camas":3,
+      "banios":1,
+      "carpeta": "inmuebles/cronos25",
+      "imagen": "comedor.jpeg",
+      "localizacion": {
+        "direccion": "Calle 18 Nº 942",
+        "x":"-38.2714542",
+        "y":"-57.836448"
+        
+        
+      }
+    }
+  ]
+}
