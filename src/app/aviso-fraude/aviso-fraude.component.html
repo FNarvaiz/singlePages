@@ -1,0 +1,39 @@
+@if (visible) {
+<div class="modal-backdrop" (click)="cerrar()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="modal-close" (click)="cerrar()">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <div class="modal-icon">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+
+    <h2 class="modal-title">Aviso Importante</h2>
+
+    <p class="modal-text">
+      Ante la circulación de sitios webs y números de contacto
+      <strong>que no pertenecen a nuestra empresa</strong>, desde donde se
+      ofrecen falsas reservas y tarifas que no corresponden a nuestros
+      servicios, les recordamos nuestros <strong>canales oficiales</strong>:
+    </p>
+
+    <ul class="canales-list">
+      @for (canal of canales; track canal.label) {
+      <li>
+        <i class="fas {{ canal.icono }}"></i>
+        <span class="canal-label">{{ canal.label }}:</span>
+        <span class="canal-valor">{{ canal.valor }}</span>
+      </li>
+      }
+    </ul>
+
+    <p class="modal-warning">
+      <i class="fas fa-exclamation-triangle"></i>
+      OTRO MEDIO NO ESTÁ AUTORIZADO
+    </p>
+
+    <button class="modal-btn" (click)="cerrar()">Entendido</button>
+  </div>
+</div>
+}

@@ -1,0 +1,25 @@
+<section class="opiniones-section">
+  <p class="title-39">Lo que dicen nuestros huéspedes</p>
+  <p class="subtitle">Opiniones de Google</p>
+
+  @if (elfsightWidgetId && !fallbackActivo) {
+  <div id="elfsight-container" class="widget-container"></div>
+  } @else if (embedUrl) {
+  <div class="widget-container">
+    <iframe
+      [src]="safeEmbedUrl"
+      width="100%"
+      height="400"
+      frameborder="0"
+      allowtransparency="true"
+      loading="lazy"
+      title="Google Reviews"
+    ></iframe>
+  </div>
+  } @else {
+  <div class="widget-placeholder">
+    <p>Widget de opiniones no configurado.</p>
+    <p>Agregar ID de Elfsight o URL de embed.</p>
+  </div>
+  }
+</section>

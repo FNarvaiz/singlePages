@@ -1,0 +1,77 @@
+{
+  "nombre": "LAS VEGAS 1º5",
+  "imagen1": "comedor.jpeg",
+  "imagen2": "cocina.jpeg",
+  "descripcion": "Departamento 1 ambiente cómodo, vista a la calle. Unicado en calle 18 entre 15 y 17, a 300 metros del Mar y 250 metros de la Peatonal.<br>Totalmente amoblado y equipado con vajilla completa para 2/3 personas, microondas, TV por cable, WI-FI.<br>Departamento ideal para 2 personas, 1 baño.<br>Calidad del Departamento: Bueno.",
+  "banios":1,
+  "camas": 2,
+  "categoria":"1 AMBIENTE",
+  "direccion": "calle 18 Nº 875",
+  "imagenes": [
+    {
+      "ruta": "comedor.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "comedor2.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "banio.jpeg",
+      "alt": "Imagen de la unidad"
+    }
+    ,
+    {
+      "ruta": "cocina.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "cocina2.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "dormitorio.jpeg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "comedor3.jpg",
+      "alt": "Imagen de la unidad"
+   }
+  ],
+  "venta": false,
+  "tarifas": [
+    {
+      "titulo": "NAVIDAD 2026",
+      "Desde": "2026-12-21",
+      "Hasta": "2026-12-26",
+      "Servicios": "",
+      "Info": "Super Promo Navidad 2026",
+      "promos": [
+        { "nombre": "4 Días", "precios": [[339000]] },
+        { "nombre": "5 Días", "precios": [[399000]] },
+        { "nombre": "7 Días", "precios": [[519000]] }
+      ]
+    },
+    {
+      "titulo": "TEMPORADA ALTA",
+      "Desde": "2026-12-30",
+      "Hasta": "2027-02-14",
+      "Servicios": "",
+      "Info": "",
+      "promos": [
+        { "nombre": "7 Días", "precios": [[749000]] }
+      ]
+    },
+    {
+      "titulo": "PROMO FEBRERO 2027",
+      "Desde": "2027-02-15",
+      "Hasta": "2027-03-31",
+      "Servicios": "",
+      "Info": "Promo desde el 15 de Febrero",
+      "promos": [
+        { "nombre": "5 Días", "precios": [[399000]] },
+        { "nombre": "7 Días", "precios": [[519000]] }
+      ]
+    }
+  ]
+}

@@ -19,9 +19,9 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: 'Luis Protti & Hotel Lugra | Miramar',
+        title: 'Luis Protti & Hotel Lugra | Miramar — Más de 50 años',
         data: {
-            description: 'Sitio oficial de Inmobiliaria Luis Protti y Hotel Lugra en Miramar. Alquileres, ventas y alojamiento.'
+            description: 'Sitio oficial de Hotel Lugra, Alquileres Luis Protti e Inmobiliaria Luis Protti en Miramar. Alojamiento, alquileres temporarios y venta de inmuebles.'
         }
     },
     {
@@ -55,9 +55,9 @@ export const routes: Routes = [
             {
                 path: 'tarifas',
                 component: TarifasComponent,
-                title: 'Hotel Lugra | Tarifas y promociones',
+                title: 'Hotel Lugra | Tarifas y promociones 2027',
                 data: {
-                    description: 'Consulta precios actualizados, temporadas y promociones especiales del Hotel Lugra. Reserva directa al mejor precio.'
+                    description: 'Preventa 2027, tarifas, promociones con descuento y cuotas sin interés. Reservá en Hotel Lugra al mejor precio.'
                 }
             },{
                 path: 'contacto',
@@ -70,9 +70,9 @@ export const routes: Routes = [
             {
                 path: 'restaurant',
                 component: RestaurantComponent,
-                title: 'Hotel Lugra | Restaurant y desayunos',
+                title: 'Hotel Lugra | Restaurant Jurere en Miramar',
                 data: {
-                    description: 'Conoce nuestro servicio de desayunos y opciones gastronómicas dentro del Hotel Lugra.'
+                    description: 'Almorzá o cená en Restaurant Jurere, Calle 23 N° 798 esq. 16, Miramar. Entrada, plato principal, postre y bebida. A 700 mts de Hotel Lugra.'
                 }
             },
         ]

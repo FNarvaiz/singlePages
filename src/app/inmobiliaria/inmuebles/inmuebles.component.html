@@ -1,36 +1,33 @@
-<div class="back-gris center ptop-20 pbottom-20">
-    <section class="margin-auto limit-1200 mtop-20" id="inmuebles">
-    <section class="margin-auto limit-1200 mbottom-20 flex-grid" id="filtros">
-        @for (item of categorias; track $index) {
+<div class="inmuebles-page">
 
-            <h1 class="item" (click)="filtrar($index)" >{{item}}</h1>
-        }
-    </section>
-    
-<section class="margin-auto limit-1200 flex-grid" >
-    @for (item of inmueblesFiltered; track $index) {
-        <article (click)="clickInmueble(item)" class="element-inmueble">
-            <img [src]="getPathImg(item)" [alt]="item.nombre">
-            <section class="left">
-                <p class="roboto-medium size-16 categoria">
-                    {{categorias[item.categoria-1]}}
-                </p>
-                <p  class="roboto-medium size-22 titulo">
-                    {{item.nombre}}
-                </p>
-                <section class="flex-grid flex-start">
-                    <p class="roboto-regular size-16 caract">Banios: {{item.banios}}         </p>
-                    <p class="roboto-regular size-16 caract">Camas: {{item.camas}}</p>
-                </section>
-                <div class="flex-grid flex-start">
-                <fa-icon [icon]="faLocationDot"/><p class="roboto-regular size-16">{{item.localizacion.direccion}}</p>
-            </div>
-            </section>
-        </article>
+  <div class="filtros-bar">
+    <button class="filtro-btn" [class.activo]="categoriaActiva === null" (click)="filtrarTodos()">Todos</button>
+    @for (item of categorias; track $index) {
+      <button class="filtro-btn" [class.activo]="categoriaActiva === $index" (click)="filtrar($index)">{{ item }}</button>
     }
-</section>
-<!-- <section class="margin-auto limit-1200 mbottom-20">
-    <app-mapa-inmuebles [inmuebles]="inmueblesFiltered"></app-mapa-inmuebles>
-</section> -->
-</section>
+  </div>
+
+  <div class="cards-grid">
+    @for (item of inmueblesFiltered; track $index) {
+      <article class="card" (click)="clickInmueble(item)">
+        <div class="card-img-wrapper">
+          <img [src]="getPathImg(item)" [alt]="item.nombre" class="card-img" />
+          <span class="card-badge">{{ categorias[item.categoria - 1] }}</span>
+        </div>
+        <div class="card-body">
+          <h2 class="card-nombre">{{ item.nombre }}</h2>
+          <div class="card-specs">
+            <span><fa-icon [icon]="faBed" /> {{ item.camas }} {{ item.camas === 1 ? 'cama' : 'camas' }}</span>
+            <span><fa-icon [icon]="faBath" /> {{ item.banios }} {{ item.banios === 1 ? 'baño' : 'baños' }}</span>
+          </div>
+          <div class="card-ubicacion">
+            <fa-icon [icon]="faLocationDot" />
+            <span>{{ item.localizacion.direccion }}</span>
+          </div>
+          <button class="card-cta">Ver detalles</button>
+        </div>
+      </article>
+    }
+  </div>
+
 </div>

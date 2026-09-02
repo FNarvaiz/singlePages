@@ -1,0 +1,98 @@
+.agencias-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 16px;
+  margin: 4px 0 40px;
+}
+
+.agencias-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.agencia-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.agencia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.agencia-img-wrapper {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.agencia-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.agencia-content {
+  padding: 20px 24px 24px;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.agencia-nombre {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #222;
+  margin: 0 0 8px;
+}
+
+.agencia-descripcion {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.agencia-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1565c0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.agencia-link:hover { color: #0d47a1; }
+
+@media (max-width: 900px) {
+  .agencias-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .agencias-grid { grid-template-columns: 1fr; }
+  .agencia-img-wrapper { height: 130px; }
+}

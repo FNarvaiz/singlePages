@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { JsonService } from '../../services/json.service';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faBed, faBath } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Router } from '@angular/router';
 import { MapaInmueblesComponent } from './mapa-inmuebles.component';
@@ -17,14 +17,17 @@ export class Inmueble {
 @Component({
     selector: 'app-inmuebles',
     standalone: true,
-    imports: [FontAwesomeModule, MapaInmueblesComponent],
+    imports: [FontAwesomeModule],
     templateUrl: './inmuebles.component.html',
     styleUrl: './inmuebles.component.css'
 })
 export class InmueblesComponent {
     @Input() venta: boolean = false;
     constructor(private jsonService: JsonService, private router: Router) {}
-    faLocationDot =faLocationDot
+    faLocationDot = faLocationDot;
+    faBed = faBed;
+    faBath = faBath;
+    categoriaActiva: number | null = null;
     categorias: string[] = [];
     tipos: string[] = [];
     inmuebles: Inmueble[] = [];
@@ -50,9 +53,14 @@ export class InmueblesComponent {
   
       return "./assets/inmo/"+obj.carpeta+"/"+obj.imagen;
     }
-    public filtrar(categoriaId : number){
-      const id = categoriaId +1
-      this.inmueblesFiltered = this.inmuebles.filter(x => x.categoria==id);
+    public filtrarTodos() {
+      this.inmueblesFiltered = this.inmuebles;
+      this.categoriaActiva = null;
+    }
+    public filtrar(categoriaId: number) {
+      const id = categoriaId + 1;
+      this.inmueblesFiltered = this.inmuebles.filter(x => x.categoria == id);
+      this.categoriaActiva = categoriaId;
     }
     public clickInmueble(obj: Inmueble){
       this.router.navigate(['/inmobiliaria/unidad', obj.carpeta]);

@@ -4,12 +4,13 @@ import { NavbarComponent } from './../../navbar/navbar.component'
 import { NavbarLugraTopComponent } from "../navbar-lugra-top/navbar-lugra-top.component";
 import { FooterComponent } from '../../footer/footer.component';
 import { WhatsappComponent } from '../../whatsapp/whatsapp.component';
+import { AvisoFraudeComponent } from '../../aviso-fraude/aviso-fraude.component';
 import { menuNavList } from '../menuItemList';
 
 @Component({
     selector: 'app-pagina-lugra',
     standalone: true,
-    imports: [WhatsappComponent, FooterComponent, NavbarComponent, RouterOutlet, NavbarLugraTopComponent],
+    imports: [WhatsappComponent, FooterComponent, NavbarComponent, RouterOutlet, NavbarLugraTopComponent, AvisoFraudeComponent],
     templateUrl: './pagina-lugra.component.html',
     styleUrl: './pagina-lugra.component.css'
 })

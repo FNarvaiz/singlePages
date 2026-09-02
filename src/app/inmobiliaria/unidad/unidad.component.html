@@ -1,38 +1,71 @@
-<div class="back-gris center ptop-20 pbottom-20 p-5">
-  <section class="margin-auto limit-1200 back-blanco mtop-20" id="inmuebles">
-    <p class="roboto-medium size-48">{{ unidad.nombre }}</p>
-    <section  class="flex-grid mbottom-20" id="imagenes">
-      <img id="primera-img" [src]="unidad.imagen1" alt="Imagen principal de {{ unidad.nombre }}">
-      <img id="segunda-img" [src]="unidad.imagen2" alt="Imagen secundaria de {{ unidad.nombre }}">
-    </section>
-    <section class="flex-grid space-between items-center mbottom-40">
-      <div class="flex-grid space-around items-center" id="categorias"  >
-        <p class="categoria text-naranja roboto-regular size-22">{{unidad.categoria}} </p>
-        <p class="categoria roboto-regular size-22">Camas: {{unidad.camas}} </p>
-        <p class="categoria roboto-regular size-22">Baños: {{unidad.banios}} </p>
+<div class="unidad-page">
+  <div class="unidad-container">
+
+    <header class="unidad-header">
+      <h1 class="unidad-nombre">{{ unidad.nombre }}</h1>
+      <div class="unidad-meta">
+        <span class="unidad-cat-badge">{{ unidad.categoria }}</span>
+        <span class="unidad-loc">
+          <fa-icon [icon]="faLocationDot" /> {{ unidad.direccion }}
+        </span>
       </div>
-      <div class="flex-grid items-center" > 
-        <fa-icon [icon]="faLocationDot"/> 
-        <p class="roboto-medium size-22 margin-auto">{{ unidad.direccion }}</p>
+      <div class="unidad-specs">
+        <span><fa-icon [icon]="faBed" /> {{ unidad.camas }} {{ unidad.camas === 1 ? 'cama' : 'camas' }}</span>
+        <span class="sep">·</span>
+        <span><fa-icon [icon]="faBath" /> {{ unidad.banios }} {{ unidad.banios === 1 ? 'baño' : 'baños' }}</span>
       </div>
+    </header>
+
+    <div class="gallery-hero">
+      <div class="gallery-main" (click)="openLightbox(0)">
+        <img [src]="unidad.imagen1" [alt]="unidad.nombre" />
+      </div>
+      <div class="gallery-right">
+        @for (img of unidad.imagenes.slice(0, 4); track $index) {
+          <div class="gallery-thumb" (click)="openLightbox($index)">
+            <img [src]="img.ruta" [alt]="img.alt" />
+            @if ($last && unidad.imagenes.length > 4) {
+              <div class="gallery-more">+{{ unidad.imagenes.length - 4 }} fotos</div>
+            }
+          </div>
+        }
+      </div>
+      <button class="gallery-btn" (click)="openLightbox(0)">
+        <fa-icon [icon]="faImages" /> Ver todas las fotos
+      </button>
+    </div>
+
+    <section class="unidad-section">
+      <h2 class="section-title">Descripción</h2>
+      <p class="unidad-descripcion" [innerHTML]="unidad.descripcion"></p>
     </section>
-    <app-tarifas-grid [headers]="['Precio']" [titulo]="'Precios'" [tarifas]="unidad.tarifas"></app-tarifas-grid>
-    <p class="roboto-medium size-26 left">Descripcion General</p>
-    <p class="roboto-regular size-22 light" [innerHTML]="unidad.descripcion"></p>
-    <app-swiper-cabecera 
-    [addClassImg]="'maxH700'"
-        [imagenesEscritorio]="unidad.imagenes"
-        [imagenesMovil]="unidad.imagenes"
-    ></app-swiper-cabecera>
-  </section>
-  @if(unidad.venta) {
-  }
-  @else {
-    <section class="margin-auto limit-1200 mtop-20">
+
+    <section class="unidad-section">
+      <app-tarifas-grid [headers]="['Precio']" [titulo]="'Precios'" [tarifas]="unidad.tarifas"></app-tarifas-grid>
+    </section>
+
+    @if (!unidad.venta) {
+      <section class="unidad-section">
+        <app-formas-pago [temporadas]="formasPago"></app-formas-pago>
+      </section>
+    }
+
+  </div>
+
+  <dialog #lb class="lightbox-dialog" (click)="onDialogClick($event)" (close)="onDialogClose()">
+    <button class="lb-close" (click)="closeLightbox(); $event.stopPropagation()">&#x2715;</button>
+    <button class="lb-prev" (click)="prevImg(); $event.stopPropagation()">&#8249;</button>
+    <img class="lb-img" [src]="unidad.imagenes[lightboxIndex].ruta" [alt]="unidad.imagenes[lightboxIndex].alt" (click)="$event.stopPropagation()" />
+    <button class="lb-next" (click)="nextImg(); $event.stopPropagation()">&#8250;</button>
+    <p class="lb-counter" (click)="$event.stopPropagation()">{{ lightboxIndex + 1 }} / {{ unidad.imagenes.length }}</p>
+  </dialog>
+
+  @if (!unidad.venta) {
+    <div class="unidad-info">
       <app-como-reservar></app-como-reservar>
       <app-politicas></app-politicas>
       <app-condiciones></app-condiciones>
-    </section>
+    </div>
   }
 </div>
 

@@ -3,11 +3,12 @@ import { NavbarComponent } from "../../navbar/navbar.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { RouterOutlet } from '@angular/router';
 import { NavbarInmoTopComponent } from '../navbar-inmo-top/navbar-inmo-top.component';
+import { AvisoFraudeComponent } from '../../aviso-fraude/aviso-fraude.component';
 import { menuNavList } from '../menuItemList';
 @Component({
     selector: 'app-pagina-inmobiliaria',
     standalone: true,
-    imports: [NavbarComponent, NavbarInmoTopComponent, FooterComponent, RouterOutlet],
+    imports: [NavbarComponent, NavbarInmoTopComponent, FooterComponent, RouterOutlet, AvisoFraudeComponent],
     templateUrl: './pagina-inmobiliaria.component.html',
     styleUrl: './pagina-inmobiliaria.component.css'
 })

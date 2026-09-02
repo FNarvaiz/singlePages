@@ -1,117 +1,149 @@
 {
   "habitaciones": ["Doble","Triple","Deptox4/5"],
   "cronograma": [
-    
     {
-       "titulo": "Feriado Largo de Diciembre Del 05/12 al 08/12 Inclusive",
-      "Desde": "2025-08-07",
-      "Hasta": "2025-12-12",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Servicio de Merienda. Carpa en Balneario a 250mts del Hotel ",
-      "Imagenes":["3_cuotas.svg","10_desc.svg"],
+      "titulo": "Feriado Largo de Octubre — 10 al 12 de Octubre",
+      "Desde": "2026-10-10",
+      "Hasta": "2026-10-12",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
+      "Info": "15% descuento por transferencia bancaria.",
+      "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
-        {
-          "nombre": "2 Noches",
-          "precios": [[232900,269000], [286900,329000], [340900,419000]]
-        },
-        {
-          "nombre": "3 Noches",
-          "precios": [[309900,359000], [381900,429000], [453900,549000]]
-        }
-        ,
-        {
-          "nombre": "4 Noches, Abona 3!!",
-          "precios": [[309900,359000], [381900,429000], [453900,549000]]
-        }
-        ]
-    },
-    {
-       "titulo": "Promo Diciembre Del 09/12 al 19/12 Inclusive",
-      "Desde": "2025-08-07",
-      "Hasta": "2025-12-21",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Servicio de Merienda. Carpa en Balneario a 250mts del Hotel. Bolso Playero, con Toallones para la playa",
-      "Info":"A partir de la 5º Noche, 1 Bonificada",
-      "Imagenes":["3y6_cuotas.svg","15_desc.svg"],
-      "promos": [
-        {
-          "nombre": "2 Noches",
-          "precios": [[188900], [245900], [302900]]
-        },
-        {
-          "nombre": "3 Noches",
-          "precios": [[267900], [348900], [429900]]
-        }
-        
-        ,
-        {
-          "nombre": "4 Noches",
-          "precios": [[336900], [438900], [540900]]
-        }
+        { "nombre": "2 Noches", "precios": [[178200], [232200], [286200]] },
+        { "nombre": "3 Noches", "precios": [[237600], [309600], [381600]] }
       ]
     },
     {
-       "titulo": "Super Promo Navidad del 20/12 al 26/12 Inclusive",
-      "Desde": "2025-08-07",
-      "Hasta": "2025-12-21",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Carpa en Balneario a 250mts del Hotel. Bolso Playero, con Toallones para la playa.",
-      "Info":"A partir de la 5º Noche, 1 Bonificada",
-      "Imagenes":["3y6_cuotas.svg","15_desc.svg"],
+      "titulo": "Feriado Largo de Noviembre — 21 al 23 de Noviembre",
+      "Desde": "2026-11-21",
+      "Hasta": "2026-11-23",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
+      "Info": "15% descuento por transferencia bancaria.",
+      "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
-        {
-          "nombre": "2 Noches",
-          "precios": [[289000,329000], [359000,399000], [439000,519000]]
-        },
-        {
-          "nombre": "3 Noches",
-          "precios": [[399000,459000], [509000,569000], [619000,729000]]
-        }
-        
-        ,
-        {
-          "nombre": "4 Noches",
-          "precios": [[509000,579000], [649000,719000], [779000,919000]]
-        }
+        { "nombre": "2 Noches", "precios": [[178200], [232200], [286200]] },
+        { "nombre": "3 Noches", "precios": [[237600], [309600], [381600]] }
       ]
     },
     {
-
-      "titulo": "Preventa Temporada 2026 - Del 27/12 al 17/02 Inclusive",
-      "Desde": "2025-08-04",
-      "Hasta": "2026-02-28",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en balnerio Daytona a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de 7 noches",
-      "Info":"A partir de la 5º Noche, 1 Bonificada",
-      "Imagenes":["3_cuotas.svg","10_desc.svg"],
+      "titulo": "Feriado Largo de Diciembre — 6 al 8 de Diciembre",
+      "Desde": "2026-12-06",
+      "Hasta": "2026-12-08",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
+      "Info": "15% descuento por transferencia bancaria. Promo: 4 Noches, Abonás 3.",
+      "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
-        {
-          "nombre": "7 Noches",
-          "precios": [[1390000,1590000], [1690000,1890000]]
-        },
-        {
-          "nombre": "4 Noches Lunes a Jueves",
-          "precios": [[680000,780000], [830000,930000]]
-        }
-           ]
-        },
+        { "nombre": "2 Noches", "precios": [[268000], [322000], [376000]] },
+        { "nombre": "3 Noches", "precios": [[357000], [429000], [499000]] },
+        { "nombre": "4 Noches (Abonás 3)", "precios": [[357000], [429000]] }
+      ]
+    },
     {
-
-      "titulo": "Super Promo Del 18/02 al 28/02 Inclusive",
-      "Desde": "2025-08-04",
-      "Hasta": "2026-02-28",
-      "Servicios":"Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en balnerio Daytona a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de 7 noches",
-      "Imagenes":["3y6_cuotas.svg","15_desc.svg"],
+      "titulo": "Super Promo Baja — Hasta el 20 de Diciembre",
+      "Desde": "2026-12-08",
+      "Hasta": "2026-12-20",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
+      "Info": "Tarifa Tarjeta de Débito y Contado Efectivo. A partir de la 5ta noche, 1 de Regalo.",
+      "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
-        {
-          "nombre": "2 Noches",
-          "precios": [[289000,329000], [359000,399000], [439000,479000]]
-        },
-        {
-          "nombre": "3 Noches",
-          "precios": [[409000,459000], [519000,569000], [619000,679000]]
-        
-        },
-        {
-          "nombre": "4 Noches",
-          "precios": [[509000,579000], [649000,719000], [779000,849000]]
-        }
+        { "nombre": "2 Noches", "precios": [[245000], [302000], [359000]] },
+        { "nombre": "3 Noches", "precios": [[348000], [429000], [510000]] },
+        { "nombre": "4 Noches", "precios": [[438000], [540000], [642000]] }
+      ]
+    },
+    {
+      "titulo": "Super Promo Navidad 2026 — 21 al 26 de Diciembre",
+      "Desde": "2026-12-21",
+      "Hasta": "2026-12-26",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
+      "Info": "15% descuento por transferencia bancaria. A partir de la 5ta noche, 1 de Regalo.",
+      "Imagenes": ["3y6_cuotas.svg"],
+      "promos": [
+        { "nombre": "2 Noches", "precios": [[349000], [419000], [499000]] },
+        { "nombre": "3 Noches", "precios": [[489000], [599000], [699000]] },
+        { "nombre": "4 Noches", "precios": [[609000], [749000], [889000]] }
+      ]
+    },
+    {
+      "titulo": "Preventa Verano 2027 — Sin Balneario (30/12 al 14/02)",
+      "Desde": "2026-07-01",
+      "Hasta": "2027-02-14",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
+      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Imagenes": ["3y6_cuotas.svg", "15_desc.svg"],
+      "subHeaders": ["Standard", "C/ Aire Acond"],
+      "promos": [
+        { "nombre": "5 Noches", "precios": [[745000, 845000], [990000, 1150000]] },
+        { "nombre": "6 Noches", "precios": [[850000, 950000], [1150000, 1300000]] },
+        { "nombre": "7 Noches", "precios": [[950000, 1090000], [1250000, 1450000]] }
+      ]
+    },
+    {
+      "titulo": "Preventa Verano 2027 — Con Balneario (30/12 al 14/02)",
+      "Desde": "2026-07-01",
+      "Hasta": "2027-02-14",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en Balneario a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
+      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Imagenes": ["3y6_cuotas.svg"],
+      "subHeaders": ["Standard", "C/ Aire Acond"],
+      "promos": [
+        { "nombre": "5 Noches", "precios": [[990000, 1090000], [1250000, 1450000]] },
+        { "nombre": "6 Noches", "precios": [[1150000, 1250000], [1490000, 1650000]] },
+        { "nombre": "7 Noches", "precios": [[1290000, 1390000], [1650000, 1850000]] }
+      ]
+    },
+    {
+      "titulo": "Promo Febrero 2027 — Sin Balneario (15/02 al 28/02)",
+      "Desde": "2027-02-15",
+      "Hasta": "2027-02-28",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
+      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Imagenes": ["3y6_cuotas.svg", "15_desc.svg"],
+      "subHeaders": ["Standard", "C/ Aire Acond"],
+      "promos": [
+        { "nombre": "5 Noches", "precios": [[629000, 709000], [839000, 969000]] },
+        { "nombre": "6 Noches", "precios": [[719000, 799000], [969000, 1099000]] },
+        { "nombre": "7 Noches", "precios": [[799000, 919000], [1059000, 1219000]] }
+      ]
+    },
+    {
+      "titulo": "Promo Febrero 2027 — Con Balneario (15/02 al 28/02)",
+      "Desde": "2027-02-15",
+      "Hasta": "2027-02-28",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en Balneario a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
+      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Imagenes": ["3y6_cuotas.svg"],
+      "subHeaders": ["Standard", "C/ Aire Acond"],
+      "promos": [
+        { "nombre": "5 Noches", "precios": [[839000, 919000], [1059000, 1219000]] },
+        { "nombre": "6 Noches", "precios": [[969000, 1059000], [1259000, 1389000]] },
+        { "nombre": "7 Noches", "precios": [[1089000, 1169000], [1389000, 1559000]] }
+      ]
+    },
+    {
+      "titulo": "Super Promo Marzo 2027",
+      "Desde": "2027-03-01",
+      "Hasta": "2027-03-31",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda. Servicio de Balneario incluido.",
+      "Info": "15% descuento por transferencia bancaria. Promo: a partir de la 5ta noche, 1 de Regalo.",
+      "Imagenes": ["3y6_cuotas.svg"],
+      "promos": [
+        { "nombre": "2 Noches", "precios": [[269000], [329000], [379000]] },
+        { "nombre": "3 Noches", "precios": [[379000], [459000], [539000]] },
+        { "nombre": "4 Noches", "precios": [[479000], [579000], [679000]] }
+      ]
+    },
+    {
+      "titulo": "Día de la Memoria y Semana Santa 2027",
+      "Desde": "2027-03-24",
+      "Hasta": "2027-04-06",
+      "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
+      "Info": "15% descuento por transferencia bancaria. A partir de la 5ta noche, 1 de Regalo.",
+      "Imagenes": ["3y6_cuotas.svg"],
+      "promos": [
+        { "nombre": "3 Noches", "precios": [[409000], [489000], [599000]] },
+        { "nombre": "4 Noches", "precios": [[509000], [609000], [749000]] },
+        { "nombre": "5 Noches", "precios": [[599000], [719000], [879000]] }
       ]
     }
   ]

@@ -1,0 +1,84 @@
+.formas-pago-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.temporada-block {
+  margin-bottom: 48px;
+}
+
+.temporada-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #333;
+  margin: 0 0 24px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #d4a853;
+  display: inline-block;
+}
+
+.promos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.promo-card {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 32px 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.promo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.promo-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e8f0fe;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #1565c0;
+}
+
+.promo-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.promo-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .promos-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .promos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

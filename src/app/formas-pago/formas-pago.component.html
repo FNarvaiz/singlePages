@@ -1,0 +1,22 @@
+@if(temporadas.length > 0) {
+  <section class="formas-pago-section">
+    <p class="title-39">Formas de Pago</p>
+
+    @for (temporada of temporadas; track temporada.nombre) {
+    <div class="temporada-block">
+      <h3 class="temporada-title">{{ temporada.nombre }}</h3>
+      <div class="promos-grid">
+        @for (promo of temporada.promos; track promo.titulo) {
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fas {{ promo.icono }}"></i>
+          </div>
+          <h4 class="promo-title">{{ promo.titulo }}</h4>
+          <p class="promo-desc">{{ promo.descripcion }}</p>
+        </div>
+        }
+      </div>
+    </div>
+    }
+  </section>
+}

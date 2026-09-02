@@ -1,0 +1,25 @@
+@if (agencias.length > 0) {
+<section class="agencias-section">
+  <p class="title-39">{{ titulo }}</p>
+  <p class="subtitle">Descuentos exclusivos para socios y clientes</p>
+
+  <div class="agencias-grid">
+    @for (agencia of agencias; track agencia.nombre) {
+    <div class="agencia-card">
+      <div class="agencia-img-wrapper">
+        <img [src]="agencia.imagen" [alt]="agencia.nombre" class="agencia-img" />
+      </div>
+      <div class="agencia-content">
+        <h3 class="agencia-nombre">{{ agencia.nombre }}</h3>
+        <p class="agencia-descripcion">{{ agencia.descripcion }}</p>
+        @if (agencia.link) {
+        <a [href]="agencia.link" target="_blank" class="agencia-link">
+          Visitar sitio <i class="fas fa-external-link-alt"></i>
+        </a>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</section>
+}

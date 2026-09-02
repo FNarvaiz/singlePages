@@ -7,6 +7,41 @@
   "camas": 2,
   "categoria":"1 AMBIENTE",
   "direccion": "Diagonal Arturo Illia 949",
+  "tarifas": [
+    {
+      "titulo": "NAVIDAD 2026",
+      "Desde": "2026-12-21",
+      "Hasta": "2026-12-26",
+      "Servicios": "",
+      "Info": "Super Promo Navidad 2026",
+      "promos": [
+        { "nombre": "4 Días", "precios": [[389000]] },
+        { "nombre": "5 Días", "precios": [[459000]] },
+        { "nombre": "7 Días", "precios": [[599000]] }
+      ]
+    },
+    {
+      "titulo": "TEMPORADA ALTA",
+      "Desde": "2026-12-30",
+      "Hasta": "2027-02-14",
+      "Servicios": "",
+      "Info": "",
+      "promos": [
+        { "nombre": "7 Días", "precios": [[799000]] }
+      ]
+    },
+    {
+      "titulo": "PROMO FEBRERO 2027",
+      "Desde": "2027-02-15",
+      "Hasta": "2027-03-31",
+      "Servicios": "",
+      "Info": "Promo desde el 15 de Febrero",
+      "promos": [
+        { "nombre": "5 Días", "precios": [[459000]] },
+        { "nombre": "7 Días", "precios": [[599000]] }
+      ]
+    }
+  ],
   "imagenes": [
     {
       "ruta": "Almar7B.JPG",

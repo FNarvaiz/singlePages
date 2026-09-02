@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { JsonService } from '../../services/json.service';
 import {MatCardModule} from '@angular/material/card';
 import { TarifasGridComponent } from '../../tarifas-grid/tarifas-grid.component'
+import { FormasPagoComponent } from '../../formas-pago/formas-pago.component'
 @Component({
     selector: 'app-tarifas',
     standalone: true,
-    imports: [MatCardModule, TarifasGridComponent],
+    imports: [MatCardModule, TarifasGridComponent, FormasPagoComponent],
     templateUrl: './tarifas.component.html',
     styleUrl: './tarifas.component.css'
 })
@@ -13,6 +14,7 @@ export class TarifasComponent implements OnInit {
   constructor(private jsonService: JsonService) {
   }
   habitaciones: string[]=[]
+  temporadas: any[] = []
   tarifas: {
     titulo: string,
     Desde: string,
@@ -35,11 +37,9 @@ export class TarifasComponent implements OnInit {
         const fecha = new Date(promo.Hasta);
         return hoy < fecha;
       });
-      
+    });
+    this.jsonService.readJson('./assets/formas-pago.json').subscribe(data => {
+      this.temporadas = data;
     });
   }
-  
-
-  
-
 }

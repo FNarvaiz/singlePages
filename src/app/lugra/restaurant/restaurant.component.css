@@ -39,3 +39,24 @@
     }
     
 }
+
+.btn-carta {
+  background: #bb8936;
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-carta:hover {
+  background: #a56e24;
+  transform: translateY(-2px);
+}

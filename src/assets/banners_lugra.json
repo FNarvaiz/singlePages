@@ -1,38 +1,54 @@
 {
   "escritorio": [
     {
-      "ruta": "assets/galeria/Banners/banner_7_descuento.jpg",
-      "alt": "Temporada 2026 7 noches en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/octubre_banner.jpg",
+      "alt": "Feriado largo de octubre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/banner_4_descuento.jpg",
-      "alt": "Temporada 2026 4 noches en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/noviembre_banner.jpg",
+      "alt": "Feriado largo de noviembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/banner_octubre.jpg",
-      "alt": "Feriado de octubre en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/dic4x1_banner.png",
+      "alt": "Diciembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/banner_noviembre.jpg",
-      "alt": "Feriado de noviembre en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/verano_banner.jpg",
+      "alt": "Verano 2027 en el Hotel Lugra"
+    },
+    {
+      "ruta": "assets/galeria/Banners/febrero_banner.png",
+      "alt": "Febrero 2027 en el Hotel Lugra"
+    },
+    {
+      "ruta": "assets/galeria/Banners/marzo_banner.png",
+      "alt": "Marzo 2027 en el Hotel Lugra"
     }
   ],
   "movil": [
     {
-      "ruta": "assets/galeria/Banners/udHistoria_7_Noches.jpg",
-      "alt": "Temporada 2026 7 noches en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/octubre_banner.jpg",
+      "alt": "Feriado largo de octubre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/udHistoria_4_Noches.jpg",
-      "alt": "Temporada 2026 4 noches en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/noviembre_banner.jpg",
+      "alt": "Feriado largo de noviembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/historia_octubre.jpg",
-      "alt": "Feriado de octubre en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/dic4x1_post.png",
+      "alt": "Diciembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/historia_noviembre.jpg",
-      "alt": "Feriado de noviembre en el Hotel Lugra"
+      "ruta": "assets/galeria/Banners/verano_banner.jpg",
+      "alt": "Verano 2027 en el Hotel Lugra"
+    },
+    {
+      "ruta": "assets/galeria/Banners/febrero_post.png",
+      "alt": "Febrero 2027 en el Hotel Lugra"
+    },
+    {
+      "ruta": "assets/galeria/Banners/marzo_banner.png",
+      "alt": "Marzo 2027 en el Hotel Lugra"
     }
   ]
 }

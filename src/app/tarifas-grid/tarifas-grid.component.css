@@ -67,11 +67,14 @@ th {
   background: #fff;
   color: #222;
   width: 235px;
-  height: 75px;
+  height: auto;
+  min-height: 75px;
+  vertical-align: middle;
 }
 
 .tabla-tarifas tbody tr {
-  height: 75px;
+  height: auto;
+  min-height: 75px;
 }
 .tabla-tarifas thead tr {
   height: 30px;
@@ -114,6 +117,15 @@ th {
   font-size: 31px;
   font-weight: 500;
   transition: background 0.2s;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.precio-base {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.9;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 .acordeon-cabecera:hover {
@@ -138,6 +150,11 @@ th {
 .promociones {
   max-width: 500px;
   width: 30%;
+}
+
+.txt-precio-multiple {
+  font-size: 15px;
+  line-height: 1.35;
 }
 .promociones img {
   width: 100%;

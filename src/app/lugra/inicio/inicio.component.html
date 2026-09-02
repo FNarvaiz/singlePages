@@ -2,6 +2,7 @@
   [imagenesEscritorio]="escritorio"
   [imagenesMovil]="movil"
 ></app-swiper-cabecera>
+<app-ultimo-minuto [tarjetas]="ultimoMinuto"></app-ultimo-minuto>
 <div class="flex-column-center margin-top-20" >
   <p class="title-39">Descubre Nuestros Servicios</p>
   <div class="limit-1200 flex-grid">
@@ -14,24 +15,31 @@
     }
     
   </div>
+  <app-opiniones elfsightWidgetId = '76b73252-e1fb-4444-b873-970d87a02582' embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.184374729206!2d-57.83494940100026!3d-38.27031115382271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9585107c4c1f4227%3A0xb5a8c9c41646aac1!2sLugra%20Hotel!5e0!3m2!1ses!2sar!4v1781154731606!5m2!1ses!2sar"></app-opiniones>
+  
   <article id="nuevo-servicio" class="border limit-1200">
     <div id="descripcion" >
       <div>
         <div class="mbottom-20"></div>
       <p class="roboto-medium size-48 ocre">NUEVO SERVICIO</p>
       <div class="mbottom-20"></div>
-      <p class="roboto-medium size-31">CENA DE BIENVENIDA EN</p>
+      <p class="roboto-medium size-31">ALMUERZO O CENA EN</p>
       <p class="roboto-medium size-31 ocre">RESTAURANT JURERÉ</p>
       <div class="mbottom-20"></div>
       <p class="roboto-regular">a 700 Mts de Hotel Lugra</p>
+      <div class="mbottom-20"></div>
+      <p class="roboto-medium size-19 ocre">
+        En estadías de 7 noches o más — Invitación sin cargo
+      </p>
     </div>
       <div id="button-conoce" class="roboto-regular size-26" (click)="clickConoceMas()">Conocé Más</div>
     </div>
-    
+
     <img id="img-jurere"
     src="assets/lugra/inicio/restaurant.jpg"
     alt="Restaurant de Lugra Hotel" />
-    
-    
+
+
   </article>
+  <app-promociones-agencias [agencias]="agenciasPromo"></app-promociones-agencias>
 </div>

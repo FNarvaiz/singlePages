@@ -1,10 +1,11 @@
-import { Component , OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { JsonService } from '../../services/json.service';
 import { SwiperCabeceraComponent } from '../../swiper-cabecera/swiper-cabecera.component';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faBed, faBath, faImages } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TarifasGridComponent } from '../../tarifas-grid/tarifas-grid.component'
+import { FormasPagoComponent } from '../../formas-pago/formas-pago.component'
 import { PoliticasComponent } from '../politicas/politicas.component';
 import { CondicionesComponent } from '../condiciones/condiciones.component';
 import { ComoReservarComponent } from '../como-reservar/como-reservar.component';
@@ -39,7 +40,7 @@ interface Unidad {
 
 @Component({
   selector: 'app-unidad',
-  imports: [FontAwesomeModule, SwiperCabeceraComponent, TarifasGridComponent, PoliticasComponent, CondicionesComponent, ComoReservarComponent],
+  imports: [FontAwesomeModule, TarifasGridComponent, FormasPagoComponent, PoliticasComponent, CondicionesComponent, ComoReservarComponent],
   templateUrl: './unidad.component.html',
   styleUrl: './unidad.component.css'
 })
@@ -63,8 +64,50 @@ export class UnidadComponent implements OnInit {
     banios:0,
     tarifas: []
   };
-  faLocationDot = faLocationDot
+  faLocationDot = faLocationDot;
+  faBed = faBed;
+  faBath = faBath;
+  faImages = faImages;
+  lightboxIndex = 0;
+  formasPago: any[] = [];
+  @ViewChild('lb') lbRef!: ElementRef<HTMLDialogElement>;
+
+  openLightbox(index: number) {
+    this.lightboxIndex = index;
+    this.lbRef.nativeElement.showModal();
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeLightbox() {
+    this.lbRef?.nativeElement?.close();
+  }
+
+  onDialogClick(event: MouseEvent) {
+    if (event.target === this.lbRef.nativeElement) this.lbRef.nativeElement.close();
+  }
+
+  onDialogClose() {
+    document.body.style.overflow = '';
+  }
+
+  prevImg() {
+    this.lightboxIndex = (this.lightboxIndex - 1 + this.unidad.imagenes.length) % this.unidad.imagenes.length;
+  }
+
+  nextImg() {
+    this.lightboxIndex = (this.lightboxIndex + 1) % this.unidad.imagenes.length;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeydown(event: KeyboardEvent) {
+    if (!this.lbRef?.nativeElement?.open) return;
+    if (event.key === 'ArrowLeft') this.prevImg();
+    if (event.key === 'ArrowRight') this.nextImg();
+  }
   ngOnInit() {
+    this.jsonService.readJson('./assets/formas-pago-inmo.json').subscribe(data => {
+      this.formasPago = data;
+    });
     const carpeta = './assets/inmo/'+this.route.snapshot.params['carpeta']+'/';
     this.jsonService.readJson(carpeta+'info_unidad.json').subscribe(data => {
       this.unidad = data;

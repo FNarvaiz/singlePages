@@ -1,0 +1,195 @@
+.ultimo-minuto {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  color: #d4a853;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  position: absolute;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #555;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.nav-btn:hover {
+  background: #f5f5f5;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.nav-left { left: -8px; }
+.nav-right { right: -8px; }
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 16px 4px 16px;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.tarjeta {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.tarjeta-badge {
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  background: #d32f2f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.tarjeta-tipo {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #222;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.tarjeta-fechas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fecha-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.fecha-item i { color: #1565c0; font-size: 14px; margin-top: 3px; }
+
+.fecha-label {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fecha-valor {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.fecha-separador { color: #ccc; font-size: 12px; }
+
+.tarjeta-info {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.tarjeta-precio {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.precio-valor {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #1565c0;
+}
+
+.precio-label {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.tarjeta-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #25d366;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.tarjeta-btn:hover { background: #1da851; }
+
+@media (max-width: 768px) {
+  .nav-btn { display: none; }
+  .tarjeta { flex: 0 0 280px; }
+  .carousel-track { gap: 14px; padding: 16px 4px 12px; }
+}

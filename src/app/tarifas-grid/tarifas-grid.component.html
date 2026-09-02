@@ -5,6 +5,11 @@
       <input type="checkbox" id="acordeon-{{ it }}" class="acordeon-toggle" />
       <label for="acordeon-{{ it }}" class="acordeon-cabecera">
         <span class="title-29">{{ tar.titulo }}</span>
+        @if (tar.precioBase) {
+        <span class="precio-base">
+          Por noche: Dbl $ {{ formatoPrecioBase(tar.precioBase.doble) }} | Trp $ {{ formatoPrecioBase(tar.precioBase.triple) }}
+        </span>
+        }
         <span class="acordeon-arrow">&#9660;</span>
       </label>
       <div class="acordeon-contenido">
@@ -26,7 +31,7 @@
               <td class="td-precio">
                 <div class=  "txt-precio {{ pre.length > 1 ? 'txt-precio-multiple' : '' }}">
                   @if(pre.length>1){ @for (x of pre; track x; let indexacion =
-                  $index) { {{ textoPrecio(x, indexacion) }}<br />
+                  $index) { {{ textoPrecio(x, indexacion, tar.subHeaders) }}<br />
                   }} @else { {{ textoPrecio(pre[0]) }} }
                 </div>
               </td>
@@ -44,9 +49,7 @@
             <p class="title-25">Servicios Incluidos</p>
             <ol type="I">
               @for (servicio of splitServicios(tar.Servicios); track servicio) {
-              <li class="roboto-regular">
-                {{ servicio }}
-              </li>
+              <li class="roboto-regular" [innerHTML]="servicio"></li>
               }
             </ol>
           </div>

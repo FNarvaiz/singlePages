@@ -16,6 +16,8 @@ export class TarifasGridComponent {
     Servicios: string,
     Info: string,
     Imagenes: string[],
+    subHeaders?: string[],
+    precioBase?: { doble: number; triple: number },
     promos: {
       nombre: string,
       precios: number[][]
@@ -29,13 +31,20 @@ export class TarifasGridComponent {
   public splitServicios(servicios: string): string[] {
     return servicios.split(". ");
   }
-  public textoPrecio(precio: number, ite: number|undefined = undefined): string {
+  public textoPrecio(precio: number, ite: number|undefined = undefined, subHeaders?: string[]): string {
     var textoPrecio = this.convertPrecio(precio)
     
-    if(ite!==undefined){
+    if(ite !== undefined){
+      if(subHeaders && subHeaders[ite]){
+        return `${subHeaders[ite]} $ ${textoPrecio}`
+      }
       var texto = ite == 0 ? "Sin Aire" : "Con Aire"
-      return `${texto} $${textoPrecio}`
+      return `${texto} $ ${textoPrecio}`
     }
-    return `$${textoPrecio}`
+    return `$ ${textoPrecio}`
+  }
+
+  public formatoPrecioBase(precio: number): string {
+    return this.convertPrecio(precio);
   }
 }
