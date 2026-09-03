@@ -1,53 +1,53 @@
 {
   "escritorio": [
     {
-      "ruta": "assets/galeria/Banners/octubre_banner.jpg",
+      "ruta": "/assets/galeria/Banners/octubre_banner.jpg",
       "alt": "Feriado largo de octubre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/noviembre_banner.jpg",
+      "ruta": "/assets/galeria/Banners/noviembre_banner.jpg",
       "alt": "Feriado largo de noviembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/dic4x1_banner.png",
+      "ruta": "/assets/galeria/Banners/dic4x1_banner.png",
       "alt": "Diciembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/verano_banner.jpg",
+      "ruta": "/assets/galeria/Banners/verano_banner.jpg",
       "alt": "Verano 2027 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/febrero_banner.png",
+      "ruta": "/assets/galeria/Banners/febrero_banner.png",
       "alt": "Febrero 2027 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/marzo_banner.png",
+      "ruta": "/assets/galeria/Banners/marzo_banner.png",
       "alt": "Marzo 2027 en el Hotel Lugra"
     }
   ],
   "movil": [
     {
-      "ruta": "assets/galeria/Banners/octubre_banner.jpg",
+      "ruta": "/assets/galeria/Banners/octubre_banner.jpg",
       "alt": "Feriado largo de octubre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/noviembre_banner.jpg",
+      "ruta": "/assets/galeria/Banners/noviembre_banner.jpg",
       "alt": "Feriado largo de noviembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/dic4x1_post.png",
+      "ruta": "/assets/galeria/Banners/dic4x1_post.png",
       "alt": "Diciembre 2026 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/verano_banner.jpg",
+      "ruta": "/assets/galeria/Banners/verano_banner.jpg",
       "alt": "Verano 2027 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/febrero_post.png",
+      "ruta": "/assets/galeria/Banners/febrero_post.png",
       "alt": "Febrero 2027 en el Hotel Lugra"
     },
     {
-      "ruta": "assets/galeria/Banners/marzo_banner.png",
+      "ruta": "/assets/galeria/Banners/marzo_banner.png",
       "alt": "Marzo 2027 en el Hotel Lugra"
     }
   ]

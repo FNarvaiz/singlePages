@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-aviso-fraude',
@@ -20,7 +21,10 @@ export class AvisoFraudeComponent implements OnInit {
     { icono: 'fa-instagram', label: 'Instagram', valor: '@lugrahotel' },
   ];
 
+  private platformId = inject(PLATFORM_ID);
+
   ngOnInit() {
+    if (!isPlatformBrowser(this.platformId)) return;
     const cerrado = localStorage.getItem(this.STORAGE_KEY);
     if (!cerrado) {
       this.visible = true;
@@ -29,6 +33,7 @@ export class AvisoFraudeComponent implements OnInit {
 
   cerrar() {
     this.visible = false;
+    if (!isPlatformBrowser(this.platformId)) return;
     localStorage.setItem(this.STORAGE_KEY, 'true');
   }
 }

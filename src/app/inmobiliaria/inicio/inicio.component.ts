@@ -19,11 +19,11 @@ export class InicioComponent implements OnInit {
   ultimoMinuto: UltimoMinutoTarjeta[] = [];
 
   ngOnInit() {
-    this.jsonService.readJson('./assets/banners_inmo.json').subscribe(data => {
+    this.jsonService.readJson('/assets/banners_inmo.json').subscribe(data => {
       this.escritorio = data['escritorio'];
       this.movil = data['movil'];
     });
-    this.jsonService.readJson('./assets/ultimo-minuto-inmobiliaria.json').subscribe(data => {
+    this.jsonService.readJson('/assets/ultimo-minuto-inmobiliaria.json').subscribe(data => {
       this.ultimoMinuto = data || [];
     });
   }

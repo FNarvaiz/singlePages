@@ -1,5 +1,5 @@
-import { Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, Input, OnChanges, PLATFORM_ID, SimpleChanges, ViewChild, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { environment } from '../../../environments/environment';
 
 interface LatLngLiteral { lat: number; lng: number }
@@ -47,8 +47,10 @@ export class MapaInmueblesComponent implements OnChanges {
   private map: any | null = null;
   private markers: any[] = [];
 
+  private platformId = inject(PLATFORM_ID);
+
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['inmuebles']) {
+    if (changes['inmuebles'] && isPlatformBrowser(this.platformId)) {
       this.ensureMapsLoaded().then(() => this.renderMap());
     }
   }

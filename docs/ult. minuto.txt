@@ -1,0 +1,10 @@
+HOTEL			
+ULTIMO MINUTO -   Haga clic aquí   			
+			
+Check In,	Check Out,	Habitación o personas  no se,	$ o consultar no se
+			
+			
+INMOBILIARIA			
+ULTIMO MINUTO -   Haga clic aquí   			
+			
+Check In,	Check Out,	Inmueble o personas no se,	$ o consultar no se

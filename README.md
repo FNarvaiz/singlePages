@@ -4,7 +4,7 @@ Aplicación Angular (standalone, Angular 20) con dos sitios dentro del mismo pro
 - Hotel Lugra: inicio, galería, tarifas, contacto y restaurant.
 - Inmobiliaria Luis Protti: inicio, alquileres, ventas, unidades y contacto.
 
-Usa `HashLocationStrategy` (#/ruta) para facilitar el deploy en hosting estático.
+El build de producción genera HTML estático de todas las rutas (SSG/prerender), listo para servir en cualquier hosting estático sin Node ni SSR.
 
 ## Requisitos
 - Node.js 18+ (recomendado LTS)
@@ -13,7 +13,7 @@ Usa `HashLocationStrategy` (#/ruta) para facilitar el deploy en hosting estátic
 ## Instalación y ejecución
 - Instalar dependencias: `npm install`
 - Ejecutar en desarrollo: `npm start` y abrir `http://localhost:4200/`
-- Compilar producción: `npm run build` (salida en `dist/`)
+- Compilar producción: `npm run build` (salida deployable en `dist/single-pages/browser/`)
 
 ## Variables de entorno (src/environments)
 Editar claves en:
@@ -160,13 +160,18 @@ La app consume varios JSON estáticos desde `assets/`. Asegúrate de mantener su
 
 ## Scripts útiles
 - `npm start`: servidor dev.
-- `npm run build`: build producción en `dist/`.
+- `npm run build`: build producción con prerender de todas las rutas (SSG) en `dist/single-pages/browser/`.
 - `npm run lint`: linting (Angular ESLint 20).
 
 ## Deploy
-- Servir el contenido de `dist/` en tu hosting.
-- Al usar `HashLocationStrategy`, no se requieren reglas de rewrite.
+- Subí el contenido de `dist/single-pages/browser/` a la raíz de tu hosting (public_html).
+- Ya se incluyen `.htaccess` (fallback SPA + caching), `sitemap.xml` y `robots.txt` en la salida del build.
+- Cada ruta queda prerenderizada como carpeta con su `index.html`: no hace falta Node ni SSR en el servidor.
 - Publica `enviar.php` en el root del sitio para que los formularios funcionen.
+
+## Rutas prerenderizadas (SEO)
+Al agregar una ruta nueva, agregala también en `serverRouteConfig` (final de `src/app/app.routes.ts`) o el build falla.
+Al agregar un inmueble nuevo, agregá su carpeta en `getPrerenderParams` (misma sección) y la carpeta con `info_unidad.json` en `src/assets/inmo/inmuebles/`.
 
 ## Problemas comunes
 - Google Maps no carga: revisa `environment.googleMaps.apiKey` y habilita la API en Google Cloud.

@@ -55,7 +55,7 @@
   <dialog #lb class="lightbox-dialog" (click)="onDialogClick($event)" (close)="onDialogClose()">
     <button class="lb-close" (click)="closeLightbox(); $event.stopPropagation()">&#x2715;</button>
     <button class="lb-prev" (click)="prevImg(); $event.stopPropagation()">&#8249;</button>
-    <img class="lb-img" [src]="unidad.imagenes[lightboxIndex].ruta" [alt]="unidad.imagenes[lightboxIndex].alt" (click)="$event.stopPropagation()" />
+    <img class="lb-img" [src]="imgActual?.ruta" [alt]="imgActual?.alt" (click)="$event.stopPropagation()" />
     <button class="lb-next" (click)="nextImg(); $event.stopPropagation()">&#8250;</button>
     <p class="lb-counter" (click)="$event.stopPropagation()">{{ lightboxIndex + 1 }} / {{ unidad.imagenes.length }}</p>
   </dialog>

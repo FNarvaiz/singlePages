@@ -70,6 +70,10 @@ export class UnidadComponent implements OnInit {
   faImages = faImages;
   lightboxIndex = 0;
   formasPago: any[] = [];
+
+  get imgActual(): { ruta: string; alt: string } | undefined {
+    return this.unidad.imagenes[this.lightboxIndex];
+  }
   @ViewChild('lb') lbRef!: ElementRef<HTMLDialogElement>;
 
   openLightbox(index: number) {
@@ -105,10 +109,11 @@ export class UnidadComponent implements OnInit {
     if (event.key === 'ArrowRight') this.nextImg();
   }
   ngOnInit() {
-    this.jsonService.readJson('./assets/formas-pago-inmo.json').subscribe(data => {
+    this.jsonService.readJson('/assets/formas-pago-inmo.json').subscribe(data => {
       this.formasPago = data;
     });
-    const carpeta = './assets/inmo/'+this.route.snapshot.params['carpeta']+'/';
+    const params = this.route.snapshot.params;
+    const carpeta = '/assets/inmo/' + params['tipo'] + '/' + params['nombre'] + '/';
     this.jsonService.readJson(carpeta+'info_unidad.json').subscribe(data => {
       this.unidad = data;
       this.unidad.imagen1= carpeta+this.unidad.imagen1;

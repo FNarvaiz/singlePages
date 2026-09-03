@@ -1,4 +1,5 @@
-import { Component, input, Input, OnInit } from '@angular/core';
+import { Component, input, Input, OnInit, PLATFORM_ID, inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { SwiperOptions } from 'swiper/types';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
@@ -13,6 +14,7 @@ import { register } from 'swiper/element/bundle';
 export class SwiperCabeceraComponent  implements OnInit {
 
   constructor() {}
+  private platformId = inject(PLATFORM_ID);
   @Input() addClassImg :  string ="";
 
   @Input() imagenesEscritorio: { ruta: string, alt?: string, url?: string }[] = [
@@ -53,6 +55,7 @@ export class SwiperCabeceraComponent  implements OnInit {
   swiperMovil!: Swiper;
 
   ngOnInit(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
     this.inicializarSwiperSegunPantalla();
     window.addEventListener('resize', this.reinicializarSwiperSegunPantalla.bind(this));
   }

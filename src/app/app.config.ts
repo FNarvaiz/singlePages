@@ -1,7 +1,7 @@
 import { ApplicationConfig } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 import { provideRouter, TitleStrategy } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -12,8 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideClientHydration(),
     provideAnimations(),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),
     { provide: TitleStrategy, useClass: AppTitleStrategy },
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
   ]
 };

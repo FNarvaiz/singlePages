@@ -29,7 +29,7 @@ export class TarifasComponent implements OnInit {
   }[] = [];
   
   ngOnInit() {
-    this.jsonService.readJson('./assets/tarifas.json').subscribe(data => {
+    this.jsonService.readJson('/assets/tarifas.json').subscribe(data => {
       this.habitaciones = data["habitaciones"]
       this.tarifas = data["cronograma"];
       var hoy = new Date()
@@ -38,7 +38,7 @@ export class TarifasComponent implements OnInit {
         return hoy < fecha;
       });
     });
-    this.jsonService.readJson('./assets/formas-pago.json').subscribe(data => {
+    this.jsonService.readJson('/assets/formas-pago.json').subscribe(data => {
       this.temporadas = data;
     });
   }

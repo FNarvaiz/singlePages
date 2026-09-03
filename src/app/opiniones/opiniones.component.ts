@@ -1,5 +1,6 @@
-import { Component, Input, AfterViewInit, Renderer2, ElementRef, inject, NgZone } from '@angular/core';
+import { Component, Input, AfterViewInit, Renderer2, ElementRef, inject, NgZone, PLATFORM_ID } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-opiniones',
@@ -13,6 +14,7 @@ export class OpinionesComponent implements AfterViewInit {
   private el = inject(ElementRef);
   private sanitizer = inject(DomSanitizer);
   private zone = inject(NgZone);
+  private platformId = inject(PLATFORM_ID);
 
   @Input() elfsightWidgetId = '';
   @Input() embedUrl = '';
@@ -26,7 +28,7 @@ export class OpinionesComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (this.elfsightWidgetId) {
+    if (this.elfsightWidgetId && isPlatformBrowser(this.platformId)) {
       this.cargarElfsightConFallback();
     }
   }

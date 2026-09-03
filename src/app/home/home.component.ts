@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   cards: any[] = [];
   
   ngOnInit() {
-    this.jsonService.readJson('./assets/home.json').subscribe(data => {
+    this.jsonService.readJson('/assets/home.json').subscribe(data => {
       this.cards = data;
     });
   }

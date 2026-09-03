@@ -54,7 +54,7 @@ export class GalleryGridComponent {
   ngOnInit() {
     // LAS CATEGORIAS VAN DE 1 EN ADELANTE.
     // LA GALERIA MANEJA DE 18 IMAGENES POR MUESTRA
-    this.jsonService.readJson('./assets/galeria.json').subscribe(data => {
+    this.jsonService.readJson('/assets/galeria.json').subscribe(data => {
       this.filtros = data['categorias'];
       this.fotos = data['fotos'];
       this.change(0);

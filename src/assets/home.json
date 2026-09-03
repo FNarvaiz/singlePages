@@ -1,28 +1,28 @@
 [
   {
-    "image": "assets/home/hotel.jpg",
+    "image": "/assets/home/hotel.jpg",
     "subtitulo": "Hotelería",
     "title": "Lugra Hotel",
     "descripcion": "Más de 50 años brindando la más alta calidad en Miramar",
-    "link": "/#/hotel",
+    "link": "/hotel",
     "social": {
       "instagram": "https://instagram.com/lugrahotel",
       "facebook": "https://facebook.com/lugrahotel"
     }
   },
   {
-    "image": "assets/home/temporada.jpg",
+    "image": "/assets/home/temporada.jpg",
     "subtitulo": "Alquileres",
     "title": "Temporada 2026 - 2027",
     "descripcion": "Alquileres temporarios en Miramar",
-    "link": "/#/inmobiliaria/alquileres"
+    "link": "/inmobiliaria/alquileres"
   },
   {
-    "image": "assets/home/alquileres.jpg",
+    "image": "/assets/home/alquileres.jpg",
     "subtitulo": "Luis Protti",
     "title": "Inmobiliaria",
     "descripcion": "Compra y venta de inmuebles en Miramar",
-    "link": "/#/inmobiliaria/ventas",
+    "link": "/inmobiliaria/ventas",
     "social": {
       "instagram": "https://instagram.com/prottiinmobiliaria",
       "facebook": "https://facebook.com/prottiinmobiliaria"

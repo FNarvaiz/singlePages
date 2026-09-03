@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { RenderMode, ServerRoute } from '@angular/ssr';
 import { InicioComponent } from './lugra/inicio/inicio.component';
 import { TarifasComponent } from './lugra/tarifas/tarifas.component';
 import { NosotrosComponent } from './lugra/nosotros/nosotros.component';
@@ -122,7 +123,7 @@ export const routes: Routes = [
                 }
             },
             {
-                path: 'unidad/:carpeta',
+                path: 'unidad/:tipo/:nombre',
                 component: UnidadComponent,
                 title: 'Inmobiliaria Luis Protti | Propiedad',
                 data: {
@@ -134,4 +135,32 @@ export const routes: Routes = [
     }
 
 
+];
+
+export const serverRouteConfig: ServerRoute[] = [
+    { path: '', renderMode: RenderMode.Prerender },
+    { path: 'hotel', renderMode: RenderMode.Prerender },
+    { path: 'hotel/nosotros', renderMode: RenderMode.Prerender },
+    { path: 'hotel/galeria', renderMode: RenderMode.Prerender },
+    { path: 'hotel/tarifas', renderMode: RenderMode.Prerender },
+    { path: 'hotel/contacto', renderMode: RenderMode.Prerender },
+    { path: 'hotel/restaurant', renderMode: RenderMode.Prerender },
+    { path: 'inmobiliaria', renderMode: RenderMode.Prerender },
+    { path: 'inmobiliaria/alquileres', renderMode: RenderMode.Prerender },
+    { path: 'inmobiliaria/ventas', renderMode: RenderMode.Prerender },
+    { path: 'inmobiliaria/nosotros', renderMode: RenderMode.Prerender },
+    { path: 'inmobiliaria/contacto', renderMode: RenderMode.Prerender },
+    {
+        path: 'inmobiliaria/unidad/:tipo/:nombre',
+        renderMode: RenderMode.Prerender,
+        async getPrerenderParams() {
+            return [
+                { tipo: 'inmuebles', nombre: 'almar7b' },
+                { tipo: 'inmuebles', nombre: 'diagomar4e' },
+                { tipo: 'inmuebles', nombre: 'lasvegas' },
+                { tipo: 'inmuebles', nombre: 'cronos25' },
+                { tipo: 'inmuebles', nombre: 'montecarlo1c' },
+            ];
+        },
+    },
 ];

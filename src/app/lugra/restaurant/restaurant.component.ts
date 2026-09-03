@@ -13,9 +13,9 @@ export class RestaurantComponent {
 
   verCarta() {
     this.lightbox.open([{
-      src: 'assets/lugra/restaurant/carta.jpg',
+      src: '/assets/lugra/restaurant/carta.jpg',
       caption: 'Carta Restaurant Jurere',
-      thumb: 'assets/lugra/restaurant/carta.jpg'
+      thumb: '/assets/lugra/restaurant/carta.jpg'
     }], 0, { centerVertically: true });
   }
 }

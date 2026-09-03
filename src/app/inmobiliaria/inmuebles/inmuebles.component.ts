@@ -34,14 +34,14 @@ export class InmueblesComponent {
     inmueblesFiltered: Inmueble[] = [];
     ngOnInit() {
       if(this.venta)
-        this.jsonService.readJson('./assets/inmuebles_venta.json').subscribe(data => {
+        this.jsonService.readJson('/assets/inmuebles_venta.json').subscribe(data => {
           this.categorias = data['categorias'];
           this.tipos = data['tipos'];
           this.inmuebles = data['inmuebles'];
           this.inmueblesFiltered = this.inmuebles;
         });
       else
-        this.jsonService.readJson('./assets/inmuebles_alquiler.json').subscribe(data => {
+        this.jsonService.readJson('/assets/inmuebles_alquiler.json').subscribe(data => {
         this.categorias = data['categorias'];
         this.tipos = data['tipos'];
         this.inmuebles = data['inmuebles'];
@@ -51,7 +51,7 @@ export class InmueblesComponent {
   
     public getPathImg(obj: Inmueble):string{
   
-      return "./assets/inmo/"+obj.carpeta+"/"+obj.imagen;
+      return "/assets/inmo/"+obj.carpeta+"/"+obj.imagen;
     }
     public filtrarTodos() {
       this.inmueblesFiltered = this.inmuebles;
@@ -63,7 +63,7 @@ export class InmueblesComponent {
       this.categoriaActiva = categoriaId;
     }
     public clickInmueble(obj: Inmueble){
-      this.router.navigate(['/inmobiliaria/unidad', obj.carpeta]);
+      this.router.navigate(['/inmobiliaria/unidad', ...obj.carpeta.split('/')]);
     }
 
 }

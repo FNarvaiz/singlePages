@@ -14,5 +14,5 @@ import { menuNavList } from '../menuItemList';
 })
 export class PaginaInmobiliariaComponent {
   menuList : any[]=menuNavList;
-  logo = "./assets/inmo/logo-50.png"
+  logo = "/assets/inmo/logo-50.png"
 }
