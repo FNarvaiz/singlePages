@@ -2,32 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { SwiperCabeceraComponent } from '../../swiper-cabecera/swiper-cabecera.component';
 import { OpinionesComponent } from '../../opiniones/opiniones.component';
 import { UltimoMinutoComponent, UltimoMinutoTarjeta } from '../../ultimo-minuto/ultimo-minuto.component';
-import { PromocionesAgenciasComponent, AgenciaPromo } from '../../promociones-agencias/promociones-agencias.component';
 import { JsonService } from '../../services/json.service';
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [SwiperCabeceraComponent, OpinionesComponent, UltimoMinutoComponent, PromocionesAgenciasComponent],
+  imports: [SwiperCabeceraComponent, OpinionesComponent, UltimoMinutoComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
 export class InicioComponent implements OnInit {
   constructor(private jsonService: JsonService) {}
-  escritorio: { ruta: string; alt: string }[] = [];
-  movil: { ruta: string; alt: string }[] = [];
+  escritorio: { ruta: string; alt?: string; url?: string }[] = [];
+  movil: { ruta: string; alt?: string; url?: string }[] = [];
   ultimoMinuto: UltimoMinutoTarjeta[] = [];
-  agenciasPromo: AgenciaPromo[] = [];
 
   ngOnInit() {
-    this.jsonService.readJson('/assets/banners_lugra.json').subscribe(data => {
+    this.jsonService.readFromPanel<{ escritorio: { ruta: string; alt?: string; url?: string }[]; movil: { ruta: string; alt?: string; url?: string }[] }>('banners.php?sitio=lugra', '/assets/banners_lugra.json').subscribe(data => {
       this.escritorio = data['escritorio'];
       this.movil = data['movil'];
     });
-    this.jsonService.readJson('/assets/ultimo-minuto-hotel.json').subscribe(data => {
+    this.jsonService.readFromPanel<UltimoMinutoTarjeta[]>('ultimo-minuto-hotel.php', '/assets/ultimo-minuto-hotel.json').subscribe(data => {
       this.ultimoMinuto = data || [];
-    });
-    this.jsonService.readJson('/assets/promociones-agencias.json').subscribe(data => {
-      this.agenciasPromo = data;
     });
   }
   //redireccionar a /hotel/restaurant

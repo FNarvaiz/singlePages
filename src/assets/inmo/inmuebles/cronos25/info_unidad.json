@@ -7,6 +7,7 @@
   "camas": 3,
   "categoria":"2 AMBIENTES",
   "direccion": "Calle 18 Nº 942",
+  "localizacion": { "x": "-38.2714576", "y": "-57.833872" },
   "imagenes": [
     {
       "ruta": "comedor.jpeg",

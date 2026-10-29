@@ -1,0 +1,66 @@
+{
+  "rating": 4.7,
+  "userRatingCount": 14,
+  "reviews": [
+    {
+      "rating": 4,
+      "relativePublishTimeDescription": "Hace 4 años",
+      "text": {
+        "text": "Siempre tienen la mejor predisposicion para que uno pase unas buenas vacaciones. A veces son los propietarios de los deptos los que deberían tener un poco más de visión comercial. Pero en lo que respecta a Luis, Graciela y todo el equipo que los acompaña  son unos capos!"
+      },
+      "authorAttribution": {
+        "displayName": "Coto Zona Norte",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocKGUgU5Z1BmRQOuNJKTpBTnpUl1rwreWCoghC9T5WEQnabyjw=s128-c0x00000000-cc-rp-mo-ba4",
+        "uri": "https://www.google.com/maps/contrib/117689410893518688201/reviews"
+      }
+    },
+    {
+      "rating": 2,
+      "relativePublishTimeDescription": "Hace 6 años",
+      "text": {
+        "text": "Les he alquilado.Tienen dptos preciosos y atención buena pero sobrevaluados los precios. Cobran un disparate."
+      },
+      "authorAttribution": {
+        "displayName": "1801 BC",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXqnFqguBKkOQX0ECGKXIKXZ26k1721HM_quyKWNuio_TbIAmMQ=s128-c0x00000000-cc-rp-mo-ba2",
+        "uri": "https://www.google.com/maps/contrib/117881885224077446153/reviews"
+      }
+    },
+    {
+      "rating": 5,
+      "relativePublishTimeDescription": "Hace 3 años",
+      "text": {
+        "text": "Excelente atencion y muy bueno el dpto q alquile.  Todo okk"
+      },
+      "authorAttribution": {
+        "displayName": "Alejandra R",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUvsMHWCHPsd3edxw7hvL1UI7CyhGZYACLFgxGgp0KRXxmCFt5f5w=s128-c0x00000000-cc-rp-mo-ba3",
+        "uri": "https://www.google.com/maps/contrib/103723977254100273993/reviews"
+      }
+    },
+    {
+      "rating": 5,
+      "relativePublishTimeDescription": "Hace 4 años",
+      "text": {
+        "text": "Excelente atención!! Alquilé un departamento en temporada de verano!"
+      },
+      "authorAttribution": {
+        "displayName": "Cynthia Libezuk",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVoPX1pydFuCvYGnCB3WVev6T4jQ3TeWdEpbAw00Ji-1hg5mv2Y=s128-c0x00000000-cc-rp-mo-ba4",
+        "uri": "https://www.google.com/maps/contrib/116567617345136390207/reviews"
+      }
+    },
+    {
+      "rating": 5,
+      "relativePublishTimeDescription": "Hace 4 años",
+      "text": {
+        "text": "Hermoso todo!! Muy buen servicio"
+      },
+      "authorAttribution": {
+        "displayName": "Analia Cuesta",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXkrSSswABTcjhRfFjvjxZCAued3WypSeXaBOCH6AbIryG20ObY=s128-c0x00000000-cc-rp-mo-ba4",
+        "uri": "https://www.google.com/maps/contrib/111464879112649484612/reviews"
+      }
+    }
+  ]
+}

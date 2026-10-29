@@ -85,6 +85,7 @@ export class MapaInmueblesComponent implements OnChanges {
         zoom: 10,
         mapTypeControl: false,
         streetViewControl: false,
+        fullscreenControl: false,
       });
     } else {
       this.map.setCenter(center);
@@ -96,10 +97,10 @@ export class MapaInmueblesComponent implements OnChanges {
 
     // Add markers
     const bounds = new w.google.maps.LatLngBounds();
+    const posiciones: LatLngLiteral[] = [];
     this.inmuebles.forEach(item => {
-      
       const lat = parseFloat(item.localizacion?.x ?? (item as any).x);
-      const lng = parseFloat((parseFloat(item.localizacion?.y ?? (item as any).y)+0.002602).toFixed(7));
+      const lng = parseFloat(item.localizacion?.y ?? (item as any).y);
       if (isNaN(lat) || isNaN(lng)) return;
       const position = { lat, lng } as LatLngLiteral;
       const marker = new w.google.maps.Marker({
@@ -108,23 +109,45 @@ export class MapaInmueblesComponent implements OnChanges {
         title: item.nombre,
       });
       const info = new w.google.maps.InfoWindow({
-        content: `<strong>${item.nombre}</strong><br>${item.localizacion?.direccion || ''}`
+        content: `<strong>${this.escapeHtml(item.nombre)}</strong><br>${this.escapeHtml(item.localizacion?.direccion || '')}`
       });
       marker.addListener('click', () => info.open({ map: this.map!, anchor: marker }));
       this.markers.push(marker);
+      posiciones.push(position);
       bounds.extend(position as any);
     });
 
-    if (this.inmuebles.length > 1) {
-      this.map.fitBounds(bounds);
+    if (posiciones.length > 1) {
+      this.map.fitBounds(bounds, { top: 40, right: 40, bottom: 40, left: 40 });
+    } else if (posiciones.length === 1) {
+      this.map.setCenter(posiciones[0]);
+      this.map.setZoom(16);
+    } else {
+      this.map.setZoom(13);
     }
+  }
+
+  private escapeHtml(valor: string): string {
+    return valor.replace(/[&<>"']/g, caracter => {
+      const mapa: Record<string, string> = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;',
+      };
+      return mapa[caracter] ?? caracter;
+    });
   }
 
   private computeCenter(): LatLngLiteral {
     const first = this.inmuebles?.[0];
-    const lat = parseFloat(first?.localizacion?.x ?? (first as any)?.x ?? '-37.999');
-    const lng =   parseFloat(( parseFloat(first?.localizacion?.y ?? (first as any)?.y ?? '-57.549')+0.002602).toFixed(7));
-    return { lat: isNaN(lat) ? -37.999 : lat, lng: isNaN(lng) ? -57.549 : lng };
+    const lat = parseFloat(first?.localizacion?.x ?? (first as any)?.x ?? '-38.2705');
+    const lng = parseFloat(first?.localizacion?.y ?? (first as any)?.y ?? '-57.8330');
+    return {
+      lat: isNaN(lat) ? -38.2705 : lat,
+      lng: isNaN(lng) ? -57.8330 : lng,
+    };
   }
 }
 

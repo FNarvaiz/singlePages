@@ -6,7 +6,7 @@
       "Desde": "2026-10-10",
       "Hasta": "2026-10-12",
       "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
-      "Info": "15% descuento por transferencia bancaria.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria.",
       "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
         { "nombre": "2 Noches", "precios": [[178200], [232200], [286200]] },
@@ -18,7 +18,7 @@
       "Desde": "2026-11-21",
       "Hasta": "2026-11-23",
       "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
-      "Info": "15% descuento por transferencia bancaria.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria.",
       "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
         { "nombre": "2 Noches", "precios": [[178200], [232200], [286200]] },
@@ -30,12 +30,12 @@
       "Desde": "2026-12-06",
       "Hasta": "2026-12-08",
       "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
-      "Info": "15% descuento por transferencia bancaria. Promo: 4 Noches, Abonás 3.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria.",
       "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
         { "nombre": "2 Noches", "precios": [[268000], [322000], [376000]] },
         { "nombre": "3 Noches", "precios": [[357000], [429000], [499000]] },
-        { "nombre": "4 Noches (Abonás 3)", "precios": [[357000], [429000]] }
+        { "nombre": "4 Noches (Abonás 3)", "precios": [[357000], [429000], [499000]] }
       ]
     },
     {
@@ -56,7 +56,7 @@
       "Desde": "2026-12-21",
       "Hasta": "2026-12-26",
       "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
-      "Info": "15% descuento por transferencia bancaria. A partir de la 5ta noche, 1 de Regalo.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria. A partir de la 5ta noche, 1 de Regalo.",
       "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
         { "nombre": "2 Noches", "precios": [[349000], [419000], [499000]] },
@@ -69,7 +69,7 @@
       "Desde": "2026-07-01",
       "Hasta": "2027-02-14",
       "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
-      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria.",
       "Imagenes": ["3y6_cuotas.svg", "15_desc.svg"],
       "subHeaders": ["Standard", "C/ Aire Acond"],
       "promos": [
@@ -83,7 +83,7 @@
       "Desde": "2026-07-01",
       "Hasta": "2027-02-14",
       "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en Balneario a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
-      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria.",
       "Imagenes": ["3y6_cuotas.svg"],
       "subHeaders": ["Standard", "C/ Aire Acond"],
       "promos": [
@@ -97,7 +97,7 @@
       "Desde": "2027-02-15",
       "Hasta": "2027-02-28",
       "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
-      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria.",
       "Imagenes": ["3y6_cuotas.svg", "15_desc.svg"],
       "subHeaders": ["Standard", "C/ Aire Acond"],
       "promos": [
@@ -111,7 +111,7 @@
       "Desde": "2027-02-15",
       "Hasta": "2027-02-28",
       "Servicios": "Desayuno Buffet, sin limite de horario. Bolso Playero, con toallones para la playa. Carpa en Balneario a 250mts del Hotel. Cena de Bienvenida en Restaurante Jurere a 700mts del Hotel, en paquete de</br> 7 noches.",
-      "Info": "15% descuento por transferencia bancaria. Consultar por Depto x4/5.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria.",
       "Imagenes": ["3y6_cuotas.svg"],
       "subHeaders": ["Standard", "C/ Aire Acond"],
       "promos": [
@@ -125,7 +125,7 @@
       "Desde": "2027-03-01",
       "Hasta": "2027-03-31",
       "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda. Servicio de Balneario incluido.",
-      "Info": "15% descuento por transferencia bancaria. Promo: a partir de la 5ta noche, 1 de Regalo.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria. Promo: a partir de la 5ta noche, 1 de Regalo.",
       "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
         { "nombre": "2 Noches", "precios": [[269000], [329000], [379000]] },
@@ -138,7 +138,7 @@
       "Desde": "2027-03-24",
       "Hasta": "2027-04-06",
       "Servicios": "Desayuno Buffet, sin limite de horario. Servicio de Merienda.",
-      "Info": "15% descuento por transferencia bancaria. A partir de la 5ta noche, 1 de Regalo.",
+      "Info": "15 % de descuento si realizás tu pago anticipado con transferencia bancaria. A partir de la 5ta noche, 1 de Regalo.",
       "Imagenes": ["3y6_cuotas.svg"],
       "promos": [
         { "nombre": "3 Noches", "precios": [[409000], [489000], [599000]] },

@@ -27,12 +27,4 @@ export class UltimoMinutoComponent {
     const mensaje = `Hola, me gustaría obtener más información sobre ${tarjeta.tipo} (${tarjeta.checkIn} al ${tarjeta.checkOut}).`;
     return `https://api.whatsapp.com/send?phone=${this.whatsappNumero}&text=${encodeURIComponent(mensaje)}`;
   }
-
-  scrollIzquierda(container: HTMLElement) {
-    container.scrollBy({ left: -320, behavior: 'smooth' });
-  }
-
-  scrollDerecha(container: HTMLElement) {
-    container.scrollBy({ left: 320, behavior: 'smooth' });
-  }
 }

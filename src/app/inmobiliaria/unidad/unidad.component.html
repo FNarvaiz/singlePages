@@ -40,9 +40,30 @@
       <p class="unidad-descripcion" [innerHTML]="unidad.descripcion"></p>
     </section>
 
+    @if (unidad.direccion || unidad.localizacion) {
+    <section class="unidad-section">
+      <h2 class="section-title">Ubicación</h2>
+      <div class="unidad-mapa-wrapper">
+        <iframe
+          class="unidad-mapa"
+          [src]="mapsEmbedUrl"
+          title="Ubicación de {{ unidad.nombre }}"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <a class="unidad-mapa-link" [href]="mapsLink" target="_blank" rel="noopener">
+        <fa-icon [icon]="faLocationDot" /> Cómo llegar
+      </a>
+    </section>
+    }
+
+    @if (unidad.tarifas.length > 0) {
     <section class="unidad-section">
       <app-tarifas-grid [headers]="['Precio']" [titulo]="'Precios'" [tarifas]="unidad.tarifas"></app-tarifas-grid>
     </section>
+    }
 
     @if (!unidad.venta) {
       <section class="unidad-section">

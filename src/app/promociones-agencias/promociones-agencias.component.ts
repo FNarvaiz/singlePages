@@ -16,5 +16,5 @@ export interface AgenciaPromo {
 })
 export class PromocionesAgenciasComponent {
   @Input() agencias: AgenciaPromo[] = [];
-  @Input() titulo = 'Promociones de Agencias';
+  @Input() titulo = 'PROMOCIONES';
 }

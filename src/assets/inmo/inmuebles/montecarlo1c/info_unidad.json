@@ -7,7 +7,8 @@
   "camas": 3,
   "venta": true,
   "categoria":"2 AMBIENTES",
-  "direccion": "Diagonal Arturo Illia 949",
+  "direccion": "Calle 13 Nº 707",
+  "localizacion": { "x": "-38.2708621", "y": "-57.8303887" },
   "imagenes": [
     {
       "ruta": "cocina.jpeg",

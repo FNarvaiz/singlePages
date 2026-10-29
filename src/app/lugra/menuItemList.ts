@@ -1,6 +1,7 @@
 export var menuNavList = [
     { name: 'Inicio', linkPrimeraRuta:'/hotel', link: '#topNavBar', routerLink: '', effectBehavior: false, active: false  },
     { name: 'Tarifas', linkPrimeraRuta:'/hotel/tarifas', link: '#topNavBar', routerLink: '', effectBehavior: false, active: false  },
+    { name: 'Promociones', linkPrimeraRuta:'/hotel/promociones', link: '#topNavBar', routerLink: '', effectBehavior: false, active: false  },
     { name: 'Restaurant', linkPrimeraRuta:'/hotel/restaurant', link: '#topNavBar', routerLink: '', effectBehavior: false, active: false  },
     { name: 'Galeria', linkPrimeraRuta:'/hotel/galeria', link: '#topNavBar', routerLink: '', effectBehavior: false, active: false  },
     { name: 'Nosotros', linkPrimeraRuta: '/hotel/nosotros', link: '#topNavBar', routerLink: '', effectBehavior: false, active: false },

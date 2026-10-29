@@ -1,6 +1,6 @@
 <p class="title-39">{{titulo}}</p>
   <div class="acordion-custom">
-    @for (tar of tarifas; track tar; let it = $index) {
+    @for (tar of tarifasOrdenadas; track tar; let it = $index) {
     <div class="acordeon-item">
       <input type="checkbox" id="acordeon-{{ it }}" class="acordeon-toggle" />
       <label for="acordeon-{{ it }}" class="acordeon-cabecera">
@@ -57,9 +57,10 @@
             <div class="promociones flex-column-center">
                @for (img of tar.Imagenes; track img) {
                 <img
-                  src="/assets/ambos/{{img}}"
+                  [src]="srcImagen(img)"
+                  alt=""
                 />
-                @if(tar.Imagenes.length >1 && img == tar.Imagenes[0]){
+                @if(tar.Imagenes.length >1 && img === tar.Imagenes[0]){
                   <p>O</p>
                 }
               }

@@ -6,7 +6,8 @@
   "banios":1,
   "camas": 2,
   "categoria":"1 AMBIENTE",
-  "direccion": "Diagonal Arturo Illia 949",
+  "direccion": "Calle 13 Nº 646",
+  "localizacion": { "x": "-38.2714496", "y": "-57.8299739" },
   "tarifas": [
     {
       "titulo": "NAVIDAD 2026",

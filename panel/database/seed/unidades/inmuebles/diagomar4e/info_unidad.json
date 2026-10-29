@@ -1,0 +1,85 @@
+{
+  "nombre": "DIAGOMAR 4ºE",
+  "imagen1": "diago.jpg",
+  "imagen2": "balcon.jpg",
+  "descripcion": "Departamento amplio contra frente muy lumionoso. Ubicado en Diagonal Arturo Illia, a 300 metros de la calle peatonal y 300 metros del mar de la ciudad.<br>Totalmente amoblado y equipado con vajilla completa para 4 personas, heladera con freezer, TV led.<br>Departamento ideal para 4 personas, 1 baños.<br>Calidad del Departamento: Bueno.",
+  "banios":1,
+  "camas": 4,
+  "venta": false,
+  "categoria":"3 AMBIENTES",
+  "direccion": "Diagonal Arturo Illia 949",
+  "tarifas": [
+    {
+      "titulo": "NAVIDAD 2026",
+      "Desde": "2026-12-21",
+      "Hasta": "2026-12-26",
+      "Servicios": "",
+      "Info": "Super Promo Navidad 2026",
+      "promos": [
+        { "nombre": "4 Días", "precios": [[459000]] },
+        { "nombre": "5 Días", "precios": [[529000]] },
+        { "nombre": "7 Días", "precios": [[699000]] }
+      ]
+    },
+    {
+      "titulo": "TEMPORADA ALTA",
+      "Desde": "2026-12-30",
+      "Hasta": "2027-02-14",
+      "Servicios": "",
+      "Info": "",
+      "promos": [
+        { "nombre": "7 Días", "precios": [[990000]] }
+      ]
+    },
+    {
+      "titulo": "PROMO FEBRERO 2027",
+      "Desde": "2027-02-15",
+      "Hasta": "2027-03-31",
+      "Servicios": "",
+      "Info": "Promo desde el 15 de Febrero",
+      "promos": [
+        { "nombre": "5 Días", "precios": [[529000]] },
+        { "nombre": "7 Días", "precios": [[699000]] }
+      ]
+    }
+  ],
+  "imagenes": [
+    {
+      "ruta": "balconn.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "banio2.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "cocina.jpg",
+      "alt": "Imagen de la unidad"
+    }
+    ,
+    {
+      "ruta": "hab mat.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "banio.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "hab.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "living comedor.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "mat.jpg",
+      "alt": "Imagen de la unidad"
+    },
+    {
+      "ruta": "hab matrimonial.jpg",
+      "alt": "Imagen de la unidad"
+    }
+  ]
+}

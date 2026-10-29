@@ -157,6 +157,20 @@
   background: #d44226;
 }
 
+.mapa-section {
+  max-width: 1200px;
+  margin: 48px auto 0;
+}
+
+.mapa-titulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 29px;
+  font-weight: 400;
+  color: var(--gris);
+  text-align: center;
+  margin: 0 0 20px;
+}
+
 @media (max-width: 900px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);

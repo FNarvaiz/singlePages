@@ -1,61 +1,32 @@
 @if (tarjetas.length > 0) {
 <section class="ultimo-minuto">
-  <div class="section-header">
-    <p class="title-39">Último Minuto</p>
-    <p class="subtitle">¡Ofertas imperdibles!</p>
-  </div>
+  <p class="title-39 oferta-seccion">ÚLTIMO MINUTO</p>
+  <p class="oferta-titulo">¡Ofertas imperdibles!</p>
 
-  <div class="carousel-wrapper">
-    <button class="nav-btn nav-left" (click)="scrollIzquierda(scrollContainer)">
-      <i class="fas fa-chevron-left"></i>
-    </button>
+  <div class="ofertas-list">
+    @for (tarjeta of tarjetas; track tarjeta.tipo + tarjeta.checkIn) {
+    <a class="oferta-bar" [href]="whatsappLink(tarjeta)" target="_blank" rel="noopener">
+      <span class="oferta-tipo">{{ tarjeta.tipo }}</span>
 
-    <div #scrollContainer class="carousel-track">
-      @for (tarjeta of tarjetas; track tarjeta.tipo + tarjeta.checkIn) {
-      <div class="tarjeta">
-        <div class="tarjeta-badge">Último Minuto</div>
+      <span class="oferta-fechas">
+        <i class="fas fa-sign-in-alt"></i>
+        <span>{{ tarjeta.checkIn }}</span>
+        <i class="fas fa-arrow-right"></i>
+        <i class="fas fa-sign-out-alt"></i>
+        <span>{{ tarjeta.checkOut }}</span>
+      </span>
 
-        <h3 class="tarjeta-tipo">{{ tarjeta.tipo }}</h3>
-
-        <div class="tarjeta-fechas">
-          <div class="fecha-item">
-            <i class="fas fa-sign-in-alt"></i>
-            <div>
-              <span class="fecha-label">Check-in</span>
-              <span class="fecha-valor">{{ tarjeta.checkIn }}</span>
-            </div>
-          </div>
-          <div class="fecha-separador">
-            <i class="fas fa-arrow-right"></i>
-          </div>
-          <div class="fecha-item">
-            <i class="fas fa-sign-out-alt"></i>
-            <div>
-              <span class="fecha-label">Check-out</span>
-              <span class="fecha-valor">{{ tarjeta.checkOut }}</span>
-            </div>
-          </div>
-        </div>
-
-        @if (tarjeta.info) {
-        <p class="tarjeta-info">{{ tarjeta.info }}</p>
-        }
-
-        <div class="tarjeta-precio">
-          <span class="precio-valor">{{ formatoPrecio(tarjeta.precio) }}</span>
-          <span class="precio-label">Total estadía</span>
-        </div>
-
-        <a class="tarjeta-btn" [href]="whatsappLink(tarjeta)" target="_blank">
-          <i class="fab fa-whatsapp"></i> Consultar
-        </a>
-      </div>
+      @if (tarjeta.info) {
+      <span class="oferta-info">{{ tarjeta.info }}</span>
       }
-    </div>
 
-    <button class="nav-btn nav-right" (click)="scrollDerecha(scrollContainer)">
-      <i class="fas fa-chevron-right"></i>
-    </button>
+      <span class="oferta-precio">{{ formatoPrecio(tarjeta.precio) }}</span>
+
+      <span class="oferta-wa">
+        <i class="fab fa-whatsapp"></i>
+      </span>
+    </a>
+    }
   </div>
 </section>
 }

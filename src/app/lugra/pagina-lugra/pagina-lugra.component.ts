@@ -18,5 +18,5 @@ export class PaginaLugraComponent {
   numero= '542291451314';
   menuList : any[]=menuNavList;
   logo = "/assets/lugra/SVG/logo_lugra.svg"
-  lema = 'Más de 50 años<br />Brindando la más alta calidad';
+  lema = '';
 }

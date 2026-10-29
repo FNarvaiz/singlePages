@@ -1,25 +1,66 @@
 <section class="opiniones-section">
-  <p class="title-39">Lo que dicen nuestros huéspedes</p>
+  <p class="title-39">{{ titulo }}</p>
   <p class="subtitle">Opiniones de Google</p>
 
-  @if (elfsightWidgetId && !fallbackActivo) {
-  <div id="elfsight-container" class="widget-container"></div>
-  } @else if (embedUrl) {
-  <div class="widget-container">
-    <iframe
-      [src]="safeEmbedUrl"
-      width="100%"
-      height="400"
-      frameborder="0"
-      allowtransparency="true"
-      loading="lazy"
-      title="Google Reviews"
-    ></iframe>
+  @if (cargando) {
+  <div class="widget-placeholder">
+    <p>Cargando opiniones…</p>
+  </div>
+  } @else if (reviews.length > 0) {
+  <div class="rating-resumen">
+    <span class="rating-numero">{{ rating.toFixed(1) }}</span>
+    <span class="rating-estrellas">
+      @for (llena of estrellas(rating); track $index) {
+      <span class="estrella" [class.llena]="llena">★</span>
+      }
+    </span>
+    <span class="rating-total">{{ total }} opiniones en Google</span>
+  </div>
+
+  <div class="reviews-grid">
+    @for (review of reviews; track $index) {
+    <article class="review-card">
+      <div class="review-head">
+        @if (review.authorAttribution?.photoUri) {
+        <img
+          class="review-avatar"
+          [src]="review.authorAttribution?.photoUri"
+          [alt]="review.authorAttribution?.displayName"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        />
+        }
+        <div class="review-datos">
+          <p class="review-autor">{{ review.authorAttribution?.displayName }}</p>
+          <p class="review-fecha">{{ review.relativePublishTimeDescription }}</p>
+        </div>
+      </div>
+      <div class="review-estrellas">
+        @for (llena of estrellas(review.rating); track $index) {
+        <span class="estrella" [class.llena]="llena">★</span>
+        }
+      </div>
+      <p class="review-texto">{{ review.text?.text || review.originalText?.text }}</p>
+    </article>
+    }
+  </div>
+
+  <a class="ver-mas" [href]="verTodasUrl" target="_blank" rel="noopener">
+    Ver todas las opiniones en Google <i class="fas fa-external-link-alt"></i>
+  </a>
+  } @else if (error) {
+  <div class="widget-placeholder">
+    <p>No pudimos cargar las opiniones en este momento.</p>
+    <a class="ver-mas" [href]="verTodasUrl" target="_blank" rel="noopener">
+      Ver las opiniones en Google <i class="fas fa-external-link-alt"></i>
+    </a>
   </div>
   } @else {
   <div class="widget-placeholder">
-    <p>Widget de opiniones no configurado.</p>
-    <p>Agregar ID de Elfsight o URL de embed.</p>
+    <p>Todavía no hay opiniones para mostrar.</p>
+    <a class="ver-mas" [href]="verTodasUrl" target="_blank" rel="noopener">
+      Ver en Google <i class="fas fa-external-link-alt"></i>
+    </a>
   </div>
   }
 </section>

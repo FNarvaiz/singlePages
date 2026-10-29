@@ -29,16 +29,16 @@ export class TarifasComponent implements OnInit {
   }[] = [];
   
   ngOnInit() {
-    this.jsonService.readJson('/assets/tarifas.json').subscribe(data => {
+    this.jsonService.readFromPanel<{ habitaciones: string[]; cronograma: TarifasComponent['tarifas'] }>('tarifas.php', '/assets/tarifas.json').subscribe(data => {
       this.habitaciones = data["habitaciones"]
       this.tarifas = data["cronograma"];
-      var hoy = new Date()
+      const hoy = new Date()
       this.tarifas = this.tarifas.filter((promo) => {  
         const fecha = new Date(promo.Hasta);
         return hoy < fecha;
       });
     });
-    this.jsonService.readJson('/assets/formas-pago.json').subscribe(data => {
+    this.jsonService.readFromPanel<{ nombre: string; promos: { icono: string; titulo: string; descripcion: string }[] }[]>('formas-pago.php?sitio=hotel', '/assets/formas-pago.json').subscribe(data => {
       this.temporadas = data;
     });
   }

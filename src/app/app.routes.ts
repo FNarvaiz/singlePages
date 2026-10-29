@@ -9,6 +9,7 @@ import { ContactoLugraComponent } from './lugra/contacto-lugra/contacto-lugra.co
 import { GaleriaComponent } from './lugra/galeria/galeria.component';
 import { PaginaInmobiliariaComponent } from './inmobiliaria/pagina-inmobiliaria/pagina-inmobiliaria.component';
 import { RestaurantComponent } from './lugra/restaurant/restaurant.component';
+import { PromocionesComponent } from './lugra/promociones/promociones.component';
 import { InicioComponent as InicioInmoComponent } from './inmobiliaria/inicio/inicio.component';
 import { ContactoComponent } from './inmobiliaria/contacto/contacto.component';
 import { UnidadComponent } from './inmobiliaria/unidad/unidad.component';
@@ -60,7 +61,16 @@ export const routes: Routes = [
                 data: {
                     description: 'Preventa 2027, tarifas, promociones con descuento y cuotas sin interés. Reservá en Hotel Lugra al mejor precio.'
                 }
-            },{
+            },
+            {
+                path: 'promociones',
+                component: PromocionesComponent,
+                title: 'Hotel Lugra | Promociones',
+                data: {
+                    description: 'Promociones y descuentos exclusivos para socios y clientes: ACA, agencias y beneficios vigentes en Hotel Lugra, Miramar.'
+                }
+            },
+            {
                 path: 'contacto',
                 component: ContactoLugraComponent,
                 title: 'Hotel Lugra | Contacto y reservas',
@@ -143,6 +153,7 @@ export const serverRouteConfig: ServerRoute[] = [
     { path: 'hotel/nosotros', renderMode: RenderMode.Prerender },
     { path: 'hotel/galeria', renderMode: RenderMode.Prerender },
     { path: 'hotel/tarifas', renderMode: RenderMode.Prerender },
+    { path: 'hotel/promociones', renderMode: RenderMode.Prerender },
     { path: 'hotel/contacto', renderMode: RenderMode.Prerender },
     { path: 'hotel/restaurant', renderMode: RenderMode.Prerender },
     { path: 'inmobiliaria', renderMode: RenderMode.Prerender },

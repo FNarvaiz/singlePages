@@ -12,8 +12,8 @@
       "imagen": "SAM_2078.JPG",
       "localizacion": {
         "direccion": "Calle 13 Nº 646",
-        "x": "-38.2714453",
-        "y": "-57.8348448"
+        "x": "-38.2714496",
+        "y": "-57.8299739"
       }
     },
     {
@@ -26,8 +26,8 @@
       "imagen": "diago.jpg",
       "localizacion": {
         "direccion": "Diagonal Arturo Illia 949",
-        "x": "-38.2701987",
-        "y": "-57.8360405"
+        "x": "-38.2702029",
+        "y": "-57.8334656"
       }
     },
     {
@@ -40,8 +40,8 @@
       "imagen": "comedor.jpeg",
       "localizacion": {
         "direccion": "Calle 18 Nº 873",
-        "x": "-38.2706525",
-        "y": "-57.837729"
+        "x": "-38.2707663",
+        "y": "-57.8336198"
       }
     },
     {
@@ -54,8 +54,8 @@
       "imagen": "comedor.jpeg",
       "localizacion": {
         "direccion": "Calle 18 Nº 942",
-        "x": "-38.2714542",
-        "y": "-57.836448"
+        "x": "-38.2714576",
+        "y": "-57.833872"
       }
     }
   ]

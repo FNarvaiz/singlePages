@@ -1,0 +1,14 @@
+{
+  "escritorio": [
+    {
+      "ruta": "/assets/galeria/Banners/alquileres_banner.png",
+      "alt": "Temporada 2027 7 noches en Miramar"
+    }
+  ],
+  "movil": [
+    {
+       "ruta": "/assets/galeria/Banners/alquileres_banner.png",
+      "alt": "Temporada 2027 7 noches en Miramar"
+    }
+  ]
+}

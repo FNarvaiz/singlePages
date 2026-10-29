@@ -1,6 +1,22 @@
-import { Component, Input, AfterViewInit, Renderer2, ElementRef, inject, NgZone, PLATFORM_ID } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { JsonService } from '../services/json.service';
+import { environment } from '../../environments/environment';
+
+export interface GoogleReview {
+  rating: number;
+  relativePublishTimeDescription: string;
+  text?: { text: string };
+  originalText?: { text: string };
+  authorAttribution?: { displayName: string; photoUri: string; uri: string };
+}
+
+export interface ResenasGoogle {
+  rating?: number;
+  userRatingCount?: number;
+  reviews?: GoogleReview[];
+}
+
+export type SitioResenas = 'hotel' | 'inmobiliaria';
 
 @Component({
   selector: 'app-opiniones',
@@ -9,69 +25,52 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './opiniones.component.html',
   styleUrl: './opiniones.component.css'
 })
-export class OpinionesComponent implements AfterViewInit {
-  private renderer = inject(Renderer2);
-  private el = inject(ElementRef);
-  private sanitizer = inject(DomSanitizer);
-  private zone = inject(NgZone);
-  private platformId = inject(PLATFORM_ID);
+export class OpinionesComponent implements OnInit {
+  private jsonService = inject(JsonService);
 
-  @Input() elfsightWidgetId = '';
-  @Input() embedUrl = '';
+  @Input() sitio: SitioResenas = 'hotel';
 
-  fallbackActivo = false;
-  private fallbackTimer: ReturnType<typeof setTimeout> | null = null;
+  rating = 0;
+  total = 0;
+  reviews: GoogleReview[] = [];
+  cargando = true;
+  error = false;
 
-  get safeEmbedUrl(): SafeResourceUrl | null {
-    if (!this.embedUrl) return null;
-    return this.sanitizer.bypassSecurityTrustResourceUrl(this.embedUrl);
+  get config() {
+    return environment.googleReviews[this.sitio];
   }
 
-  ngAfterViewInit() {
-    if (this.elfsightWidgetId && isPlatformBrowser(this.platformId)) {
-      this.cargarElfsightConFallback();
-    }
+  get titulo(): string {
+    return this.sitio === 'hotel'
+      ? 'Lo que dicen nuestros huéspedes'
+      : 'Lo que dicen nuestros clientes';
   }
 
-  private cargarElfsightConFallback() {
-    const container = this.el.nativeElement.querySelector('#elfsight-container');
-    if (container) {
-      const widgetDiv = this.renderer.createElement('div');
-      this.renderer.setAttribute(widgetDiv, 'class', `elfsight-app-${this.elfsightWidgetId}`);
-      this.renderer.appendChild(container, widgetDiv);
-    }
+  get verTodasUrl(): string {
+    return `https://search.google.com/local/reviews?placeid=${this.config.placeId}`;
+  }
 
-    const script = this.renderer.createElement('script');
-    this.renderer.setAttribute(script, 'src', 'https://static.elfsight.com/platform/platform.js');
-    this.renderer.setAttribute(script, 'async', 'true');
+  estrellas(valor: number): boolean[] {
+    const redondeado = Math.round(valor);
+    return [1, 2, 3, 4, 5].map(n => n <= redondeado);
+  }
 
-    // Si el script falla en cargar (error de red), fallback inmediato
-    this.renderer.listen(script, 'error', () => {
-      this.activarFallback();
+  ngOnInit() {
+    this.jsonService.readFromPanel<ResenasGoogle>(
+      `resenas.php?sitio=${this.sitio}`,
+      this.config.fallback
+    ).subscribe({
+      next: (data) => {
+        this.rating = data?.rating ?? 0;
+        this.total = data?.userRatingCount ?? 0;
+        this.reviews = (data?.reviews ?? []).slice(0, 5);
+        this.cargando = false;
+      },
+      error: () => {
+        this.reviews = [];
+        this.cargando = false;
+        this.error = true;
+      }
     });
-
-    this.renderer.appendChild(document.body, script);
-
-    // Fallback por timeout: si después de 8s el widget no renderizó contenido
-    this.zone.runOutsideAngular(() => {
-      this.fallbackTimer = setTimeout(() => {
-        const widget = this.el.nativeElement.querySelector(`.elfsight-app-${this.elfsightWidgetId}`);
-        // Elfsight renderiza iframes o múltiples divs dentro del widget. Si sigue vacío, no cargó.
-        const renderizo = widget && (
-          widget.querySelector('iframe') != null ||
-          widget.children.length > 0
-        );
-        if (!renderizo && this.embedUrl) {
-          this.zone.run(() => { this.fallbackActivo = true; });
-        }
-      }, 8000);
-    });
-  }
-
-  private activarFallback() {
-    if (this.fallbackTimer) { clearTimeout(this.fallbackTimer); }
-    if (this.embedUrl) {
-      this.zone.run(() => { this.fallbackActivo = true; });
-    }
   }
 }

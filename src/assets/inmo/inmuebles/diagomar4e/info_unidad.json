@@ -8,6 +8,7 @@
   "venta": false,
   "categoria":"3 AMBIENTES",
   "direccion": "Diagonal Arturo Illia 949",
+  "localizacion": { "x": "-38.2702029", "y": "-57.8334656" },
   "tarifas": [
     {
       "titulo": "NAVIDAD 2026",

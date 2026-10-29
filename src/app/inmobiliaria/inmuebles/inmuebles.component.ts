@@ -17,12 +17,13 @@ export class Inmueble {
 @Component({
     selector: 'app-inmuebles',
     standalone: true,
-    imports: [FontAwesomeModule],
+    imports: [FontAwesomeModule, MapaInmueblesComponent],
     templateUrl: './inmuebles.component.html',
     styleUrl: './inmuebles.component.css'
 })
 export class InmueblesComponent {
     @Input() venta: boolean = false;
+    @Input() mostrarMapa: boolean = false;
     constructor(private jsonService: JsonService, private router: Router) {}
     faLocationDot = faLocationDot;
     faBed = faBed;
@@ -34,14 +35,14 @@ export class InmueblesComponent {
     inmueblesFiltered: Inmueble[] = [];
     ngOnInit() {
       if(this.venta)
-        this.jsonService.readJson('/assets/inmuebles_venta.json').subscribe(data => {
+        this.jsonService.readFromPanel<{ categorias: string[]; tipos: string[]; inmuebles: Inmueble[] }>('inmuebles.php?sitio=venta', '/assets/inmuebles_venta.json').subscribe(data => {
           this.categorias = data['categorias'];
           this.tipos = data['tipos'];
           this.inmuebles = data['inmuebles'];
           this.inmueblesFiltered = this.inmuebles;
         });
       else
-        this.jsonService.readJson('/assets/inmuebles_alquiler.json').subscribe(data => {
+        this.jsonService.readFromPanel<{ categorias: string[]; tipos: string[]; inmuebles: Inmueble[] }>('inmuebles.php?sitio=alquiler', '/assets/inmuebles_alquiler.json').subscribe(data => {
         this.categorias = data['categorias'];
         this.tipos = data['tipos'];
         this.inmuebles = data['inmuebles'];

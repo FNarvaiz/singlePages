@@ -1,0 +1,16 @@
+[
+  {
+    "tipo": "Doble Standard",
+    "checkIn": "15/07/2026",
+    "checkOut": "18/07/2026",
+    "precio": 250000,
+    "info": "Desayuno incluido"
+  },
+  {
+    "tipo": "Triple con A.A.",
+    "checkIn": "20/07/2026",
+    "checkOut": "25/07/2026",
+    "precio": 480000,
+    "info": "Con balneario"
+  }
+]

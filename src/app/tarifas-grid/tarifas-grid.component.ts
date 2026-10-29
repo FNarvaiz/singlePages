@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-tarifas-grid',
@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './tarifas-grid.component.html',
   styleUrl: './tarifas-grid.component.css'
 })
-export class TarifasGridComponent {
+export class TarifasGridComponent implements OnChanges {
   @Input() titulo: string = "Tarifas"
   @Input() headers: string[]=[]
   @Input() tarifas: {
@@ -23,7 +23,15 @@ export class TarifasGridComponent {
       precios: number[][]
     }[]
   }[] = [];
+  tarifasOrdenadas: TarifasGridComponent['tarifas'] = [];
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['tarifas']) {
+      this.tarifasOrdenadas = [...(this.tarifas ?? [])].sort((a, b) =>
+        a.Desde.localeCompare(b.Desde) || a.Hasta.localeCompare(b.Hasta)
+      );
+    }
+  }
 
   private convertPrecio(precio: number): string {
     return precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -32,13 +40,13 @@ export class TarifasGridComponent {
     return servicios.split(". ");
   }
   public textoPrecio(precio: number, ite: number|undefined = undefined, subHeaders?: string[]): string {
-    var textoPrecio = this.convertPrecio(precio)
+    const textoPrecio = this.convertPrecio(precio)
     
     if(ite !== undefined){
       if(subHeaders && subHeaders[ite]){
         return `${subHeaders[ite]} $ ${textoPrecio}`
       }
-      var texto = ite == 0 ? "Sin Aire" : "Con Aire"
+      const texto = ite == 0 ? "Sin Aire" : "Con Aire"
       return `${texto} $ ${textoPrecio}`
     }
     return `$ ${textoPrecio}`
@@ -46,5 +54,9 @@ export class TarifasGridComponent {
 
   public formatoPrecioBase(precio: number): string {
     return this.convertPrecio(precio);
+  }
+
+  public srcImagen(img: string): string {
+    return /^https?:\/\//i.test(img) ? img : `/assets/ambos/${img}`;
   }
 }

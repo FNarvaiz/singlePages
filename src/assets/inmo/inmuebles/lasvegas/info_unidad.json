@@ -6,7 +6,8 @@
   "banios":1,
   "camas": 2,
   "categoria":"1 AMBIENTE",
-  "direccion": "calle 18 Nº 875",
+  "direccion": "Calle 18 Nº 873",
+  "localizacion": { "x": "-38.2707663", "y": "-57.8336198" },
   "imagenes": [
     {
       "ruta": "comedor.jpeg",

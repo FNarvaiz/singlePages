@@ -30,4 +30,11 @@
     }
   </div>
 
+  @if (mostrarMapa && inmueblesFiltered.length > 0) {
+  <section class="mapa-section">
+    <h2 class="mapa-titulo">Ubicaciones</h2>
+    <app-mapa-inmuebles [inmuebles]="inmueblesFiltered"></app-mapa-inmuebles>
+  </section>
+  }
+
 </div>
