@@ -68,7 +68,7 @@ if ($carpeta === '') {
 }
 if ($imagen === '') {
     $errores[] = 'La imagen principal es obligatoria.';
-} elseif (!preg_match('/^[\w.\-]+\.(svg|png|jpe?g)$/i', $imagen)) {
+} elseif (!preg_match('/^[\w.\-]+\.(svg|png|jpe?g|webp)$/i', $imagen)) {
     $errores[] = 'El nombre de la imagen no es válido.';
 }
 if ($camas < 0 || $banios < 0) {

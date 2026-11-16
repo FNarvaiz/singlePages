@@ -66,6 +66,29 @@ function sitio_um_validar(string $valor): string
     return $valor === 'inmobiliaria' ? 'inmobiliaria' : 'hotel';
 }
 
+function listar_uploads(): array
+{
+    $dir = __DIR__ . '/../uploads';
+    if (!is_dir($dir)) {
+        return [];
+    }
+
+    $archivos = [];
+    foreach (scandir($dir) ?: [] as $archivo) {
+        if (!preg_match('/\.(png|jpe?g|webp)$/i', $archivo)) {
+            continue;
+        }
+        $archivos[] = [
+            'url' => PANEL_BASE_URL . '/uploads/' . $archivo,
+            'mtime' => (int) filemtime($dir . '/' . $archivo),
+        ];
+    }
+
+    usort($archivos, fn(array $a, array $b): int => $b['mtime'] <=> $a['mtime']);
+
+    return array_map(fn(array $a): string => $a['url'], $archivos);
+}
+
 function renombrar_carpeta(PDO $pdo, string $anterior, string $nueva, ?int $unidadId = null): array
 {
     $resultado = ['errores' => [], 'unidades' => 0, 'inmuebles' => 0];

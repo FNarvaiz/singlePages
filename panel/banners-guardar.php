@@ -40,7 +40,7 @@ if ($ruta === '') {
     if (!str_starts_with($ruta, PANEL_BASE_URL . '/uploads/') && !filter_var($ruta, FILTER_VALIDATE_URL)) {
         $errores[] = 'La URL de la imagen no es válida.';
     }
-} elseif (!preg_match('#^/[\w./\-]+\.(svg|png|jpe?g)$#i', $ruta)) {
+} elseif (!preg_match('#^/[\w./\-]+\.(svg|png|jpe?g|webp)$#i', $ruta)) {
     $errores[] = 'La ruta de la imagen no es válida. Usá una ruta del sitio o una URL.';
 }
 

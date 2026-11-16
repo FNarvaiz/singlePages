@@ -67,7 +67,7 @@ foreach ($imagenes as $img) {
         if (!str_starts_with($img, PANEL_BASE_URL . '/uploads/')) {
             $errores[] = 'Ícono con URL no permitida: ' . $img;
         }
-    } elseif (!preg_match('/^[\w.\-]+\.(svg|png|jpe?g)$/i', $img)) {
+    } elseif (!preg_match('/^[\w.\-]+\.(svg|png|jpe?g|webp)$/i', $img)) {
         $errores[] = 'Nombre de ícono no válido: ' . $img;
     }
 }

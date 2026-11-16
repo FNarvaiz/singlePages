@@ -284,6 +284,63 @@ input:focus, textarea:focus, select:focus {
 
 .fila-botones { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
 
+.fila-subida {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.fila-subida input[type="file"],
+.subida-inline input[type="file"] {
+    width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 6px 8px;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    background: #fff;
+    font-size: 13px;
+}
+
+.subida-inline {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    font-weight: 400;
+}
+
+.preview-subida {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.preview-subida:empty { display: none; }
+
+.preview-subida img {
+    max-width: 220px;
+    max-height: 140px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde);
+    background: #fafafa;
+    object-fit: contain;
+}
+
+.preview-subida .url-subida {
+    font-size: 12px;
+    color: var(--color-muted);
+    word-break: break-all;
+}
+
+.campo > label { margin-bottom: 0; }
+.campo > input { margin-bottom: 4px; }
+
 @media (max-width: 700px) {
     .fila-form { grid-template-columns: 1fr; }
     .nav-links { display: none; }

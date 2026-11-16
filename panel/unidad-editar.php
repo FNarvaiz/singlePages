@@ -155,14 +155,34 @@ $datosEditor = [
                     <textarea name="descripcion" rows="6"><?= e($unidad['descripcion']) ?></textarea>
                 </label>
                 <div class="fila-form">
-                    <label>
-                        Imagen principal 1 (archivo de la carpeta o URL subida)
-                        <input type="text" name="imagen1" maxlength="255" value="<?= e($unidad['imagen1']) ?>" required>
-                    </label>
-                    <label>
-                        Imagen principal 2 (opcional)
-                        <input type="text" name="imagen2" maxlength="255" value="<?= e($unidad['imagen2']) ?>">
-                    </label>
+                    <div class="campo">
+                        <label for="imagen1">Imagen principal 1 (archivo de la carpeta o URL subida)</label>
+                        <input id="imagen1" type="text" name="imagen1" maxlength="255" value="<?= e($unidad['imagen1']) ?>" required>
+                        <div class="subida-inline" data-subida data-destino="#imagen1">
+                            <input type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" data-archivo>
+                            <button type="button" class="btn btn-secundario btn-chico" data-subir>Subir imagen</button>
+                            <div class="preview-subida" data-preview-subida>
+                                <?php if (preg_match('#^https?://#i', $unidad['imagen1'])): ?>
+                                    <img src="<?= e($unidad['imagen1']) ?>" alt="">
+                                <?php endif; ?>
+                            </div>
+                            <div data-aviso-subida></div>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="imagen2">Imagen principal 2 (opcional)</label>
+                        <input id="imagen2" type="text" name="imagen2" maxlength="255" value="<?= e($unidad['imagen2']) ?>">
+                        <div class="subida-inline" data-subida data-destino="#imagen2">
+                            <input type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" data-archivo>
+                            <button type="button" class="btn btn-secundario btn-chico" data-subir>Subir imagen</button>
+                            <div class="preview-subida" data-preview-subida>
+                                <?php if (preg_match('#^https?://#i', $unidad['imagen2'])): ?>
+                                    <img src="<?= e($unidad['imagen2']) ?>" alt="">
+                                <?php endif; ?>
+                            </div>
+                            <div data-aviso-subida></div>
+                        </div>
+                    </div>
                 </div>
                 <label class="checkbox-linea">
                     <input type="checkbox" name="venta" value="1" <?= $unidad['venta'] ? 'checked' : '' ?>>
@@ -179,6 +199,12 @@ $datosEditor = [
                 <p class="ayuda" style="margin: 0 0 12px;">
                     Cada foto: archivo dentro de la carpeta (ej. Almar7B.JPG) o URL de una imagen subida al panel.
                 </p>
+                <div class="subida-inline" data-subida data-galeria="1" style="margin-bottom: 12px;">
+                    <input type="file" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" data-archivo>
+                    <button type="button" class="btn btn-secundario btn-chico" data-subir>Subir foto</button>
+                    <div class="preview-subida" data-preview-subida></div>
+                    <div data-aviso-subida></div>
+                </div>
                 <div id="contenedor-imagenes"></div>
                 <button type="button" class="btn btn-secundario btn-chico" id="btn-agregar-imagen">+ Agregar foto</button>
             </div>
@@ -198,23 +224,10 @@ $datosEditor = [
             </div>
         </form>
 
-        <?php if ($id): ?>
-        <div class="panel-card" style="margin-top: 20px;">
-            <h2>Subir foto (PNG / JPG)</h2>
-            <p class="ayuda" style="margin: 0 0 10px;">
-                Al subirla te devolvemos la URL para pegarla en una foto de la galería. Máx. 1 MB.
-            </p>
-            <form method="post" action="subir-icono.php" enctype="multipart/form-data" class="fila-botones">
-                <?= csrf_field() ?>
-                <input type="hidden" name="retorno" value="unidad-editar.php?id=<?= $id ?>">
-                <input type="file" name="icono" accept=".png,.jpg,.jpeg,image/png,image/jpeg" required>
-                <button type="submit" class="btn">Subir</button>
-            </form>
-        </div>
-        <?php endif; ?>
     </main>
 
     <script id="datos-editor-unidad" type="application/json"><?= json_encode($datosEditor, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
     <script src="assets/panel-unidad.js"></script>
+    <script src="assets/panel-upload.js"></script>
 </body>
 </html>

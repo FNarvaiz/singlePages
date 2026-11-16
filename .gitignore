@@ -43,3 +43,10 @@ Thumbs.db
 
 # Panel config (credenciales, token y claves)
 /panel/config.php
+
+# PHP backend de formularios (dependencias y credenciales)
+/subir-al-hosting/vendor/
+/subir-al-hosting/config.php
+
+# Artefactos de Playwright MCP
+/.playwright-mcp/

@@ -39,7 +39,8 @@ Panel de control PHP 8.5 + MySQL para editar los datos que consume la web (Angul
 | `formas-pago*.php` | Bloques de formas de pago (hotel/inmobiliaria) |
 | `inmuebles*.php` | Listados de alquileres y ventas |
 | `unidades.php` + `unidad-editar.php` + `unidad-guardar.php` + `unidad-accion.php` | Detalle de cada unidad (info_unidad.json): descripción, fotos, tarifas por temporada |
-| `subir-icono.php` | Sube imágenes PNG/JPG a `uploads/` |
+| `subir-icono.php` | Sube imágenes PNG/JPG/WebP a `uploads/` (AJAX o formulario) |
+| `assets/panel-upload.js` | Subida AJAX reutilizable en Banners, Tarifas, Agencias y Unidades |
 | `api/*.php` | JSON público que consume la web |
 | `includes/` | Conexión, sesión, helpers, helpers de API |
 | `database/schema.sql` + `database/seed/` | Esquema y datos semilla |
@@ -50,6 +51,16 @@ Panel de control PHP 8.5 + MySQL para editar los datos que consume la web (Angul
 - Endpoints: `tarifas.php`, `ultimo-minuto-hotel.php`, `ultimo-minuto-inmobiliaria.php`, `banners.php?sitio=lugra|inmobiliaria`, `promos-agencias.php`, `formas-pago.php?sitio=hotel|inmobiliaria`, `inmuebles.php?sitio=alquiler|venta`, `unidad.php?carpeta=inmuebles/<nombre>`, `resenas.php?sitio=hotel|inmobiliaria`.
 - Si el panel no responde (o durante el build con prerender), usa los JSON de `src/assets/` como respaldo.
 
+## Subida de imágenes
+
+- Se puede subir desde **Banners**, **Tarifas** (íconos), **Agencias** y **Unidades** (imagen principal 1/2 y galería).
+- Las imágenes se guardan en `panel/uploads/` con nombre aleatorio y se usan como **URL absoluta del panel** (`PANEL_BASE_URL` en `config.php`). La web Angular ya acepta URLs absolutas en esos casos.
+- Formatos: **PNG, JPG y WebP**. Tamaño máximo: **5 MB** (`UPLOAD_MAX_BYTES` en `config.php`).
+- `panel/.user.ini` eleva los límites de PHP a 8 MB de archivo / 10 MB de POST. Si el hosting lo ignora, configurar los mismos valores en cPanel → *MultiPHP INI Editor* para el dominio del panel.
+- En instalaciones existentes, actualizar `UPLOAD_MAX_BYTES` a `5242880` en `config.php` (no se versiona) y subir `.user.ini`.
+- **Inmuebles** sigue usando solo el nombre de archivo dentro de `src/assets/inmo/<carpeta>/`; no se sube desde el panel (el listado del sitio no acepta URLs externas).
+- Para agregar o reemplazar imágenes sin subirlas, también se puede pegar una ruta del sitio (`/assets/...`) o una URL existente.
+
 ## Reseñas de Google
 
 - `api/resenas.php` devuelve `rating`, `userRatingCount` y hasta 5 `reviews` de la ficha de Google indicada en `GOOGLE_PLACES_PLACE_IDS` (`config.php`).
@@ -58,13 +69,12 @@ Panel de control PHP 8.5 + MySQL para editar los datos que consume la web (Angul
 - Si no podés fijar la IP de salida del hosting, usá una key sin restricción de aplicación pero solo con `Places API (New)` habilitada y un tope de cuota.
 - Si Google falla, el endpoint devuelve la última caché disponible; si no hay caché, responde 502 y la web usa `src/assets/resenas-hotel.json` o `resenas-inmobiliaria.json` como respaldo.
 - Google Places API (New) devuelve como máximo 5 reseñas por ficha; no hay paginación.
-- Los íconos subidos se devuelven como URL absoluta del panel; los existentes como ruta del sitio.
 
 ## Seguridad
 
 - Login con `password_hash`, sesión con cookie httponly + SameSite Lax.
 - CSRF en todos los formularios. Consultas con PDO preparado.
-- `uploads/` bloquea la ejecución de PHP (`.htaccess`). Solo PNG/JPG, máx. 1 MB, nombres aleatorios.
+- `uploads/` bloquea la ejecución de PHP (`.htaccess`). Solo PNG/JPG/WebP, máx. 5 MB, nombres aleatorios.
 - El instalador y el migrador exigen token y hay que borrarlos después de usarlos.
 
 ## Recuperar la contraseña del admin

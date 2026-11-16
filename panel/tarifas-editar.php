@@ -63,7 +63,7 @@ $iconosExistentes = [];
 if (is_dir($directorioAmbos)) {
     $archivos = scandir($directorioAmbos) ?: [];
     foreach ($archivos as $archivo) {
-        if (preg_match('/\.(svg|png|jpe?g)$/i', $archivo)) {
+        if (preg_match('/\.(svg|png|jpe?g|webp)$/i', $archivo)) {
             $iconosExistentes[] = $archivo;
         }
     }
@@ -74,19 +74,7 @@ if (!$iconosExistentes) {
 sort($iconosExistentes);
 
 // Íconos subidos desde el panel (URLs absolutas)
-$iconosSubidos = [];
-$dirUploads = __DIR__ . '/uploads';
-if (is_dir($dirUploads)) {
-    $archivos = scandir($dirUploads) ?: [];
-    usort($archivos, function (string $a, string $b) use ($dirUploads): int {
-        return (int) filemtime($dirUploads . '/' . $b) <=> (int) filemtime($dirUploads . '/' . $a);
-    });
-    foreach ($archivos as $archivo) {
-        if (preg_match('/\.(png|jpe?g)$/i', $archivo)) {
-            $iconosSubidos[] = PANEL_BASE_URL . '/uploads/' . $archivo;
-        }
-    }
-}
+$iconosSubidos = listar_uploads();
 
 $seleccionados = array_fill_keys(array_map('strval', $promocion['imagenes']), true);
 
@@ -168,18 +156,19 @@ $datosEditor = [
                     </div>
                 <?php endif; ?>
 
-                <?php if ($iconosSubidos): ?>
-                    <p class="ayuda">Íconos subidos desde el panel:</p>
-                    <div class="fila-botones" style="margin-bottom: 12px;">
-                        <?php foreach ($iconosSubidos as $icono): ?>
-                        <label class="icono-check">
-                            <input type="checkbox" name="imagenes[]" value="<?= e($icono) ?>"
-                                <?= isset($seleccionados[$icono]) ? 'checked' : '' ?>>
-                            <img src="<?= e($icono) ?>" alt="">
-                        </label>
-                        <?php endforeach; ?>
-                    </div>
-                <?php endif; ?>
+                <p class="ayuda">Íconos subidos desde el panel:</p>
+                <div class="fila-botones" id="iconos-subidos" style="margin-bottom: 12px;">
+                    <?php foreach ($iconosSubidos as $icono): ?>
+                    <label class="icono-check">
+                        <input type="checkbox" name="imagenes[]" value="<?= e($icono) ?>"
+                            <?= isset($seleccionados[$icono]) ? 'checked' : '' ?>>
+                        <img src="<?= e($icono) ?>" alt="">
+                    </label>
+                    <?php endforeach; ?>
+                    <?php if (!$iconosSubidos): ?>
+                        <p class="ayuda" data-lista-vacia style="margin: 0;">Sin íconos subidos todavía.</p>
+                    <?php endif; ?>
+                </div>
             </div>
 
             <div class="panel-card">
@@ -212,23 +201,27 @@ $datosEditor = [
             </div>
         </form>
 
-        <?php if ($id): ?>
         <div class="panel-card" style="margin-top: 20px;">
-            <h2>Subir ícono nuevo (PNG / JPG)</h2>
+            <h2>Subir ícono (PNG / JPG / WebP)</h2>
             <p class="ayuda" style="margin: 0 0 10px;">
-                El ícono queda alojado en el panel y podés tildarlo arriba. Máx. 1 MB.
+                El ícono se agrega tildado a la lista de arriba; guardá la promoción para conservarlo. Máx. 5 MB.
             </p>
-            <form method="post" action="subir-icono.php" enctype="multipart/form-data" class="fila-botones">
+            <form method="post" action="subir-icono.php" enctype="multipart/form-data" data-subida
+                data-lista-iconos="#iconos-subidos">
                 <?= csrf_field() ?>
-                <input type="hidden" name="retorno" value="tarifas-editar.php?id=<?= $id ?>">
-                <input type="file" name="icono" accept=".png,.jpg,.jpeg,image/png,image/jpeg" required>
-                <button type="submit" class="btn">Subir</button>
+                <input type="hidden" name="retorno" value="tarifas-editar.php<?= $id ? '?id=' . $id : '' ?>">
+                <div class="fila-subida">
+                    <input type="file" name="icono" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" required>
+                    <button type="submit" class="btn">Subir</button>
+                </div>
+                <div data-aviso-subida></div>
+                <div class="preview-subida" data-preview-subida></div>
             </form>
         </div>
-        <?php endif; ?>
     </main>
 
     <script id="datos-editor" type="application/json"><?= json_encode($datosEditor, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?></script>
     <script src="assets/panel.js"></script>
+    <script src="assets/panel-upload.js"></script>
 </body>
 </html>

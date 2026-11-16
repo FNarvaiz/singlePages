@@ -70,7 +70,7 @@ foreach ([$imagen1, $imagen2] as $imagen) {
         if (!str_starts_with($imagen, PANEL_BASE_URL . '/uploads/') && !filter_var($imagen, FILTER_VALIDATE_URL)) {
             $errores[] = 'URL de imagen no válida: ' . $imagen;
         }
-    } elseif (!preg_match('/^[\w.\- ]+\.(svg|png|jpe?g)$/i', $imagen)) {
+    } elseif (!preg_match('/^[\w.\- ]+\.(svg|png|jpe?g|webp)$/i', $imagen)) {
         $errores[] = 'Nombre de imagen no válido: ' . $imagen;
     }
 }
@@ -95,7 +95,7 @@ foreach ($imagenes as $img) {
         if (!str_starts_with($ruta, PANEL_BASE_URL . '/uploads/') && !filter_var($ruta, FILTER_VALIDATE_URL)) {
             $errores[] = 'URL de foto no válida: ' . $ruta;
         }
-    } elseif (!preg_match('/^[\w.\- ]+\.(svg|png|jpe?g)$/i', $ruta)) {
+    } elseif (!preg_match('/^[\w.\- ]+\.(svg|png|jpe?g|webp)$/i', $ruta)) {
         $errores[] = 'Nombre de foto no válido: ' . $ruta;
     }
     $imagenesLimpios[] = ['ruta' => $ruta, 'alt' => $alt];

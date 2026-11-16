@@ -35,8 +35,8 @@ const RESENAS_CACHE_TTL = 43200;
 // Orígenes permitidos por CORS en la API ('*' o 'https://www.lugrahotel.com.ar,https://www.luisprotti.com.ar')
 const CORS_ALLOW_ORIGIN = '*';
 
-// Límite de tamaño para íconos subidos (PNG/JPG)
-const UPLOAD_MAX_BYTES = 1048576; // 1 MB
+// Límite de tamaño para imágenes subidas (PNG/JPG/WebP)
+const UPLOAD_MAX_BYTES = 5242880; // 5 MB
 
 // Nombre de la sesión
 const SESSION_NAME = 'panel_lugra';

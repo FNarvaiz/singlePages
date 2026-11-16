@@ -58,6 +58,11 @@
 
     function pintarImagenes() {
         contenedorImagenes.innerHTML = imagenes.map(function (img, i) {
+            const preview = /^https?:\/\//i.test(img.ruta)
+                ? '<div class="preview-subida"><a href="' + escapeHtml(img.ruta) + '" target="_blank" rel="noopener">' +
+                  '<img src="' + escapeHtml(img.ruta) + '" alt=""></a></div>'
+                : '';
+
             return '<div class="panel-card" style="padding: 14px; margin-bottom: 10px;">' +
                 '<div class="fila-form">' +
                 '<label>Foto (archivo o URL)<input type="text" class="imagen-ruta" data-i="' + i +
@@ -65,6 +70,7 @@
                 '<label>Texto alternativo<input type="text" class="imagen-alt" data-i="' + i +
                     '" value="' + escapeHtml(img.alt) + '"></label>' +
                 '</div>' +
+                preview +
                 '<button type="button" class="btn-inline peligro" data-quitar-imagen="' + i + '">Quitar foto</button>' +
                 '</div>';
         }).join('');
@@ -230,6 +236,15 @@
         });
         pintarTarifas();
     });
+
+    window.panelUnidadAgregarImagen = function (ruta) {
+        imagenes.push({ ruta: String(ruta || ''), alt: '' });
+        pintarImagenes();
+        const ultima = contenedorImagenes.lastElementChild;
+        if (ultima) {
+            ultima.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    };
 
     pintarImagenes();
     pintarTarifas();

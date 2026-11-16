@@ -37,17 +37,18 @@ if ($id > 0) {
     ];
 }
 
-// Rutas existentes de banners del sitio (misma cuenta cPanel)
-$rutasExistentes = [];
+// Rutas existentes de banners del sitio (misma cuenta cPanel) + imágenes subidas al panel
+$rutasExistentes = listar_uploads();
 $dirBanners = dirname(__DIR__) . '/assets/galeria/Banners';
 if (is_dir($dirBanners)) {
     $archivos = scandir($dirBanners) ?: [];
     foreach ($archivos as $archivo) {
-        if (preg_match('/\.(svg|png|jpe?g)$/i', $archivo)) {
+        if (preg_match('/\.(svg|png|jpe?g|webp)$/i', $archivo)) {
             $rutasExistentes[] = '/assets/galeria/Banners/' . $archivo;
         }
     }
 }
+$rutasExistentes = array_values(array_unique($rutasExistentes));
 sort($rutasExistentes);
 ?>
 <!doctype html>
@@ -93,7 +94,7 @@ sort($rutasExistentes);
                 <label>
                     Imagen (ruta)
                     <span class="ayuda">Ruta del sitio (ej. /assets/galeria/Banners/...) o URL de un archivo subido.</span>
-                    <input type="text" name="ruta" list="banners-existente" value="<?= e($banner['ruta']) ?>" required>
+                    <input id="banner-ruta" type="text" name="ruta" list="banners-existente" value="<?= e($banner['ruta']) ?>" required>
                     <datalist id="banners-existente">
                         <?php foreach ($rutasExistentes as $ruta): ?>
                             <option value="<?= e($ruta) ?>">
@@ -120,20 +121,33 @@ sort($rutasExistentes);
             </div>
         </form>
 
-        <?php if ($id): ?>
         <div class="panel-card" style="margin-top: 20px;">
-            <h2>Subir imagen nueva (PNG / JPG)</h2>
+            <h2>Subir imagen (PNG / JPG / WebP)</h2>
             <p class="ayuda" style="margin: 0 0 10px;">
-                Al subirla te devolvemos la URL para pegarla en el campo Imagen. Máx. 1 MB.
+                La imagen se sube al panel y la URL se completa automáticamente en el campo Imagen.
+                Máx. 5 MB. Recomendado: 1920 px de ancho.
             </p>
-            <form method="post" action="subir-icono.php" enctype="multipart/form-data" class="fila-botones">
+            <form method="post" action="subir-icono.php" enctype="multipart/form-data" data-subida
+                data-destino="#banner-ruta">
                 <?= csrf_field() ?>
-                <input type="hidden" name="retorno" value="banners-editar.php?id=<?= $id ?>&sitio=<?= e($sitio) ?>">
-                <input type="file" name="icono" accept=".png,.jpg,.jpeg,image/png,image/jpeg" required>
-                <button type="submit" class="btn">Subir</button>
+                <input type="hidden" name="retorno" value="<?= e('banners-editar.php' . ($id ? '?id=' . $id . '&sitio=' . $sitio : '?sitio=' . $sitio)) ?>">
+                <div class="fila-subida">
+                    <input type="file" name="icono" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" required>
+                    <button type="submit" class="btn">Subir</button>
+                </div>
+                <div data-aviso-subida></div>
+                <div class="preview-subida" data-preview-subida>
+                    <?php if (preg_match('#^https?://#i', $banner['ruta'])): ?>
+                        <a href="<?= e($banner['ruta']) ?>" target="_blank" rel="noopener">
+                            <img src="<?= e($banner['ruta']) ?>" alt="">
+                        </a>
+                        <code class="url-subida"><?= e($banner['ruta']) ?></code>
+                    <?php endif; ?>
+                </div>
             </form>
         </div>
-        <?php endif; ?>
     </main>
+
+    <script src="assets/panel-upload.js"></script>
 </body>
 </html>

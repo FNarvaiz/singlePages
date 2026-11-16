@@ -34,7 +34,7 @@ if ($imagen === '') {
     if (!str_starts_with($imagen, PANEL_BASE_URL . '/uploads/') && !filter_var($imagen, FILTER_VALIDATE_URL)) {
         $errores[] = 'La URL de la imagen no es válida.';
     }
-} elseif (!preg_match('#^/[\w./\-]+\.(svg|png|jpe?g)$#i', $imagen)) {
+} elseif (!preg_match('#^/[\w./\-]+\.(svg|png|jpe?g|webp)$#i', $imagen)) {
     $errores[] = 'La ruta de la imagen no es válida.';
 }
 if ($link !== '' && !preg_match('#^https?://#i', $link)) {
