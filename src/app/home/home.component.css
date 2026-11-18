@@ -142,12 +142,15 @@
 
 @media (max-width: 580px) {
   .logo-header {
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: 1rem;
+    padding: 1rem 0.75rem;
   }
 
   .logo {
-    height: 60px;
+    height: clamp(38px, 11vw, 60px);
+    width: auto;
+    max-width: 100%;
+    flex-shrink: 0;
   }
 
   .logo-divider {

@@ -163,7 +163,8 @@ a {
     font-size: 28px;
     cursor: pointer;
     display: none;
-    line-height: 0;
+    line-height: 1;
+    padding: 8px;
   }
   
   .navbar-mobile .mobile-nav-toggle {
@@ -187,7 +188,7 @@ a {
     }
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 1280px) {
     .mobile-nav-toggle {
       display: block;
     }
@@ -268,7 +269,7 @@ a {
     }
   }
   
-  @media (min-width: 1000px) {
+  @media (min-width: 1280px) {
     .logo-mobile {
       display: none;
     }
@@ -308,6 +309,12 @@ a {
     }
     #header .logo{
       margin-left: 10px;
+      width: calc(100% - 70px);
+      max-width: 330px;
+    }
+    #header .logo img{
+      max-width: 100%;
+      height: auto;
     }
     #header .navbar{
       margin-right: 10px;

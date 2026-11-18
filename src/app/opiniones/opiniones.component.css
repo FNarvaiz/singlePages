@@ -1,3 +1,9 @@
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
 .opiniones-section {
   max-width: 1200px;
   margin: 60px auto;
@@ -72,6 +78,7 @@
 }
 
 .review-card {
+  min-width: 0;
   background: #fff;
   border: 1px solid #eee;
   border-radius: 12px;

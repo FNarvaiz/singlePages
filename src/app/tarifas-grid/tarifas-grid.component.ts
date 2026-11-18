@@ -27,10 +27,39 @@ export class TarifasGridComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['tarifas']) {
-      this.tarifasOrdenadas = [...(this.tarifas ?? [])].sort((a, b) =>
+      this.tarifasOrdenadas = this.normalizarTarifas(this.tarifas ?? []).sort((a, b) =>
         a.Desde.localeCompare(b.Desde) || a.Hasta.localeCompare(b.Hasta)
       );
     }
+  }
+
+  private normalizarTarifas(tarifas: TarifasGridComponent['tarifas']): TarifasGridComponent['tarifas'] {
+    return (tarifas ?? []).map(tar => {
+      const promos = (tar.promos ?? []).map(p => ({
+        ...p,
+        precios: (p.precios ?? []).map(pre => [...(pre ?? [])])
+      }));
+
+      const totalColumnas = promos.reduce((max, p) => Math.max(max, p.precios.length), 0);
+      const columnasConPrecio: number[] = [];
+      for (let col = 0; col < totalColumnas; col++) {
+        const tienePrecio = promos.some(p =>
+          (p.precios[col] ?? []).some(precio => Number(precio) > 0)
+        );
+        if (tienePrecio) columnasConPrecio.push(col);
+      }
+
+      return {
+        ...tar,
+        Servicios: tar.Servicios ?? '',
+        Info: tar.Info ?? '',
+        Imagenes: tar.Imagenes ?? [],
+        promos: promos.map(p => ({
+          ...p,
+          precios: columnasConPrecio.map(col => p.precios[col] ?? [])
+        }))
+      };
+    });
   }
 
   private convertPrecio(precio: number): string {
@@ -39,7 +68,10 @@ export class TarifasGridComponent implements OnChanges {
   public splitServicios(servicios: string): string[] {
     return servicios.split(". ");
   }
-  public textoPrecio(precio: number, ite: number|undefined = undefined, subHeaders?: string[]): string {
+  public textoPrecio(precio: number | undefined, ite: number|undefined = undefined, subHeaders?: string[]): string {
+    if (precio === undefined || precio === null) {
+      return '';
+    }
     const textoPrecio = this.convertPrecio(precio)
     
     if(ite !== undefined){

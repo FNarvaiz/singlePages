@@ -4,12 +4,13 @@
   border: solid 2px;
 }
 .item {
-  width: 380px;
+  width: min(380px, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 240px;
+  height: auto;
+  min-height: 240px;
   margin: 14px 5px;
 }
 .item img {
@@ -56,7 +57,8 @@
 }
 #button-conoce {
   background-color: var(--ocre);
-  width: 280px;
+  width: min(280px, 100%);
+  box-sizing: border-box;
   border-radius: 15px;
   text-align: center;
   padding: 20px;
@@ -81,5 +83,13 @@
   }
  .title-39{
   padding: 0;
- }
+  }
+  .flex-grid {
+    width: 100%;
+  }
+  .item {
+    width: 100%;
+    max-width: 380px;
+    margin: 14px 0;
+  }
 }

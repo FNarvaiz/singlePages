@@ -211,3 +211,21 @@ a {
     padding-right: 20px;
   }
 }
+@media (max-width: 700px) {
+  .title-39 {
+    font-size: 30px;
+    line-height: 1.25;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .size-48 {
+    font-size: 32px;
+  }
+  .size-43 {
+    font-size: 30px;
+  }
+  .size-31 {
+    font-size: 26px;
+  }
+}
+
